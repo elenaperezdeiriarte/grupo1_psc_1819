@@ -281,6 +281,7 @@ public class ClsDatos
 
 	public String ReadContrasena() 
 	{
+		//Leemos y comprobamos si la contraseña es correcta
 		
 		String contrasena = null;
 		Serializable o=null;
