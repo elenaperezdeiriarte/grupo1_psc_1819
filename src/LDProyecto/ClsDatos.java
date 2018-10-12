@@ -153,6 +153,7 @@ public class ClsDatos
 	
 	public void ComenzarRead(enFicDatos fichero) throws IOException 
 	{
+		//Lectura de la BD
 		String ruta=setFichero(fichero);
 		File fic;
 		
@@ -181,6 +182,7 @@ public class ClsDatos
 	
 	public void TerminarRead()
 	{
+		//Terminar de leer la BD
 		try
 		{
 			if(ois!=null)ois.close();
@@ -279,6 +281,7 @@ public class ClsDatos
 
 	public String ReadContrasena() 
 	{
+		
 		String contrasena = null;
 		Serializable o=null;
 				
