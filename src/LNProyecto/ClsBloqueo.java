@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class ClsBloqueo implements Serializable 
 {
-	
+	//Gestion de bloqueos
 	private static final long serialVersionUID = -7956610234382749357L;
 	private Date now1;
 	private Date now2;
