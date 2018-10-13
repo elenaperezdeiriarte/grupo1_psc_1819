@@ -3,6 +3,7 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+//Clase que se detallan los parametros de los articulos
 @SuppressWarnings("rawtypes")
 public class ClsArticulo implements Comparable, Serializable 
 {
