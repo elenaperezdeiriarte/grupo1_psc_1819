@@ -70,7 +70,7 @@ public class ClsDatos
 	
 	public void ComenzarSave(enFicDatos fichero)
 	{
-		
+		//Guardamos fichero (contrasena en este caso)
 		
 		String ruta=setFichero(fichero);
 		File fic;

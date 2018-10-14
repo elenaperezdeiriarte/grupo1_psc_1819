@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class ClsContrasena implements Serializable
 {
+	//Guardar nueva contraseña
 	/**
 	 * 
 	 */
