@@ -10,6 +10,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import javax.swing.JLabel;
 
+// en esta clase se anade el url
 public class LabelUrl extends JLabel implements MouseListener {
 
 	private static final long serialVersionUID = -6065731997922680545L;
