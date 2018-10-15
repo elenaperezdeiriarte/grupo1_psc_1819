@@ -252,7 +252,7 @@ public class ClsDatos
 		return num;
 	}
 	
-	
+	//eliminar libro
 	public void ResetFile (enFicDatos fichero)
 	{
 		String ruta =setFichero(fichero);
