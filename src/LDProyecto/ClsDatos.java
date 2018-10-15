@@ -70,7 +70,7 @@ public class ClsDatos
 	
 	public void ComenzarSave(enFicDatos fichero)
 	{
-		
+		//Para guardar un nuevo libro
 		
 		String ruta=setFichero(fichero);
 		File fic;
