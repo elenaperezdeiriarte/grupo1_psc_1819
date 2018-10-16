@@ -90,7 +90,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 		{			
 			int semaforo = 0;
 			int candado = 0;
-			
+			//Gestion de bloqueos
 			if(Gestor.intentosBloqueo()>=3)
 			{
 				semaforo = Gestor.semaforoBloqueo();
