@@ -14,6 +14,8 @@ import static LNProyecto.ClsConstantes.enFicDatos;
 
 public class ClsDatos
 {
+	//Gestios y guardado de todos los ficheros.
+	
 	private final String fic_numerador = "src\\numerador.dat";
 	private final String fic_contrasena = "src\\contrasena.dat";
 	private final String fic_articulos = "src\\articulos.dat";
@@ -77,6 +79,8 @@ public class ClsDatos
 		
 		//Guardar nuevo CD
 
+
+		//Guardamos fichero (contrasena en este caso)
 		
 		String ruta=setFichero(fichero);
 		File fic;
