@@ -9,6 +9,7 @@ public class ClsSugerencias implements Serializable
 	private String autor;
 	private String tipo;
 	
+	//ver sugerencias
 
 	public ClsSugerencias (String nombre, String autor, String tipo)
 	{
