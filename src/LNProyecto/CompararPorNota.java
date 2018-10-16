@@ -1,6 +1,6 @@
 package LNProyecto;
 
-
+//Clase que permite la comparacion por nota de los articulos.
 import java.util.Comparator;
 
 public class CompararPorNota implements Comparator<ClsArticulo>

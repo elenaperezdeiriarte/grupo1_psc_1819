@@ -1,6 +1,6 @@
 package LNProyecto;
 
-
+//Clase que sirve para realizar la funcion de comparar articulos por nombre.
 import java.util.Comparator;
 
 public class CompararPorNombre implements Comparator<ClsArticulo>
