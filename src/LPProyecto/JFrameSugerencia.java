@@ -21,7 +21,7 @@ import javax.swing.ButtonGroup;
 
 public class JFrameSugerencia extends JFrame implements ActionListener
 {
-
+ //mostrar sugerencia por pantalla
 	private static final long serialVersionUID = 456983590530819147L;
 	private JPanel contentPane;
 	private JButton btnEnviar;
