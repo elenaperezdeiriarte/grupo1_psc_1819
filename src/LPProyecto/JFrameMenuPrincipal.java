@@ -1,6 +1,8 @@
 package LPProyecto;
 
 import java.awt.event.ActionEvent;
+
+
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
@@ -15,6 +17,8 @@ import java.awt.Font;
 import java.io.Serializable;
 
 import javax.swing.ImageIcon;
+
+//Diseñar menu inicio
 
 public class JFrameMenuPrincipal extends JFrame implements ActionListener 
 {
