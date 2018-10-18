@@ -1,6 +1,6 @@
 package LNProyecto;
 
-
+//Clase en la que se definen los atributos de los articulos
 import java.io.Serializable;
 
 @SuppressWarnings("rawtypes")

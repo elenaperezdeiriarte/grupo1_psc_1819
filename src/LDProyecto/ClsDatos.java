@@ -72,6 +72,14 @@ public class ClsDatos
 	
 	public void ComenzarSave(enFicDatos fichero)
 	{
+
+		//Para guardar un nuevo libro
+
+		//Guardamos fichero (contrasena en este caso)
+		
+		//Guardar nuevo CD
+
+
 		//Guardamos fichero (contrasena en este caso)
 		
 		String ruta=setFichero(fichero);
@@ -256,7 +264,7 @@ public class ClsDatos
 		return num;
 	}
 	
-	
+	//eliminar libro
 	public void ResetFile (enFicDatos fichero)
 	{
 		String ruta =setFichero(fichero);
