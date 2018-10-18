@@ -15,6 +15,7 @@ import static LNProyecto.ClsConstantes.enFicDatos;
 public class ClsDatos
 {
 	//Gestios y guardado de todos los ficheros.
+	//Funcionalidades de alquilar, modificar y devolver articulo
 	
 	private final String fic_numerador = "src\\numerador.dat";
 	private final String fic_contrasena = "src\\contrasena.dat";
