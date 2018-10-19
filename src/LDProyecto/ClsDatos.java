@@ -14,6 +14,9 @@ import static LNProyecto.ClsConstantes.enFicDatos;
 
 public class ClsDatos
 {
+	//Gestios y guardado de todos los ficheros.
+	//Funcionalidades de alquilar, modificar y devolver articulo
+	
 	private final String fic_numerador = "src\\numerador.dat";
 	private final String fic_contrasena = "src\\contrasena.dat";
 	private final String fic_articulos = "src\\articulos.dat";
@@ -70,6 +73,14 @@ public class ClsDatos
 	
 	public void ComenzarSave(enFicDatos fichero)
 	{
+
+		//Para guardar un nuevo libro
+
+		//Guardamos fichero (contrasena en este caso)
+		
+		//Guardar nuevo CD
+
+
 		//Guardamos fichero (contrasena en este caso)
 		
 		String ruta=setFichero(fichero);
@@ -254,7 +265,7 @@ public class ClsDatos
 		return num;
 	}
 	
-	
+	//eliminar libro
 	public void ResetFile (enFicDatos fichero)
 	{
 		String ruta =setFichero(fichero);

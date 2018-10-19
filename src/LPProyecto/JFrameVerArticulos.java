@@ -28,6 +28,8 @@ import LNProyecto.TableArticulos;
 
 import java.awt.Font;
 
+//Ventana que diseña la pantalla de ver artículos del sistema
+
 public class JFrameVerArticulos extends JFrame implements ActionListener, MouseListener
 {
 	private static final long serialVersionUID = -4874552086093483595L;

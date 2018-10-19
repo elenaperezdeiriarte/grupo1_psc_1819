@@ -19,7 +19,7 @@ import LNProyecto.ClsUnificadorDClases;
 
 import java.awt.Color;
 
-
+//Menu donde se pedirá la contraseña
 public class JFramePedirContra extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 7512657161608326625L;

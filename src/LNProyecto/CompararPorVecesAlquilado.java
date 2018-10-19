@@ -1,6 +1,6 @@
 package LNProyecto;
 
-
+//Clase que permite la funcionalidad de comparar articulos por veces prestado.
 import java.util.Comparator;
 
 public class CompararPorVecesAlquilado implements Comparator<ClsArticulo>
