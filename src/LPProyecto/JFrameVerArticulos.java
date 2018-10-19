@@ -469,6 +469,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener, MouseL
 		
 		if (botonPulsado == btnBuscar )
 		{
+			//Aqui se manda lo que hemos buscado
 			JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(1, textBusqueda.getText(), ordenacion,adminOusu);
 			objVerArticulos.setVisible(true);
 			
