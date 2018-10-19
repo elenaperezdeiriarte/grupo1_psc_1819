@@ -12,6 +12,8 @@ import java.awt.Font;
 public class JFrameMenuAdministrador extends JFrame implements ActionListener
 {
 	
+	//Desarrollo del menu del administrador
+	
 	private static final long serialVersionUID = 2691647860492756196L;
 	private PanelConImagen contentPane;
 	private JButton btnArticulo;
