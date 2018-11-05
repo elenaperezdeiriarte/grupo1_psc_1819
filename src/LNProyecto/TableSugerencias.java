@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
-	public class TableSugrencias extends AbstractTableModel
+	public class TableSugerencias extends AbstractTableModel
 	{
 			private static final long serialVersionUID = 1L;
 			private String[] columnNames = {"Tipo", "Nombre", "Autor"};
 			Object [][] data;
 			
-			public TableSugrencias(ArrayList<ClsSugerencias> a){
+			public TableSugerencias(ArrayList<ClsSugerencias> a){
 				
 		
 				super();

@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -13,10 +14,11 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.UIManager;
 
+import LDProyecto.BaseDatos;
 import LNProyecto.ClsQuejas;
 import LNProyecto.ClsSugerencias;
 import LNProyecto.ClsUnificadorDClases;
-import LNProyecto.TableSugrencias;
+import LNProyecto.TableSugerencias;
 
 import javax.swing.JButton;
 
@@ -30,7 +32,7 @@ public class JFrameListaQuejasSugerencias extends JFrame implements ActionListen
 
 	private static final long serialVersionUID = 3550010992905899764L;
 	private JPanel contentPane;
-	private TableSugrencias tasug;
+	private TableSugerencias tasug;
 	private JTable tableSug;
 	private JButton btnLimpiarQuejas;
 	private JButton btnLimpiarSuger;
@@ -90,9 +92,20 @@ public class JFrameListaQuejasSugerencias extends JFrame implements ActionListen
 		
 		
 		
-		ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		ArrayList<ClsQuejas> QuejasList = Gestor.leerQuejas();
-		
+		BaseDatos.initBD("eLibrary.db");
+		BaseDatos.crearTablaBDQ();
+		try 
+		{
+			BaseDatos.selectQuejas();
+		} 
+		catch (SQLException e1) 
+		{
+			e1.printStackTrace();
+		}
+		ArrayList<ClsQuejas> QuejasList = new ArrayList<ClsQuejas>();
+		QuejasList = BaseDatos.getQuejas();
+		BaseDatos.close();
+			
 		ClsQuejas[] ListQuej = new ClsQuejas[QuejasList.size()];
 		
 		for(int a = 0 ; a<QuejasList.size();a++)
@@ -104,11 +117,25 @@ public class JFrameListaQuejasSugerencias extends JFrame implements ActionListen
 		list.setBounds(59,135,536,517);
 		contentPane.add(list);
 		
-		ArrayList<ClsSugerencias> SugerenciasList = Gestor.leerSugerencias();
+		
+		
+		BaseDatos.initBD("eLibrary.db");
+		BaseDatos.crearTablaBDS();
+		try 
+		{
+			BaseDatos.selectSugerencias();
+		} 
+		catch (SQLException e1) 
+		{
+			e1.printStackTrace();
+		}
+		ArrayList<ClsSugerencias> SugerenciasList = new ArrayList<ClsSugerencias>();
+		SugerenciasList = BaseDatos.getSugerencias();
+		BaseDatos.close();
 		
 		if(SugerenciasList!=null)
 		{	
-			tasug = new TableSugrencias(SugerenciasList);
+			tasug = new TableSugerencias(SugerenciasList);
 			tableSug = new JTable(tasug);
 			scrollPane.setViewportView(tableSug);
 			tableSug.setToolTipText("");
@@ -126,32 +153,29 @@ public class JFrameListaQuejasSugerencias extends JFrame implements ActionListen
 		
 		if (botonPulsado == jbVolver)
 		{
-			JFrameMenuAdministrador objMenuAdministrador = new JFrameMenuAdministrador();
-			
+			JFrameMenuAdministrador objMenuAdministrador = new JFrameMenuAdministrador();			
 			objMenuAdministrador.setVisible(true);
 			this.dispose();
 		}
 		if (botonPulsado == btnLimpiarQuejas)
 		{
-			ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-			Gestor.eliminarQuejas();
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.eliminarTablaBDQ();
+			BaseDatos.close();
 			
 			JFrameListaQuejasSugerencias objQuejas= new JFrameListaQuejasSugerencias();
 			objQuejas.setVisible(true);
-			
-			this.dispose();
-		
+			this.dispose();		
 		}
 		if (botonPulsado == btnLimpiarSuger)
 		{
-			ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-			Gestor.eliminarSugerencias();
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.eliminarTablaBDS();
+			BaseDatos.close();
 			
 			JFrameListaQuejasSugerencias objQuejas= new JFrameListaQuejasSugerencias();
-			objQuejas.setVisible(true);
-			
-			this.dispose();
-			
+			objQuejas.setVisible(true);			
+			this.dispose();			
 		}
 		
 	}

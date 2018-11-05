@@ -5,9 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
+
+import LNProyecto.ClsArticulo;
+import LNProyecto.ClsQuejas;
+import LNProyecto.ClsSugerencias;
 
 public class BaseDatos {
 
@@ -57,9 +61,9 @@ public class BaseDatos {
 	// ------------------------------------
 
 
-//////////////////////////////////////
-/////	     Contrasena          /////
-//////////////////////////////////////
+	//////////////////////////////////////
+	/////	     Contrasena          /////
+	//////////////////////////////////////
 	
 	public static void crearTablaBDU() 
 	{
@@ -130,18 +134,16 @@ public class BaseDatos {
 		return contraAdmin;
 	}
 	
-//////////////////////////////////////
-/////	        Bloqueo          /////
-//////////////////////////////////////	
+	//////////////////////////////////////
+	/////	        Bloqueo          /////
+	//////////////////////////////////////	
 	
 	public static void crearTablaBDB() 
 	{
 		if (statement==null) return;
 		try 
 		{
-			statement.executeUpdate("create table BLOQUEO " +
-				"(intento int, milisegundos long)");
-			
+			statement.executeUpdate("create table BLOQUEO " + "(intento int, milisegundos long)");			
 		} 
 		catch (SQLException e) 
 		{
@@ -266,5 +268,158 @@ public class BaseDatos {
 	{
 		return milisegundosAdmin;
 	}
+	
+	//////////////////////////////////////
+	/////	       Quejas            /////
+	//////////////////////////////////////
+	
+	public static void crearTablaBDQ() 
+	{	
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table QUEJAS " + "(texto string)");
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static void eliminarTablaBDQ() {
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table QUEJAS");
+			arrayQuejas = new ArrayList<ClsQuejas>();
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearQueja( Statement st, String texto ) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into QUEJAS (texto) values('" + texto + "')";
+			JOptionPane.showMessageDialog(null, "Queja guardada");
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static void selectQuejas() throws SQLException
+	{
+		
+		Statement stmt = connection.createStatement();
+		String query = "select texto from QUEJAS";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next())
+		{
+			queja(rs.getString(1));
+		}
+	}
+	
+	static ArrayList<ClsQuejas> arrayQuejas = new ArrayList<ClsQuejas>();
+	public static void queja(String texto)
+	{
+		ClsQuejas queja = new ClsQuejas(texto);	
+		arrayQuejas.add(queja);
+	}
+	
+	public static ArrayList<ClsQuejas> getQuejas()
+	{
+		return arrayQuejas;
+	}
+
+	//////////////////////////////////////
+	/////	       Sugerencias       /////
+	//////////////////////////////////////
+	
+	public static void crearTablaBDS() 
+	{	
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table SUGERENCIAS " + "(nombre string, autor string, tipo string)");
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static void eliminarTablaBDS() {
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table SUGERENCIAS");
+			arraySugerencia = new ArrayList<ClsSugerencias>();
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearSugerencia( Statement st, String nombre, String autor, String tipo) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into SUGERENCIAS (nombre, autor, tipo) values('" + nombre + "', '" + autor + "', '" + tipo + "')";
+			JOptionPane.showMessageDialog(null, "Sugerencia guardada");
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static void selectSugerencias() throws SQLException
+	{
+		
+		Statement stmt = connection.createStatement();
+		String query = "select nombre, autor, tipo from SUGERENCIAS";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next())
+		{
+			sugerencia(rs.getString(1),rs.getString(2),rs.getString(3));
+		}
+	}
+	
+	static ArrayList<ClsSugerencias> arraySugerencia = new ArrayList<ClsSugerencias>();
+	public static void sugerencia(String nombre, String autor, String tipo)
+	{
+		ClsSugerencias sugerencia = new ClsSugerencias(nombre, autor, tipo);	
+		arraySugerencia.add(sugerencia);
+	}
+	
+	public static ArrayList<ClsSugerencias> getSugerencias()
+	{
+		return arraySugerencia;
+	}
+
 }	
+
+
+
+
 	

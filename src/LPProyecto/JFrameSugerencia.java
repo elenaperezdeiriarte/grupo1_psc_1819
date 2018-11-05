@@ -2,13 +2,19 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
+
 import javax.swing.JButton;
 
+import LNProyecto.ClsQuejas;
+import LNProyecto.ClsSugerencias;
 import LNProyecto.ClsUnificadorDClases;
 
 import javax.swing.JLabel;
@@ -104,7 +110,6 @@ public class JFrameSugerencia extends JFrame implements ActionListener
 		
 		if (botonPulsado == btnEnviar)
 		{
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
 			String tipo;
 			
 			if (rdbtnCd.isSelected()) 
@@ -119,12 +124,21 @@ public class JFrameSugerencia extends JFrame implements ActionListener
 			{
 	            tipo = "Libro";
 	        }
-			cambio.NuevaSugerencia(textNombre.getText(), textAutor.getText(), tipo);
 			
-			JFrameMenuCliente objCliente = new JFrameMenuCliente();
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.crearTablaBDS();			
+			try 
+			{
+				BaseDatos.crearSugerencia(BaseDatos.getStatement(), textNombre.getText(), textAutor.getText(), tipo);
+			} 
+			catch (SQLException e1) 
+			{
+				e1.printStackTrace();
+			}			
+			BaseDatos.close();
 			
-			objCliente.setVisible(true);
-			
+			JFrameMenuCliente objCliente = new JFrameMenuCliente();			
+			objCliente.setVisible(true);			
 			this.dispose();
 		}
 		if (botonPulsado == btnAtras)
