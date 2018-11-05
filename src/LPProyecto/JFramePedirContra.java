@@ -9,15 +9,12 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
-
-import LNProyecto.ClsBloqueo;
 
 import java.awt.Color;
 
@@ -30,6 +27,8 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 	private JButton btnVerificar;
 	private JLabel lblFaltan;
 	private JButton btnVolver;
+	private int intento = 0;
+	private long milisegs = 0;
 	public JFramePedirContra() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,7 +57,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 		
 		lblFaltan = new JLabel();
 		lblFaltan.setForeground(Color.RED);
-		lblFaltan.setBounds(82, 50, 257, 14);
+		lblFaltan.setBounds(82, 30, 257, 14);
 		contentPane.add(lblFaltan);
 		
 		btnVolver = new JButton(new ImageIcon(getClass().getResource("/images/back.png")));
@@ -68,8 +67,51 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 		btnVolver.setBorderPainted(false);
 		btnVolver.addActionListener(this);
 		contentPane.add(btnVolver);
-				
-		new ClsBloqueo();
+		
+		BaseDatos.initBD("eLibrary.db");
+		BaseDatos.crearTablaBDB();
+		try 
+		{
+			BaseDatos.devolverBloqueo();
+		} 
+		catch (SQLException e1) 
+		{
+			e1.printStackTrace();
+		}		
+		intento = BaseDatos.getIntentos();
+		System.out.println("Intento: " + intento);
+		milisegs = BaseDatos.getMilisegundos();
+		System.out.println("Milis: " + milisegs);
+		System.out.println("---------------------");
+		if (intento == 0)
+		{
+			try 
+			{
+				BaseDatos.crearBloqueo(BaseDatos.getStatement());
+			} 
+			catch (SQLException e1) 
+			{
+				e1.printStackTrace();
+			}
+		}
+		BaseDatos.close();
+		
+		
+		if(intento >= 4)
+		{
+			long diferencia = (milisegs - System.currentTimeMillis())/1000;
+			if(0 >= diferencia)
+			{
+				lblFaltan.setText("Ya puede introducir la contraseña");
+			}
+			else
+			{
+				lblFaltan.setText("Espere " + diferencia  + " segundo(s) para poder acceder");
+			}
+			
+		}
+		
+		contentPane.add(lblFaltan);
 	}
 	
 	
@@ -86,127 +128,75 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 		}
 		
 		if (botonPulsado == btnVerificar)
-		{		
-//			int semaforo = 0;
-//			int candado = 0;
-//			
-//			//Gestion de bloqueos
-//			if(Gestor.intentosBloqueo()>=3)
-//			{
-//				semaforo = Gestor.semaforoBloqueo();
-//			}
-//			
-//			if (semaforo==0)
-//			{
-//				candado = 1;
-//				
-//				Gestor.sumarIntento();
-//				String contrasena1 = Gestor.leerContra();
-//				char[] contraescrita = passwordField.getPassword();
-//				
-//				if (contrasena1.equals(String.valueOf(contraescrita)))
-//				{
-//					Gestor.reiniciarIntentos();			
-//					JFrameMenuAdministrador objMenuAdministrador = new JFrameMenuAdministrador();
-//					objMenuAdministrador.setVisible(true);
-//					this.dispose();
-//				}
-//				else
-//				{
-//					lblFaltan.setText("                  Error en la contrasena");
-//					setContentPane(contentPane);
-//				    contentPane.validate();
-//				    contentPane.repaint();
-//										
-//					if(candado==1)
-//					{
-//						Gestor.sacarMinutos();
-//					}
-//						
-//					if(Gestor.getIntentos()>=3)
-//					{
-//						lblFaltan.setText("Espere " + (Gestor.getIntentos())  + " minuto(s) para poder acceder");
-//						setContentPane(contentPane);
-//					    contentPane.validate();
-//					    contentPane.repaint();
-//					}	
-//				}
-//					
-//				if(candado==1)
-//				{
-//					Gestor.sacarMinutos();
-//				}
-//			}
-//			else
-//			{
-//				long falta = Gestor.sacarFalta();
-//				if (falta<0)
-//				{
-//					TimerTask timerTask = new TimerTask()
-//				     {
-//						ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-//				         public void run() 
-//				         {
-//				        	lblFaltan.setText("Falta(n) " + (-Gestor.sacarFalta()) + " segundo(s) para poder acceder");
-//			        		
-//							setContentPane(contentPane);
-//							contentPane.validate();
-//							contentPane.repaint();
-//				         }
-//				     };
-//				      // Aqun se pone en marcha el timer cada segundo.
-//				     Timer timer = new Timer();
-//				     // Dentro de 0 milisegundos avnsame cada 1000 milisegundos
-//				     timer.scheduleAtFixedRate(timerTask, 0, 1000); 
-//				}
-//				else
-//				{
-//					lblFaltan.setText(null);
-//					
-//					setContentPane(contentPane);
-//				    contentPane.validate();
-//				    contentPane.repaint();
-//				}
-//			}
-			
-			
-			
-			
-			BaseDatos.initBD("eLibrary.db");
-
-			BaseDatos.crearTablaBDU();
-			
-			String savedContra = "";
-			
-			try 
+		{	
+			if(milisegs < System.currentTimeMillis())
 			{
-				BaseDatos.devolverContra();
-			} 
-			catch (SQLException e1) 
-			{
-				e1.printStackTrace();
+				BaseDatos.initBD("eLibrary.db");
+	
+				BaseDatos.crearTablaBDU();
+				
+				String savedContra = "";
+				
+				try 
+				{
+					BaseDatos.devolverContra();
+				} 
+				catch (SQLException e1) 
+				{
+					e1.printStackTrace();
+				}
+				
+				savedContra = BaseDatos.getContra();
+				BaseDatos.close();
+				
+				if(savedContra.equals("")) {savedContra="a";}
+				
+				String writtenContra = new String(passwordField.getPassword());
+				Boolean comparation = false;
+				
+				
+				if(writtenContra.equals(savedContra)) {comparation = true;}
+				
+				System.out.println("Written: " + writtenContra + "\n" + "Saved: " + savedContra + "\n" + "Comparation: " + comparation);
+				
+				if(comparation==true)
+				{
+					BaseDatos.initBD("eLibrary.db");
+					BaseDatos.eliminarTablaBDB();
+					BaseDatos.close();
+					JFrameMenuAdministrador objMenuAdministrador = new JFrameMenuAdministrador();
+					objMenuAdministrador.setVisible(true);
+					this.dispose();
+				}
+				else
+				{
+					BaseDatos.initBD("eLibrary.db");
+					if(4 < intento) { BaseDatos.eliminarTablaBDB();}
+					BaseDatos.crearTablaBDB();
+					try 
+					{
+						BaseDatos.updateBloqueo(BaseDatos.getStatement());
+					} 
+					catch (SQLException e1) 
+					{
+						e1.printStackTrace();
+					}
+					BaseDatos.close();
+					JOptionPane.showMessageDialog(null, "Contraseña Erronea");
+					
+					JFramePedirContra objPedirContra = new JFramePedirContra();
+					objPedirContra.setVisible(true);				
+					this.dispose();
+				}
 			}
-			
-			savedContra = BaseDatos.getContra();
-			BaseDatos.close();
-			
-			if(savedContra.equals("")) {savedContra="a";}
-			
-			String writtenContra = new String(passwordField.getPassword());
-			Boolean comparation = false;
-			
-			
-			if(writtenContra.equals(savedContra)) {comparation = true;}
-			
-			System.out.println("Written: " + writtenContra + "\n" + "Saved: " + savedContra + "\n" + "Comparation: " + comparation);
-			
-			if(comparation==true)
+			else
 			{
-				JFrameMenuAdministrador objMenuAdministrador = new JFrameMenuAdministrador();
-				objMenuAdministrador.setVisible(true);
-				this.dispose();
-			}
-			
+					JOptionPane.showMessageDialog(null, "Espera a que pase el bloqueo");
+					
+					JFramePedirContra objPedirContra = new JFramePedirContra();
+					objPedirContra.setVisible(true);				
+					this.dispose();
+			}	
 		}
 	}
 }

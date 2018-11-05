@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 import javax.swing.JOptionPane;
 
 public class BaseDatos {
@@ -16,13 +17,7 @@ public class BaseDatos {
 	
 	private static Connection connection = null;
 	private static Statement statement = null;
-	static String izena;
-
-	/** Inicializa una BD SQLITE y devuelve una conexión con ella. Debe llamarse a este 
-	 * método antes que ningún otro, y debe devolver no null para poder seguir trabajando con la BD.
-	 * @param nombreBD	Nombre de fichero de la base de datos
-	 * @return	Conexión con la base de datos indicada. Si hay algún error, se devuelve null
-	 */
+	
 	public static Connection initBD( String nombreBD ) {
 		try {
 		    Class.forName("org.sqlite.JDBC");
@@ -37,8 +32,7 @@ public class BaseDatos {
 		}
 	}
 	
-	/** Cierra la conexión con la Base de Datos
-	 */
+
 	public static void close() {
 		try {
 			statement.close();
@@ -48,17 +42,12 @@ public class BaseDatos {
 		}
 	}
 	
-	/** Devuelve la conexión si ha sido establecida previamente (#initBD()).
-	 * @return	Conexión con la BD, null si no se ha establecido correctamente.
-	 */
+	
 	public static Connection getConnection() {
 		return connection;
 	}
 	
-	/** Devuelve una sentencia para trabajar con la BD,
-	 * si la conexión si ha sido establecida previamente (#initBD()).
-	 * @return	Sentencia de trabajo con la BD, null si no se ha establecido correctamente.
-	 */
+	
 	public static Statement getStatement() {
 		return statement;
 	}
@@ -66,11 +55,14 @@ public class BaseDatos {
 	// ------------------------------------
 	// PARTICULAR DEL CATALOGO MULTIMEDIA
 	// ------------------------------------
+
+
+//////////////////////////////////////
+/////	     Contrasena          /////
+//////////////////////////////////////
 	
-	/** Crea una tabla de catálogo multimedia en una base de datos, si no existía ya.
-	 * Debe haberse inicializado la conexión correctamente.
-	 */
-	public static void crearTablaBDU() {
+	public static void crearTablaBDU() 
+	{
 		if (statement==null) return;
 		try 
 		{
@@ -87,18 +79,6 @@ public class BaseDatos {
 		try 
 		{
 			statement.executeUpdate("drop table CONTRASENA");
-		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
-			// e.printStackTrace();  
-		}
-	}
-	
-	public static void crearTablaBDT() {
-		if (statement==null) return;
-		try {
-			statement.executeUpdate("create table TIEMPOS " +
-				"(izena String, vehiculo String, minuto int, segundo int, milisegundo int)");
-			
 		} catch (SQLException e) {
 			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
 			// e.printStackTrace();  
@@ -123,7 +103,6 @@ public class BaseDatos {
 		}
 	}
 	
-	//Contrasena
 	public static void devolverContra() throws SQLException
 	{
 		
@@ -149,6 +128,143 @@ public class BaseDatos {
 	public static String getContra()
 	{
 		return contraAdmin;
+	}
+	
+//////////////////////////////////////
+/////	        Bloqueo          /////
+//////////////////////////////////////	
+	
+	public static void crearTablaBDB() 
+	{
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table BLOQUEO " +
+				"(intento int, milisegundos long)");
+			
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+
+	public static void eliminarTablaBDB() {
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table BLOQUEO");
+		} catch (SQLException e) {
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearBloqueo( Statement st) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into BLOQUEO (intento, milisegundos) values(1,0)";
+			intentos(1);
+			milisegundos(1);
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+		
+	}
+	
+	public static boolean updateBloqueo( Statement st) throws SQLException 
+	{
+		devolverBloqueo();
+		int intentos = intentosAdmin + 1;
+		
+		if(intentos >= 4)
+		{
+//			java.util.Date d = new java.util.Date();
+		    long milis = System.currentTimeMillis() + 60000;
+		    
+			try 
+			{
+				String sentSQL = "update BLOQUEO set intento = " + intentos + ", milisegundos = " + milis;
+				intentos(intentos);
+				milisegundos(milis);
+				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				int val = st.executeUpdate( sentSQL );
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+				return true;
+			} 
+			catch (SQLException e) 
+			{
+				e.printStackTrace();
+				return false;
+			}
+		}
+		else
+		{
+			try 
+			{
+				String sentSQL = "update BLOQUEO set intento = " + intentos;
+				intentos(intentos);
+				System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+				int val = st.executeUpdate( sentSQL );
+				if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+				return true;
+			} 
+			catch (SQLException e) 
+			{
+				e.printStackTrace();
+				return false;
+			}
+		}
+	}
+	
+	public static void devolverBloqueo() throws SQLException
+	{
+		
+		Statement stmt = connection.createStatement();
+		String query = "select intento, milisegundos from BLOQUEO";
+		ResultSet rs = stmt.executeQuery(query);
+		int intentos = 0;
+		long milisegundos = 0;
+		while (rs.next())
+		{
+			intentos = rs.getInt(1);
+			milisegundos = rs.getLong(2);
+		}
+		
+		intentos(intentos);
+		milisegundos(milisegundos);
+	}
+	
+	static int intentosAdmin;
+	public static void intentos(int intentos)
+	{
+		intentosAdmin = intentos;	
+	}
+	
+	public static int getIntentos()
+	{
+		return intentosAdmin;
+	}
+	
+	
+	static long milisegundosAdmin;
+	public static void milisegundos(long milisegundos)
+	{
+		milisegundosAdmin = milisegundos;	
+	}
+	
+	public static long getMilisegundos()
+	{
+		return milisegundosAdmin;
 	}
 }	
 	
