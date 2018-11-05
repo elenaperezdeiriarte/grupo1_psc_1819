@@ -3,8 +3,7 @@
   <groupId>grupo1_psc_1819</groupId>
   <artifactId>grupo1_psc_1819</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <build>
-  
+  <build> 
     <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
@@ -45,6 +44,30 @@
 				</execution>
 			</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+			</plugin>
     </plugins>
   </build>
+  <dependencies>
+  	<dependency>
+		<groupId>org.databene</groupId>
+		<artifactId>contiperf</artifactId>
+		<version>2.0.0</version>
+		<scope>test</scope>
+	</dependency> 	
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.17</version>
+  	</dependency>
+  	<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+  </dependencies>
 </project>

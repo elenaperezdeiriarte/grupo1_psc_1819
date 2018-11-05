@@ -14,6 +14,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsBloqueo;
 import LNProyecto.ClsUnificadorDClases;
 
@@ -29,6 +31,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 	private JLabel lblFaltan;
 	private ClsUnificadorDClases Gestor;
 	private JButton btnVolver;
+	private static final Logger log = Logger.getLogger(JFramePedirContra.class.getName());
 	public JFramePedirContra() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -113,10 +116,11 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 				}
 				else
 				{
-					lblFaltan.setText("                  Error en la contrasena");
+					lblFaltan.setText("Error en la contrasena");
 					setContentPane(contentPane);
 				    contentPane.validate();
 				    contentPane.repaint();
+				    log.warn("Contraseña erronea");
 										
 					if(candado==1)
 					{

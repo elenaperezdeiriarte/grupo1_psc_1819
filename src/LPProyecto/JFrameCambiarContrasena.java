@@ -17,6 +17,9 @@ import javax.swing.JButton;
 
 
 
+
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsContrasena;
 import LNProyecto.ClsUnificadorDClases;
 
@@ -32,10 +35,12 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 	private JLabel lblAmbasContraseasNo;
 	private JButton jbGuardar;
 	private JButton jbVolver;
+	private static final Logger log = Logger.getLogger(JFrameCambiarContrasena.class.getName());
 	
 	public JFrameCambiarContrasena()  
 	
 	{
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new PanelConImagen();
@@ -112,6 +117,8 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 				setContentPane(contentPane);
 			    contentPane.validate();
 			    contentPane.repaint();
+			    log.error("Contraseña erronea");
+			    
 			}
 		}
 		if (botonPulsado == jbVolver)
