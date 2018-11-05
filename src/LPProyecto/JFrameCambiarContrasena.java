@@ -2,9 +2,13 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
+
 import javax.swing.JTextField;
 
 import java.awt.Font;
@@ -12,13 +16,6 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-
-
-
-
-
-import LNProyecto.ClsContrasena;
-import LNProyecto.ClsUnificadorDClases;
 
 import java.awt.Color;
 
@@ -95,8 +92,21 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 			
 			if (nuevacontr1.equals(nuevacontr2))
 			{				
-				ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-				Gestor.guardarContra(new ClsContrasena(nuevacontr1));				
+				BaseDatos.initBD("eLibrary.db");
+				BaseDatos.eliminarTablaBDU();
+				BaseDatos.crearTablaBDU();
+				
+				try 
+				{
+					BaseDatos.cambiarContra(BaseDatos.getStatement(), nuevacontr1);
+				} 
+				catch (SQLException e1) 
+				{
+					e1.printStackTrace();
+				}
+				
+				BaseDatos.close();
+							
 				JFramePedirContra objPedirContra = new JFramePedirContra();
 				objPedirContra.setVisible(true);
 				
