@@ -1,3 +1,2 @@
 # grupo1_psc_1819
-Somos los putos amos
-No flipeis
+Este programa tiene como fin el permitir al usuario gestionar una biblioteca.
