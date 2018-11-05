@@ -2,9 +2,13 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
+
 import javax.swing.JButton;
 
 import java.awt.Font;
@@ -14,6 +18,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+import LNProyecto.ClsCD;
 import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.MiExcepcion;
 
@@ -121,9 +126,7 @@ public class JFrameCFCD extends JFrame implements ActionListener
 		
 		if (botonPulsado == jbGuardar)
 		{
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-			int numero = cambio.leerNumerador();
-											
+			int numero = 1;											
 			double nota = 0;
 			int estado = 0, contador= 0, numVotos = 0;
 			String nombre = txtCDNom.getText();
@@ -133,26 +136,23 @@ public class JFrameCFCD extends JFrame implements ActionListener
 			String web = "";
 			String imagen = "";
 				
+			ClsCD cdnuevo = new ClsCD(nombre, numero, autor, duracion, ano, nota, estado, contador, numVotos, 0, web, imagen);
 			
-			boolean rep=false;
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.crearTablaBDCD();			
 			try 
 			{
-				cambio.NuevoCD(nombre, numero, autor, duracion, ano, nota, estado, contador, numVotos, 0, web, imagen);
+				BaseDatos.crearCD(BaseDatos.getStatement(), cdnuevo);
 			} 
-			catch (MiExcepcion e1) 
+			catch (SQLException e1) 
 			{
-				rep=true;
-				JOptionPane.showMessageDialog(this, e1.toString());
-			}	
-			
-			if (rep!=true)
-			{
-				cambio.sumarNumerador();
-				
-				JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
-				objVerArticulos.setVisible(true);
-				this.dispose();
-			}
+				e1.printStackTrace();
+			}			
+			BaseDatos.close();
+	
+			JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
+			objVerArticulos.setVisible(true);
+			this.dispose();
 		}
 	}
 }

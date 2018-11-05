@@ -2,9 +2,13 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -14,6 +18,8 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import LNProyecto.ClsCD;
+import LNProyecto.ClsDVD;
 import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.MiExcepcion;
 
@@ -134,40 +140,35 @@ public class JFrameCFDVD extends JFrame implements ActionListener
 		
 		if (botonPulsado == jbGuardar)
 		{
-			
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-			int numero = cambio.leerNumerador();
+			int numero = 1;
 											
 			double nota = 0;
 			int estado = 0, contador= 0, numVotos = 0;
 			String nombre = txtNomDVD.getText();
 			String autor = txtAutorDVD.getText();
-			int duracion1 = Integer.parseInt(txtDuracionDVD.getText());
-			int ano1 = Integer.parseInt(txtAnoDVD.getText());
+			int duracion = Integer.parseInt(txtDuracionDVD.getText());
+			int ano = Integer.parseInt(txtAnoDVD.getText());
 			int oscar = Integer.parseInt(txtOscarDVD.getText());
 			String web = "";
 			String imagen = "";
 				
+			ClsDVD dvdnuevo = new ClsDVD(nombre, numero, autor, duracion, ano, nota, estado, contador, oscar, numVotos, 1, web, imagen);
 			
-			boolean rep=false;
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.crearTablaBDDVD();			
 			try 
 			{
-				cambio.NuevoDVD(nombre, numero, autor, duracion1, ano1, nota, estado, contador, oscar, numVotos, 1, web, imagen);
+				BaseDatos.crearDVD(BaseDatos.getStatement(), dvdnuevo);
 			} 
-			catch (MiExcepcion e1) 
+			catch (SQLException e1) 
 			{
-				rep=true;
-				JOptionPane.showMessageDialog(this, e1.toString());
-			}	
-			
-			if (rep!=true)
-			{
-				cambio.sumarNumerador();
+				e1.printStackTrace();
+			}			
+			BaseDatos.close();
 				
-				JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
-				objVerArticulos.setVisible(true);
-				this.dispose();
-			}
+			JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
+			objVerArticulos.setVisible(true);
+			this.dispose();
 		}
 	}
 

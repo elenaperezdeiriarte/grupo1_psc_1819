@@ -2,12 +2,15 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
 
 import java.awt.Font;
 
@@ -17,6 +20,8 @@ import java.awt.Color;
 
 import javax.swing.JTextField;
 
+import LNProyecto.ClsDVD;
+import LNProyecto.ClsLibro;
 import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.MiExcepcion;
 
@@ -116,9 +121,7 @@ public class JFrameCFLibro extends JFrame implements ActionListener
 		
 		if (botonPulsado == jbGuardar)
 		{
-			
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-			int numero = cambio.leerNumerador();
+			int numero = 1;
 											
 			double nota = 0;
 			int estado = 0, contador= 0, numVotos = 0;
@@ -129,26 +132,23 @@ public class JFrameCFLibro extends JFrame implements ActionListener
 			String autor = txtLibAutor.getText();
 			String imagen = "";
 				
+			ClsLibro libronuevo = new ClsLibro(nombre, numero, autor, nota, estado, contador, paginas, numVotos, 2, web, imagen);
 			
-			boolean rep=false;
+			BaseDatos.initBD("eLibrary.db");
+			BaseDatos.crearTablaBDLibro();			
 			try 
 			{
-				cambio.NuevoLibro(nombre, numero, autor, nota, estado, contador, paginas,numVotos, 2, web, imagen);
+				BaseDatos.crearLibro(BaseDatos.getStatement(), libronuevo);
 			} 
-			catch (MiExcepcion e1) 
+			catch (SQLException e1) 
 			{
-				rep=true;
-				JOptionPane.showMessageDialog(this, e1.toString());
-			}	
-			
-			if (rep!=true)
-			{
-				cambio.sumarNumerador();
-				
-				JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
-				objVerArticulos.setVisible(true);
-				this.dispose();
+				e1.printStackTrace();
 			}			
+			BaseDatos.close();
+				
+			JFrameVerArticulos objVerArticulos= new JFrameVerArticulos(saberSiBusc,busqueda,ordenacion,0);
+			objVerArticulos.setVisible(true);
+			this.dispose();		
 		}
 			
 	}

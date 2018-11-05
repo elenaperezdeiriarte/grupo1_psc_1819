@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 import LNProyecto.ClsArticulo;
+import LNProyecto.ClsCD;
+import LNProyecto.ClsDVD;
+import LNProyecto.ClsLibro;
 import LNProyecto.ClsQuejas;
 import LNProyecto.ClsSugerencias;
 
@@ -416,7 +419,266 @@ public class BaseDatos {
 	{
 		return arraySugerencia;
 	}
-
+	
+	//////////////////////////////////////
+	/////	     	  CD	         /////
+	//////////////////////////////////////
+	
+	public static void crearTablaBDCD() 
+	{	
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table CDS " + "(nombre string, numero int, autor string, duracion int, ano int, nota double, estado int, contador int, numVotos int, tipo int, web string, imagen string)");
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static void eliminarTablaBDCD() 
+	{
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table CDS");
+			arrayCD = new ArrayList<ClsCD>();
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearCD( Statement st, ClsCD cd) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into CDS (nombre, numero, autor, duracion, ano, nota, estado, contador, numVotos, tipo, web, imagen) values('" + cd.getNombre() + "', " + cd.getNumero() + ", '" + cd.getAutor() + "', " + cd.getDuracion() + ", " + cd.getAno() + ", " + cd.getNota() + ", " + cd.getEstado() + ", " + cd.getContador() + ", " + cd.getNumVotos() + ", " + cd.getTipo() + ", '" + cd.getWeb() + "', '" + cd.getImagen() + "')";
+			JOptionPane.showMessageDialog(null, "CD guardado");
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static void selectCDs() throws SQLException
+	{
+		Statement stmt = connection.createStatement();
+		String query = "select * from CDS";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next())
+		{
+			ClsCD cd = new ClsCD(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getDouble(6),rs.getInt(7),rs.getInt(8),rs.getInt(9),rs.getInt(10),rs.getString(11),rs.getString(12));
+			cd(cd);
+			ClsArticulo articulo = cd;
+			articulo(articulo);
+		}
+	}
+	
+	static ArrayList<ClsCD> arrayCD = new ArrayList<ClsCD>();
+	public static void cd(ClsCD cd)
+	{	
+		arrayCD.add(cd);
+	}
+	
+	public static ArrayList<ClsCD> getCDs()
+	{
+		return arrayCD;
+	}
+	
+	//////////////////////////////////////
+	/////	     	  DVD	         /////
+	//////////////////////////////////////
+	
+	public static void crearTablaBDDVD() 
+	{	
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table DVDS " + "(nombre string, numero int, autor string, duracion int, ano int, nota double, estado int, contador int, oscar int, numVotos int, tipo int, web string, imagen string)");
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static void eliminarTablaBDDVD() 
+	{
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table DVDS");
+			arrayDVD = new ArrayList<ClsDVD>();
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearDVD( Statement st, ClsDVD dvd) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into DVDS (nombre, numero, autor, duracion, ano, nota, estado, contador, oscar, numVotos, tipo, web, imagen) values('" + dvd.getNombre() + "', " + dvd.getNumero() + ", '" + dvd.getAutor() + "', " + dvd.getDuracion() + ", " + dvd.getAno() + ", " + dvd.getNota() + ", " + dvd.getEstado() + ", " + dvd.getContador() + ", " + dvd.getOscar() + ", " + dvd.getNumVotos() + ", " + dvd.getTipo() + ", '" + dvd.getWeb() + "', '" + dvd.getImagen() + "')";
+			JOptionPane.showMessageDialog(null, "DVD guardado");
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static void selectDVDs() throws SQLException
+	{
+		Statement stmt = connection.createStatement();
+		String query = "select * from DVDS";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next())
+		{
+			ClsDVD dvd = new ClsDVD(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getDouble(6),rs.getInt(7),rs.getInt(8),rs.getInt(9),rs.getInt(10),rs.getInt(11),rs.getString(12),rs.getString(13));
+			dvd(dvd);
+			ClsArticulo articulo = dvd;
+			articulo(articulo);
+		}
+	}
+	
+	static ArrayList<ClsDVD> arrayDVD = new ArrayList<ClsDVD>();
+	public static void dvd(ClsDVD dvd)
+	{	
+		arrayDVD.add(dvd);
+	}
+	
+	public static ArrayList<ClsDVD> getDVDs()
+	{
+		return arrayDVD;
+	}
+	
+	//////////////////////////////////////
+	/////	     	  Libro	         /////
+	//////////////////////////////////////
+	
+	public static void crearTablaBDLibro() 
+	{	
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("create table LIBROS " + "(nombre string, numero int, autor string, nota double, estado int, contador int, paginas int, numVotos int, tipo int, web string, imagen string)");
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static void eliminarTablaBDLibro() 
+	{
+		if (statement==null) return;
+		try 
+		{
+			statement.executeUpdate("drop table LIBROS");
+			arrayLibros = new ArrayList<ClsLibro>();
+		} 
+		catch (SQLException e) 
+		{
+			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// e.printStackTrace();  
+		}
+	}
+	
+	public static boolean crearLibro( Statement st, ClsLibro libro) throws SQLException 
+	{
+		try 
+		{
+			String sentSQL = "insert into LIBROS (nombre, numero, autor, nota, estado, contador, paginas, numVotos, tipo, web, imagen) values('" + libro.getNombre() + "', " + libro.getNumero() + ", '" + libro.getAutor() + "', " + libro.getNota() + ", " + libro.getEstado() + ", " + libro.getContador() + ", " + libro.getpaginas() + ", "+ libro.getNumVotos() + ", " + libro.getTipo() + ", '" + libro.getWeb() + "', '" + libro.getImagen() + "')";
+			JOptionPane.showMessageDialog(null, "Libro guardado");
+			System.out.println( sentSQL );  // (Quitar) para ver lo que se hace
+			int val = st.executeUpdate( sentSQL );
+			if (val!=1) return false;  // Se tiene que añadir 1 - error si no
+			return true;
+		} 
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	public static void selectLibros() throws SQLException
+	{
+		Statement stmt = connection.createStatement();
+		String query = "select * from LIBROS";
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next())
+		{
+			ClsLibro libro = new ClsLibro(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getDouble(4),rs.getInt(5),rs.getInt(6),rs.getInt(7),rs.getInt(8),rs.getInt(9),rs.getString(10),rs.getString(11));
+			libro(libro);
+			ClsArticulo articulo = libro;
+			articulo(articulo);
+		}
+	}
+	
+	static ArrayList<ClsLibro> arrayLibros = new ArrayList<ClsLibro>();
+	public static void libro(ClsLibro libro)
+	{	
+		arrayLibros.add(libro);
+	}
+	
+	public static ArrayList<ClsLibro> getLibros()
+	{
+		return arrayLibros;
+	}
+	
+	//////////////////////////////////////
+	/////	     Articulos	         /////
+	//////////////////////////////////////
+	
+	
+	public static void selectArticulos() throws SQLException
+	{
+		arrayArticulos = new ArrayList<ClsArticulo>();
+		crearTablaBDCD();
+		selectCDs();
+		crearTablaBDDVD();
+		selectDVDs();
+		crearTablaBDLibro();
+		selectLibros();
+	}
+	
+	static ArrayList<ClsArticulo> arrayArticulos = new ArrayList<ClsArticulo>();
+	public static void articulo(ClsArticulo articulo)
+	{	
+		arrayArticulos.add(articulo);
+	}
+	
+	public static ArrayList<ClsArticulo> getArticulos()
+	{
+		return arrayArticulos;
+	}
+	
+	
+	
+	
+	
 }	
 
 

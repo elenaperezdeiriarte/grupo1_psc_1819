@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -20,6 +21,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import LDProyecto.BaseDatos;
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.CompararPorNombre;
@@ -80,8 +82,25 @@ public class JFrameVerArticulos extends JFrame implements ActionListener, MouseL
 	{					
 		this.adminOusu=adminOusu;
 		this.busqueda= Busc;
-		ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		ArticuloList = Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
+//		ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
+//		ArticuloList = Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
+		
+		BaseDatos.initBD("eLibrary.db");		
+		BaseDatos.crearTablaBDU();		
+		String savedContra = "";
+		
+		try 
+		{
+			BaseDatos.selectArticulos();
+		} 
+		catch (SQLException e1) 
+		{
+			e1.printStackTrace();
+		}
+		
+		ArticuloList = BaseDatos.getArticulos();
+		BaseDatos.close();
+		
 		
 		saberSiBusc = a;
 		ordenacion = x;
@@ -414,11 +433,20 @@ public class JFrameVerArticulos extends JFrame implements ActionListener, MouseL
 			tableArticulos.setToolTipText("");
 			tableArticulos.setBorder(UIManager.getBorder("FileChooser.listViewBorder"));
 			tableArticulos.setFillsViewportHeight(true);
-			ArrayList <Integer> tamanos = Gestor.tamanosColumnas();
+			
+			ArrayList <Integer> tamanos = new ArrayList<Integer>();
+			tamanos.add(50);
+			tamanos.add(50);
+			tamanos.add(300);
+			tamanos.add(200);
+			tamanos.add(40);
+			tamanos.add(60);
+			tamanos.add(50);			
 			for(int i = 0; i<7; i++)
 			{
 				tableArticulos.getColumnModel().getColumn(i).setPreferredWidth(tamanos.get(i).intValue());
 			}
+			
 			tableArticulos.setEnabled(true);
 			tableArticulos.setRowSelectionAllowed(true);
 		}
