@@ -21,6 +21,8 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.UIManager;
 
+import org.apache.log4j.Logger;
+
 import LDProyecto.BaseDatos;
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsUnificadorDClases;
@@ -75,6 +77,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener, MouseL
 	private JLabel label_5;
 	private JTextField txtWeb;
 	private JButton btnVerFichaDel;
+	final static Logger log = Logger.getLogger(JFrameVerArticulos.class.getName());
 	
 
 	@SuppressWarnings("unchecked")
@@ -92,6 +95,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener, MouseL
 		try 
 		{
 			BaseDatos.selectArticulos();
+			log.info("Mensaje de info: El usuario esta viendo correctamente los articulos");
 		} 
 		catch (SQLException e1) 
 		{

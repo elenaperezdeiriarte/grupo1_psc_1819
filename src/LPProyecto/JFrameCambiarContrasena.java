@@ -126,7 +126,7 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 				setContentPane(contentPane);
 			    contentPane.validate();
 			    contentPane.repaint();
-			    log.error("Contraseña erronea");
+			    log.error("Mensaje de error: Contraseña erronea");
 			    
 			}
 		}

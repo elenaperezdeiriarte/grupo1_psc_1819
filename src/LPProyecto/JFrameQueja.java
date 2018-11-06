@@ -14,6 +14,8 @@ import LDProyecto.BaseDatos;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsUnificadorDClases;
 
 public class JFrameQueja extends JFrame implements ActionListener
@@ -29,6 +31,7 @@ public class JFrameQueja extends JFrame implements ActionListener
 	private JButton btnEnviar;
 	private JTextArea textArea;
 	private JButton btnAtras;
+	final static Logger log = Logger.getLogger(JFrameQueja.class.getName());
 	public JFrameQueja() 
 	{
 		 setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,7 +83,8 @@ public class JFrameQueja extends JFrame implements ActionListener
 			 BaseDatos.close();
 			 
 			 JFrameMenuCliente objCliente = new JFrameMenuCliente();			
-			 objCliente.setVisible(true);			
+			 objCliente.setVisible(true);
+			 log.info("Mensaje de info: El usuario ha enviado correctamente la queja");
 			 this.dispose();
 		 }
 		 if (botonPulsado == btnAtras)
