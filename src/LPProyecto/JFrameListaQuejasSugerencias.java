@@ -30,6 +30,11 @@ import javax.swing.JList;
 public class JFrameListaQuejasSugerencias extends JFrame implements ActionListener
 {
 
+	//El administrador puede ver las quejas y las sugerencias
+	//Aparecen por un lado las sugerencias y por otro las quejas
+	//Se accede a la BD
+	// Se muestra el titulo, autor y tipo
+	
 	private static final long serialVersionUID = 3550010992905899764L;
 	private JPanel contentPane;
 	private TableSugerencias tasug;
