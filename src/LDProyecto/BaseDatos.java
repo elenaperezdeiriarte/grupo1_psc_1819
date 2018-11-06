@@ -33,7 +33,7 @@ public class BaseDatos {
 			statement.setQueryTimeout(30);  // poner timeout 30 msg
 		    return connection;
 		} catch (ClassNotFoundException | SQLException e) {
-			JOptionPane.showMessageDialog( null, "Error de conexión!! No se ha podido conectar con " + nombreBD , "ERROR", JOptionPane.ERROR_MESSAGE );
+			JOptionPane.showMessageDialog( null, "Error de conexión!! No se ha podido conectar con " + nombreBD + "\n" + e, "ERROR", JOptionPane.ERROR_MESSAGE );
 			System.out.println( "Error de conexión!! No se ha podido conectar con " + nombreBD );
 			return null;
 		}
