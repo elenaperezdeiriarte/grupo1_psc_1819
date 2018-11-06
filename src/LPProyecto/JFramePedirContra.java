@@ -16,6 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 import java.awt.Color;
 
 //Menu donde se pedirá la contraseña
@@ -29,6 +31,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 	private JButton btnVolver;
 	private int intento = 0;
 	private long milisegs = 0;
+	private static final Logger log = Logger.getLogger(JFramePedirContra.class.getName());
 	public JFramePedirContra() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
