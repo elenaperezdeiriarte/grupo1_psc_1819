@@ -25,6 +25,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.ButtonGroup;
 
+import org.apache.log4j.Logger;
+
 public class JFrameSugerencia extends JFrame implements ActionListener
 {
 	
@@ -39,6 +41,7 @@ public class JFrameSugerencia extends JFrame implements ActionListener
 	 private JRadioButton rdbtnCd;
 	 private JRadioButton rdbtnDvd;
 	 private JRadioButton rdbtnLibro;
+	 final static Logger log = Logger.getLogger(JFrameSugerencia.class.getName());
 	
 	 private final ButtonGroup buttonGroup = new ButtonGroup();
 	 private JButton btnAtras;
@@ -131,10 +134,12 @@ public class JFrameSugerencia extends JFrame implements ActionListener
 			BaseDatos.crearTablaBDS();			
 			try 
 			{
+				log.info("Mensaje de info: Se ha realizado con éxito el envio de la sugerencia");
 				BaseDatos.crearSugerencia(BaseDatos.getStatement(), textNombre.getText(), textAutor.getText(), tipo);
 			} 
 			catch (SQLException e1) 
 			{
+				
 				e1.printStackTrace();
 			}			
 			BaseDatos.close();
