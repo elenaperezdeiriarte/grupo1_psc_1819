@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class ClsCD extends ClsAudioVisual implements Serializable
 {
 	
-
+	//Clase de los CDs
 
 	/**
 	 * 

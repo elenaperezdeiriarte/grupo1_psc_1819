@@ -7,6 +7,8 @@ import javax.swing.table.AbstractTableModel;
 
 	public class TableCDs extends AbstractTableModel
 	{
+		//Tablas de los CDs
+		
 			private static final long serialVersionUID = 1L;
 			private String[] columnNames = {"Num","Nombre","Autor","Nota","Estado","Num. Pre."};
 			Object [][] data;
