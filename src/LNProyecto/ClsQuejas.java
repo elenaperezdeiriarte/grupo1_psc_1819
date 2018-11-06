@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class ClsQuejas implements Serializable
 {
+	//Crear clase ClsQuejas, que constara de un campo de tipo texto donde escribira la queja o problema
+	
 	private static final long serialVersionUID = -5913412847978581167L;
 	private String queja;
 
