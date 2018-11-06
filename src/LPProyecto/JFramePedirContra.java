@@ -174,6 +174,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 				else
 				{
 					BaseDatos.initBD("eLibrary.db");
+					log.warn("Contraseña erronea");
 					if(4 < intento) { BaseDatos.eliminarTablaBDB();}
 					BaseDatos.crearTablaBDB();
 					try 
