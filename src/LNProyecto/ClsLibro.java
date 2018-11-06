@@ -2,17 +2,18 @@ package LNProyecto;
 
 import java.io.Serializable;
 
-public class ClsLibro extends ClsArticulo implements Serializable
-{
+public class ClsLibro extends ClsArticulo implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private int paginas;
-	
-	public ClsLibro (String nombre, int numero, String autor, double nota, int estado, int contador, int paginas, int numVotos, int tipo, String web, String imagen)
-	{
-		super (numero, nombre, autor, nota, estado, contador, numVotos, tipo, web, imagen);
+
+	public ClsLibro(String nombre, int numero, String autor, double nota,
+			int estado, int contador, int paginas, int numVotos, int tipo,
+			String web, String imagen) {
+		super(numero, nombre, autor, nota, estado, contador, numVotos, tipo,
+				web, imagen);
 		this.paginas = paginas;
 	}
 
@@ -22,19 +23,18 @@ public class ClsLibro extends ClsArticulo implements Serializable
 
 	public void setpaginas(int paginas) {
 		this.paginas = paginas;
-	}	
-	
-	public String toString()
-	{
+	}
+
+	public String toString() {
 		StringBuffer salida = new StringBuffer();
-		
+
 		String texto = super.toString();
 		salida.append("El libro");
 		salida.append(texto);
 		salida.append(" tiene ");
 		salida.append(paginas);
 		salida.append(" paginas");
-		
+
 		return salida.toString();
 	}
 }

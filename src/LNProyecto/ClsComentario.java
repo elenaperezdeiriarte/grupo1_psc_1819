@@ -2,16 +2,14 @@ package LNProyecto;
 
 import java.io.Serializable;
 
-public class ClsComentario implements Serializable
-{
+public class ClsComentario implements Serializable {
 	private static final long serialVersionUID = 5651789084653031818L;
 	private int numeroDeArticulo;
 	private String comentario;
-	
-	public ClsComentario(int numero, String comentario)
-	{
-		this.numeroDeArticulo=numero;
-		this.comentario=comentario;
+
+	public ClsComentario(int numero, String comentario) {
+		this.numeroDeArticulo = numero;
+		this.comentario = comentario;
 	}
 
 	@Override

@@ -12,11 +12,10 @@ import java.util.ArrayList;
 
 import static LNProyecto.ClsConstantes.enFicDatos;
 
-public class ClsDatos
-{
-	//Gestios y guardado de todos los ficheros.
-	//Funcionalidades de alquilar, modificar y devolver articulo
-	
+public class ClsDatos {
+	// Gestios y guardado de todos los ficheros.
+	// Funcionalidades de alquilar, modificar y devolver articulo
+
 	private final String fic_numerador = "src\\numerador.dat";
 	private final String fic_contrasena = "src\\contrasena.dat";
 	private final String fic_articulos = "src\\articulos.dat";
@@ -24,302 +23,239 @@ public class ClsDatos
 	private final String fic_bloqueo = "src\\bloqueo.dat";
 	private final String fic_queja = "src\\queja.dat";
 	private final String fic_comentarios = "src\\comentarios.dat";
-	
-	
+
 	ObjectOutputStream oos;
-	ObjectInputStream ois; 
+	ObjectInputStream ois;
 	AppendableObjectOutputStream aos;
-	
-	
-	
-	private String setFichero (enFicDatos fichero)
-	{
-		//Segï¿½n el fichero sobre el que se quiera trabajar, se selecciona la ruta.
-		
-		switch(fichero)
-		{
-			case FICHERO_DATOS_COMENTARIOS:
-			{
-				return fic_comentarios;
-			}
-			case FICHERO_DATOS_ARTICULOS:
-			{
-				return fic_articulos;
-			}
-			case FICHERO_DATOS_QUEJA:
-			{
-				return fic_queja;
-			}
-			case FICHERO_DATOS_SUGERENCIA:
-			{
-				return fic_sugerencias;
-			}
-			case FICHERO_DATOS_CONTRASENA:
-			{
-				return fic_contrasena;
-			}
-			case FICHERO_DATOS_NUMERADOR:
-			{
-				return fic_numerador;
-			}
-			case FICHERO_DATOS_BLOQUEO:
-			{
-				return fic_bloqueo;
-			}
-			
+
+	private String setFichero(enFicDatos fichero) {
+		// Segï¿½n el fichero sobre el que se quiera trabajar, se selecciona la
+		// ruta.
+
+		switch (fichero) {
+		case FICHERO_DATOS_COMENTARIOS: {
+			return fic_comentarios;
+		}
+		case FICHERO_DATOS_ARTICULOS: {
+			return fic_articulos;
+		}
+		case FICHERO_DATOS_QUEJA: {
+			return fic_queja;
+		}
+		case FICHERO_DATOS_SUGERENCIA: {
+			return fic_sugerencias;
+		}
+		case FICHERO_DATOS_CONTRASENA: {
+			return fic_contrasena;
+		}
+		case FICHERO_DATOS_NUMERADOR: {
+			return fic_numerador;
+		}
+		case FICHERO_DATOS_BLOQUEO: {
+			return fic_bloqueo;
+		}
+
 		}
 		return "";
 	}
-	
-	public void ComenzarSave(enFicDatos fichero)
-	{
 
-		//Para guardar un nuevo libro
+	public void ComenzarSave(enFicDatos fichero) {
 
-		//Guardamos fichero (contrasena en este caso)
-		
-		//Guardar nuevo CD
+		// Para guardar un nuevo libro
 
+		// Guardamos fichero (contrasena en este caso)
 
-		//Guardamos fichero (contrasena en este caso)
-		
-		String ruta=setFichero(fichero);
+		// Guardar nuevo CD
+
+		// Guardamos fichero (contrasena en este caso)
+
+		String ruta = setFichero(fichero);
 		File fic;
-		
-		//se comprueba si el fichero existe o es la primera vez.
-		fic=new File(ruta);
-		//Si el fichero existe se deberï¿½n aï¿½adir registros. En caso contrario se deberï¿½ de crear el fichero
-		if(fic.exists())
-		{
+
+		// se comprueba si el fichero existe o es la primera vez.
+		fic = new File(ruta);
+		// Si el fichero existe se deberï¿½n aï¿½adir registros. En caso
+		// contrario se deberï¿½ de crear el fichero
+		if (fic.exists()) {
 			try {
-				aos = new AppendableObjectOutputStream(new FileOutputStream(fic,true));
+				aos = new AppendableObjectOutputStream(new FileOutputStream(
+						fic, true));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-		}
-		else
-		{
-			
-			try
-			{
+
+		} else {
+
+			try {
 				fic.createNewFile();
 				oos = new ObjectOutputStream(new FileOutputStream(fic));
-			} catch (FileNotFoundException e)
-			{
+			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} catch (IOException e)
-			{
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
-		
+
 	}
-	public void TerminarSave()
-	{
-		try
-		{
-			if (oos!=null) oos.close();
-			else if(aos!=null)aos.close();
-			
-		} catch (IOException e)
-		{
+
+	public void TerminarSave() {
+		try {
+			if (oos != null)
+				oos.close();
+			else if (aos != null)
+				aos.close();
+
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  // Se cierra al terminar.
+		} // Se cierra al terminar.
 	}
-	public void Save(Serializable o)
-	{
-		
-	
-		try
-		{
-			if(oos!=null) 
+
+	public void Save(Serializable o) {
+
+		try {
+			if (oos != null)
 				oos.writeObject(o);
-			else
-			{
-				if(aos!=null)	
-				{
-					
+			else {
+				if (aos != null) {
+
 					aos.writeObject(o);
 				}
 			}
-			
-		
-		} 
-		catch (FileNotFoundException e)
-		{
+
+		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (IOException e)
-		{
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	
-	public void ComenzarRead(enFicDatos fichero) throws IOException 
-	{
-		//Lectura de la BD
-		String ruta=setFichero(fichero);
+
+	public void ComenzarRead(enFicDatos fichero) throws IOException {
+		// Lectura de la BD
+		String ruta = setFichero(fichero);
 		File fic;
-		
-		fic=new File(ruta);
-		if (fic.exists())
-		{
-			try
-			{
+
+		fic = new File(ruta);
+		if (fic.exists()) {
+			try {
 				ois = new ObjectInputStream(new FileInputStream(fic));
-			} catch (FileNotFoundException e)
-			{
+			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} catch (IOException e)
-			{
+			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}
-		else
-		{
+		} else {
 			throw new IOException();
 		}
 	}
-		
-	
-	public void TerminarRead()
-	{
-		//Terminar de leer la BD
-		try
-		{
-			if(ois!=null)ois.close();
-		} catch (IOException e)
-		{
+
+	public void TerminarRead() {
+		// Terminar de leer la BD
+		try {
+			if (ois != null)
+				ois.close();
+		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
-	public ArrayList<Serializable> Read()
-	{
-		
-		ArrayList<Serializable>lista;
-		Serializable o=null;
-		
-		
-		lista=new ArrayList<Serializable>();
-		try
-		{
-			
-			while ((o = (Serializable)ois.readObject()) != null) 
-			{
-			       lista.add(o);        
+
+	public ArrayList<Serializable> Read() {
+
+		ArrayList<Serializable> lista;
+		Serializable o = null;
+
+		lista = new ArrayList<Serializable>();
+		try {
+
+			while ((o = (Serializable) ois.readObject()) != null) {
+				lista.add(o);
 			}
-		} 
-		catch (IOException e)
-		{
-			if(o==null) 
-			{
+		} catch (IOException e) {
+			if (o == null) {
 				System.out.println(e.getMessage());
 			}
-		}
-		catch (ClassNotFoundException e)
-		{
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
 
 		return lista;
 	}
-		
-	public int ReadNumero()
-	{
-		
+
+	public int ReadNumero() {
+
 		Integer numero = null;
-		Serializable o=null;
-				
-		try
-		{
-			
-			while ((o = (Serializable)ois.readObject()) != null) 
-			{
-			       numero = (Integer) o ;   
+		Serializable o = null;
+
+		try {
+
+			while ((o = (Serializable) ois.readObject()) != null) {
+				numero = (Integer) o;
 			}
-		} 
-		catch (IOException e)
-		{
-			if(o==null) 
-			{
+		} catch (IOException e) {
+			if (o == null) {
 				System.out.println(e.getMessage());
 			}
-		}
-		catch (ClassNotFoundException e)
-		{
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		int num = numero;
 		return num;
 	}
-	
-	//eliminar libro
-	public void ResetFile (enFicDatos fichero)
-	{
-		String ruta =setFichero(fichero);
-		File f=new File(ruta);
+
+	// eliminar libro
+	public void ResetFile(enFicDatos fichero) {
+		String ruta = setFichero(fichero);
+		File f = new File(ruta);
 		f.delete();
-			
+
 	}
-	public int ContarGuardados(enFicDatos fichero)
-	{
-		ArrayList<Serializable> l=null;
+
+	public int ContarGuardados(enFicDatos fichero) {
+		ArrayList<Serializable> l = null;
 		try {
 			ComenzarRead(fichero);
-			l=Read();
+			l = Read();
 			TerminarRead();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if(l!=null)
+		if (l != null)
 			return l.size();
 		else
 			return 0;
 	}
 
-	public String ReadContrasena() 
-	{
-		//Leemos y comprobamos si la contraseña es correcta
-		
+	public String ReadContrasena() {
+		// Leemos y comprobamos si la contraseña es correcta
+
 		String contrasena = null;
-		Serializable o=null;
-				
-		try
-		{
-			
-			while ((o = (Serializable)ois.readObject()) != null) 
-			{
-				contrasena = (String) o ;   
+		Serializable o = null;
+
+		try {
+
+			while ((o = (Serializable) ois.readObject()) != null) {
+				contrasena = (String) o;
 			}
-			
-		} 
-		catch (IOException e)
-		{
-			if(o==null) 
-			{
+
+		} catch (IOException e) {
+			if (o == null) {
 				System.out.println(e.getMessage());
 			}
-		}
-		catch (ClassNotFoundException e)
-		{
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 		return contrasena;
 	}
-	
 
 }

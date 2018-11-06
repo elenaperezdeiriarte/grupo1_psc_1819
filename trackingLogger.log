@@ -1,0 +1,5 @@
+2018-11-06 16:39:17,661 [AWT-EventQueue-0] INFO  LPProyecto.JFrameQueja - Mensaje de info: El usuario ha enviado correctamente la queja
+2018-11-06 16:39:29,342 [AWT-EventQueue-0] INFO  LPProyecto.JFrameSugerencia - Mensaje de info: Se ha realizado con éxito el envio de la sugerencia
+2018-11-06 16:39:32,252 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
+2018-11-06 19:49:49,317 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
+2018-11-06 19:49:59,597 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos

@@ -1,4 +1,4 @@
-package grupo1_psc_1819;
+package test;
 
 import static org.junit.Assert.*;
 
