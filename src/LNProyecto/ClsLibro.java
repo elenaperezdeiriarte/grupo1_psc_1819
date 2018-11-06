@@ -7,6 +7,9 @@ public class ClsLibro extends ClsArticulo implements Serializable
 	/**
 	 * 
 	 */
+	
+	//Metemos la clase de los libros
+	
 	private static final long serialVersionUID = 1L;
 	private int paginas;
 	

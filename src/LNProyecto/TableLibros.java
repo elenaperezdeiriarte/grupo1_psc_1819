@@ -7,6 +7,8 @@ import javax.swing.table.AbstractTableModel;
 
 	public class TableLibros extends AbstractTableModel
 	{
+		//tabla de libros
+		
 			private static final long serialVersionUID = 1L;
 			private String[] columnNames = {"Num","Nombre", "Autor", "Nota", "Estado", "Num. Pre."};
 			Object [][] data;
