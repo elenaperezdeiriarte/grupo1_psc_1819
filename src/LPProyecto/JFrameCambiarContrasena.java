@@ -24,6 +24,7 @@ import java.awt.Color;
 
 public class JFrameCambiarContrasena extends JFrame implements ActionListener
 {
+	//Diseño de ventana para cambiar la contraseña
 
 	private static final long serialVersionUID = 1L;
 	private PanelConImagen contentPane;
