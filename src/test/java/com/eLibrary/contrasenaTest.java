@@ -1,4 +1,4 @@
-package test;
+package com.eLibrary;
 
 import static org.junit.Assert.*;
 

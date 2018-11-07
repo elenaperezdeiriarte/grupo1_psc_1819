@@ -1,4 +1,4 @@
-package MAIN;
+package com.eLibrary;
 
 
 import LPProyecto.JFrameMenuPrincipal;
