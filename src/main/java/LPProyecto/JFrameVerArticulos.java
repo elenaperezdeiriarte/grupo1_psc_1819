@@ -32,7 +32,7 @@ import LNProyecto.TableArticulos;
 
 import java.awt.Font;
 
-//Ventana que diseña la pantalla de ver artículos del sistema
+// Ventana que diseña la pantalla de ver artículos del sistema
 
 public class JFrameVerArticulos extends JFrame implements ActionListener,
 		MouseListener {
@@ -84,9 +84,9 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 	public JFrameVerArticulos(int a, String Busc, int x, int adminOusu) {
 		this.adminOusu = adminOusu;
 		this.busqueda = Busc;
-		// ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		// ArticuloList =
-		// Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
+		//ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
+		//ArticuloList =
+		//Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
 
 		BaseDatos.initBD("eLibrary.db");
 		BaseDatos.crearTablaBDU();
