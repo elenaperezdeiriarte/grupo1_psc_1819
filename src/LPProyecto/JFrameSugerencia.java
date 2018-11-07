@@ -29,7 +29,7 @@ import org.apache.log4j.Logger;
 
 public class JFrameSugerencia extends JFrame implements ActionListener {
 
-	// Añadimos la funcionalidad para poder sugerir un articulo
+	// Diseñamos la ventana para poder sugerir un articulo
 
 	private static final long serialVersionUID = 456983590530819147L;
 	private JPanel contentPane;
