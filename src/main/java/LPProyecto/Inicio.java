@@ -38,7 +38,7 @@ public class Inicio extends JFrame {
 		contentPane.add(lblNewLabel11);
 		
 		JLabel lblNewLabel111 = new JLabel("");
-		lblNewLabel111.setIcon(new ImageIcon(Inicio.class.getResource("/images/Sabina.jpg")));
+		lblNewLabel111.setIcon(new ImageIcon(Inicio.class.getResource("/images/Sabina.png")));
 		lblNewLabel111.setBounds(495, 495, 222, 200);
 		contentPane.add(lblNewLabel111);
 	}
