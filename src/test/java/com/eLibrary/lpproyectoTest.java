@@ -8,6 +8,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
+import org.databene.contiperf.PerfTest;
+import org.databene.contiperf.Required;
+import org.databene.contiperf.junit.ContiPerfRule;
+import org.junit.Rule;
 import org.junit.Test;
 
 import LNProyecto.ClsArticulo;
@@ -34,13 +38,14 @@ import LPProyecto.JFrameVerFicha;
 
 public class lpproyectoTest {
 	ClsArticulo art;
-
+		
 	@Test
-	public void fichaTest() {
-			art = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, "", "ja");	
-			JFrameVerFicha fic = new JFrameVerFicha(art, 0, "a", 0, 0, 0);
-			assertNotNull(fic);
+	public void fichaTest() throws Exception {
+		art = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, "", "ja");	
+		JFrameVerFicha fic = new JFrameVerFicha(art, 0, "a", 0, 0, 0);
+		assertNotNull(fic);
 	}
+	
 	
 	@Test
 	public void inicioTest() {
