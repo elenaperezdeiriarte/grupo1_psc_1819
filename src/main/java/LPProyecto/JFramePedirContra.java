@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
 
 import java.awt.Color;
 
-//Menu donde se pedirá la contraseña
+//Menu donde se pedirï¿½ la contraseï¿½a
 public class JFramePedirContra extends JFrame implements ActionListener{
 
 	private static final long serialVersionUID = 7512657161608326625L;
@@ -105,7 +105,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 			long diferencia = (milisegs - System.currentTimeMillis())/1000;
 			if(0 >= diferencia)
 			{
-				lblFaltan.setText("Ya puede introducir la contraseña");
+				lblFaltan.setText("Ya puede introducir la contraseï¿½a");
 			}
 			else
 			{
@@ -121,6 +121,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) 
 	{	
+		//accedemos a la base de datos cuando el administrador haga el login
 		JButton botonPulsado = (JButton)e.getSource();
 		
 		if (botonPulsado == btnVolver)
@@ -174,7 +175,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 				else
 				{
 					BaseDatos.initBD("eLibrary.db");
-					log.warn("Mensaje de aviso: Contraseña erronea");
+					log.warn("Mensaje de aviso: Contraseï¿½a erronea");
 					if(4 < intento) { BaseDatos.eliminarTablaBDB();}
 					BaseDatos.crearTablaBDB();
 					try 
@@ -186,7 +187,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 						e1.printStackTrace();
 					}
 					BaseDatos.close();
-					JOptionPane.showMessageDialog(null, "Contraseña Erronea");
+					JOptionPane.showMessageDialog(null, "Contraseï¿½a Erronea");
 					
 					JFramePedirContra objPedirContra = new JFramePedirContra();
 					objPedirContra.setVisible(true);				
