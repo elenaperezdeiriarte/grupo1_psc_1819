@@ -82,6 +82,7 @@ public class ClsUnificadorDClases
 		}
 	}
 	
+	//Este metodo permite añadir un nuevo DVD en el sistema.
 	public void NuevoDVD (String nombre, int numero, String autor, int duracion, int ano, double nota, int estado, int contador, int oscar, int numVotos, int tipo, String web, String imagen) throws MiExcepcion
 	{
 		ClsDVD dvdnuevo = new ClsDVD(nombre, numero, autor, duracion, ano, nota, estado, contador, oscar, numVotos, tipo, web, imagen);
