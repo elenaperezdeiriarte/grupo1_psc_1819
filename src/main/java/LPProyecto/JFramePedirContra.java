@@ -81,6 +81,7 @@ public class JFramePedirContra extends JFrame implements ActionListener{
 		{
 			e1.printStackTrace();
 		}		
+		//Gestion de bloqueo
 		intento = BaseDatos.getIntentos();
 		System.out.println("Intento: " + intento);
 		milisegs = BaseDatos.getMilisegundos();
