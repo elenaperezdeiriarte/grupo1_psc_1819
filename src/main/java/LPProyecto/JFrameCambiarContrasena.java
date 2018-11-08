@@ -24,7 +24,7 @@ import java.awt.Color;
 
 public class JFrameCambiarContrasena extends JFrame implements ActionListener
 {
-	//Diseño de ventana para cambiar la contraseña
+	//Diseï¿½o de ventana para cambiar la contraseï¿½a
 
 	private static final long serialVersionUID = 1L;
 	private PanelConImagen contentPane;
@@ -91,6 +91,7 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 		
 		JButton botonPulsado = (JButton)d.getSource();
 		
+		//Si son iguales se modificara la contraseÃ±a, si no, dara un mensaje de error
 		if (botonPulsado == jbGuardar)
 		{			
 			String nuevacontr1 = txtFieldContrasena1.getText();
@@ -127,7 +128,7 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 				setContentPane(contentPane);
 			    contentPane.validate();
 			    contentPane.repaint();
-			    log.error("Mensaje de error: Contraseña erronea");
+			    log.error("Mensaje de error: Contraseï¿½a erronea");
 			    
 			}
 		}
