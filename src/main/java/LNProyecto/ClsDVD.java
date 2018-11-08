@@ -2,12 +2,13 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+
+//Esta clase incorpora todas las propiedades que sean propias suyas 
+//ademas de las que tiene por defecto por heredar de ClsArticulo
+
 public class ClsDVD extends ClsAudioVisual implements Serializable
 {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private int oscar;
 	

@@ -11,10 +11,10 @@ public class ClsArticulo implements Comparable, Serializable
 	private String nombre;
 	private String autor;
 	private int numero;
-	private double nota;
+	private double nota; //guarda la nota del articulo
 	private int estado; //0=Disponible 1=Prestado
 	private int contador; //Veces prestado
-	private int numVotos;
+	private int numVotos; //guarda el numero de votos del articulo
 	private int tipo; //0=CD 1=DVD 2=Libro
 	private String web;
 	private String imagen; //hipervinculo a la imagen
