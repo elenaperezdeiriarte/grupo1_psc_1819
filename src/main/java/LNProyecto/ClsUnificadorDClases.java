@@ -348,6 +348,7 @@ public class ClsUnificadorDClases
 		return ListaArticulos;
 	}
 	
+	//Este metodo sirve para comenzar a Modificar un Articulo recibiendo un Articulo.
 	public void comenzarModificacion(ClsArticulo Articulo)
 	{
 		ArrayList <ClsArticulo> ArticuloList2 = new ArrayList<ClsArticulo>();
@@ -375,6 +376,7 @@ public class ClsUnificadorDClases
 		}
 	}
 	
+	//Este metodo permite modificar un artículo seleccionado.
 	@SuppressWarnings("unused")
 	public void Modificar(ClsArticulo Articulo, int alq0mod0punt, int punt, String webnuev, String imagnuev) throws MiExcepcion
 	{
@@ -671,6 +673,7 @@ public class ClsUnificadorDClases
 		ClsBloqueo bloqueo = Gestor.leerBloqueo();
 		return bloqueo.sacarFalta();
 	}
+	
 	
 	public void eliminarFichero(enFicDatos fichero)
 	{
