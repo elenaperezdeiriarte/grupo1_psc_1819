@@ -235,9 +235,9 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 	        {
 	        }
 			
-			ImageIcon fot = new ImageIcon(image);
-	        ImageIcon icono = new ImageIcon(fot.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_DEFAULT));
-	        imagen.setIcon(icono);
+			//ImageIcon fot = new ImageIcon();
+	       // ImageIcon icono = new ImageIcon(fot.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_DEFAULT));
+	        //imagen.setIcon(icono);
 	        
 	        contentPane.add(btnDelete);
 	        contentPane.add(lblEliminarFoto);
@@ -271,7 +271,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		
 		if(tipo==0 || tipo==1)
 		{
-			ClsAudioVisual Audiovisual = (ClsAudioVisual) Articulo;
+			//ClsAudioVisual Audiovisual = (ClsAudioVisual) Articulo;
 			
 			JLabel lbDuracion = new JLabel("Duracion:");
 			lbDuracion.setForeground(Color.WHITE);
@@ -279,7 +279,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 			lbDuracion.setBounds(557, 256, 102, 37);
 			contentPane.add(lbDuracion);
 			
-			JLabel lbDuracion1 = new JLabel(Integer.toString(Audiovisual.getDuracion())+ " min");
+			/*JLabel lbDuracion1 = new JLabel(Integer.toString(Audiovisual.getDuracion())+ " min");
 			lbDuracion1.setForeground(Color.WHITE);
 			lbDuracion1.setFont(new Font("Tahoma", Font.BOLD, 21));
 			lbDuracion1.setBounds(686, 256, 168, 37);
@@ -295,7 +295,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 			lbAno1.setForeground(Color.WHITE);
 			lbAno1.setFont(new Font("Tahoma", Font.BOLD, 21));
 			lbAno1.setBounds(155, 255, 168, 37);
-			contentPane.add(lbAno1);
+			contentPane.add(lbAno1);*/
 			
 			if(tipo==2)
 			{

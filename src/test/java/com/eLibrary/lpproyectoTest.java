@@ -37,9 +37,8 @@ public class lpproyectoTest {
 
 	@Test
 	public void fichaTest() {
-		art = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, "", "ja");	
-
-			JFrameVerFicha fic = new JFrameVerFicha(art, 0, null, 0, 0, 0);
+			art = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, "", "ja");	
+			JFrameVerFicha fic = new JFrameVerFicha(art, 0, "a", 0, 0, 0);
 			assertNotNull(fic);
 	}
 	
@@ -54,6 +53,7 @@ public class lpproyectoTest {
 		JFrameCambiarContrasena cont = new JFrameCambiarContrasena();
 		assertNotNull(cont);		
 	}
+	
 	@Test
 	public void cfarticuloTest() {
 		JFrameCFCD cfcd = new JFrameCFCD(0, 0, null);
