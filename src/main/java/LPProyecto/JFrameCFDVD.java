@@ -1,5 +1,9 @@
 package LPProyecto;
 
+//recoge la info de los dvd que se quieren anadir
+//los clientes son los que introducen
+//esta funcionalidad no se visualiza en la parte de administrador
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
