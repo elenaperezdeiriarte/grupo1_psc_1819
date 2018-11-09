@@ -2,6 +2,8 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+//recoge la informacion de las sugerencias
+
 public class ClsSugerencias implements Serializable
 {
 	private static final long serialVersionUID = 8684936469815067072L;
