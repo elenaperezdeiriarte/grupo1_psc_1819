@@ -1,5 +1,7 @@
 package LNProyecto;
 
+//tabla que muestra las sugerencias
+
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
