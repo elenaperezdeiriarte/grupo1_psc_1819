@@ -1,5 +1,10 @@
 package LNProyecto;
 
+/*
+ * La tabla recoge las sugerencias que han hecho los clientes
+ * 
+ */
+
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
