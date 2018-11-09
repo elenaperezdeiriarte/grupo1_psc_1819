@@ -32,7 +32,7 @@ import LNProyecto.TableArticulos;
 
 import java.awt.Font;
 
-// Ventana que diseña la pantalla de ver artículos del sistema
+// Ventana que diseï¿½a la pantalla de ver artï¿½culos del sistema
 
 public class JFrameVerArticulos extends JFrame implements ActionListener,
 		MouseListener {
@@ -63,16 +63,16 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 	private JLabel label_3;
 	private JButton btnWeb;
 	private JLabel label_4;
-	private JButton btestrella1;
-	private JButton btestrella2;
-	private JButton btestrella3;
-	private JButton btestrella4;
-	private JButton btestrella5;
-	private JButton btestrella6;
-	private JButton btestrella7;
-	private JButton btestrella8;
-	private JButton btestrella9;
-	private JButton btestrella10;
+	private JButton btestrella1; //Boton para puntuar usuario
+	private JButton btestrella2; //Boton para puntuar usuario
+	private JButton btestrella3; //Boton para puntuar usuario
+	private JButton btestrella4; //Boton para puntuar usuario
+	private JButton btestrella5; //Boton para puntuar usuario
+	private JButton btestrella6; //Boton para puntuar usuario
+	private JButton btestrella7; //Boton para puntuar usuario
+	private JButton btestrella8; //Boton para puntuar usuario
+	private JButton btestrella9; //Boton para puntuar usuario
+	private JButton btestrella10; //Boton para puntuar usuario
 	private JLabel lblPuntuar;
 	private JLabel label_5;
 	private JTextField txtWeb;
@@ -224,6 +224,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			lblHttp.setBounds(845, 532, 84, 44);
 			contentPane.add(lblHttp);
 		} else {
+			//Botones y labels para puntuar el articulo
 			lblPuntuar = new JLabel("Puntuar:");
 			lblPuntuar.setForeground(Color.WHITE);
 			lblPuntuar.setFont(new Font("Tahoma", Font.PLAIN, 18));

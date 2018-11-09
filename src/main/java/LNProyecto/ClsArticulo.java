@@ -25,7 +25,7 @@ public class ClsArticulo implements Comparable, Serializable
 		this.numero = numero;
 		this.nombre = nombre;
 		this.autor = autor;
-		this.nota = nota ;
+		this.nota = nota ; //nota del articulo
 		this.estado = estado;
 		this.contador = contador;
 		this.numVotos = numVotos;
@@ -43,10 +43,12 @@ public class ClsArticulo implements Comparable, Serializable
 		return 0;
 	}
 	
+	//devuelve el numero de votos de un articulo
 	public int getNumVotos() {
 		return numVotos;
 	}
-
+	
+	//asigna los numeros de votos introducidos a un articulo
 	public void setNumVotos(int numVotos) {
 		this.numVotos = numVotos;
 	}
