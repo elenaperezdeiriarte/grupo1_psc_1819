@@ -34,11 +34,11 @@ public class BaseDatos {
 			return connection;
 		} catch (ClassNotFoundException | SQLException e) {
 			JOptionPane.showMessageDialog(null,
-					"Error de conexión!! No se ha podido conectar con "
+					"Error de conexiï¿½n!! No se ha podido conectar con "
 							+ nombreBD + "\n" + e, "ERROR",
 					JOptionPane.ERROR_MESSAGE);
 			System.out
-					.println("Error de conexión!! No se ha podido conectar con "
+					.println("Error de conexiï¿½n!! No se ha podido conectar con "
 							+ nombreBD);
 			return null;
 		}
@@ -77,7 +77,7 @@ public class BaseDatos {
 					+ "(contra string)");
 
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -88,7 +88,7 @@ public class BaseDatos {
 		try {
 			statement.executeUpdate("drop table CONTRASENA");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -98,11 +98,11 @@ public class BaseDatos {
 		try {
 			String sentSQL = "insert into CONTRASENA (contra) values('"
 					+ contra + "')";
-			JOptionPane.showMessageDialog(null, "Contraseña cambiada");
+			JOptionPane.showMessageDialog(null, "Contraseï¿½a cambiada");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -145,7 +145,7 @@ public class BaseDatos {
 			statement.executeUpdate("create table BLOQUEO "
 					+ "(intento int, milisegundos long)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -156,7 +156,7 @@ public class BaseDatos {
 		try {
 			statement.executeUpdate("drop table BLOQUEO");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -169,7 +169,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -194,7 +194,7 @@ public class BaseDatos {
 				System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 				int val = st.executeUpdate(sentSQL);
 				if (val != 1)
-					return false; // Se tiene que añadir 1 - error si no
+					return false; // Se tiene que aï¿½adir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -207,7 +207,7 @@ public class BaseDatos {
 				System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 				int val = st.executeUpdate(sentSQL);
 				if (val != 1)
-					return false; // Se tiene que añadir 1 - error si no
+					return false; // Se tiene que aï¿½adir 1 - error si no
 				return true;
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -262,7 +262,7 @@ public class BaseDatos {
 		try {
 			statement.executeUpdate("create table QUEJAS " + "(texto string)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -274,7 +274,7 @@ public class BaseDatos {
 			statement.executeUpdate("drop table QUEJAS");
 			arrayQuejas = new ArrayList<ClsQuejas>();
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -288,7 +288,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -328,7 +328,7 @@ public class BaseDatos {
 			statement.executeUpdate("create table SUGERENCIAS "
 					+ "(nombre string, autor string, tipo string)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -340,7 +340,7 @@ public class BaseDatos {
 			statement.executeUpdate("drop table SUGERENCIAS");
 			arraySugerencia = new ArrayList<ClsSugerencias>();
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -354,7 +354,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -395,7 +395,7 @@ public class BaseDatos {
 					.executeUpdate("create table CDS "
 							+ "(nombre string, numero int, autor string, duracion int, ano int, nota double, estado int, contador int, numVotos int, tipo int, web string, imagen string)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -407,7 +407,7 @@ public class BaseDatos {
 			statement.executeUpdate("drop table CDS");
 			arrayCD = new ArrayList<ClsCD>();
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -442,7 +442,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -487,7 +487,7 @@ public class BaseDatos {
 					.executeUpdate("create table DVDS "
 							+ "(nombre string, numero int, autor string, duracion int, ano int, nota double, estado int, contador int, oscar int, numVotos int, tipo int, web string, imagen string)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -499,7 +499,7 @@ public class BaseDatos {
 			statement.executeUpdate("drop table DVDS");
 			arrayDVD = new ArrayList<ClsDVD>();
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -537,7 +537,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -583,7 +583,7 @@ public class BaseDatos {
 					.executeUpdate("create table LIBROS "
 							+ "(nombre string, numero int, autor string, nota double, estado int, contador int, paginas int, numVotos int, tipo int, web string, imagen string)");
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -595,7 +595,7 @@ public class BaseDatos {
 			statement.executeUpdate("drop table LIBROS");
 			arrayLibros = new ArrayList<ClsLibro>();
 		} catch (SQLException e) {
-			// Si hay excepción es que la tabla ya existía (lo cual es correcto)
+			// Si hay excepciï¿½n es que la tabla ya existï¿½a (lo cual es correcto)
 			// e.printStackTrace();
 		}
 	}
@@ -629,7 +629,7 @@ public class BaseDatos {
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
-				return false; // Se tiene que añadir 1 - error si no
+				return false; // Se tiene que aï¿½adir 1 - error si no
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -667,6 +667,7 @@ public class BaseDatos {
 	// ////////////////////////////////////
 
 	public static void selectArticulos() throws SQLException {
+		//Lectura de artÃ­culos bbdd para ver artÃ­culos cliente
 		arrayArticulos = new ArrayList<ClsArticulo>();
 		crearTablaBDCD();
 		selectCDs();
