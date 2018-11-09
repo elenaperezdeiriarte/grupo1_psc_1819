@@ -3,6 +3,9 @@ package LNProyecto;
 //Clase en la que se definen los atributos de los articulos
 import java.io.Serializable;
 
+// padre de libros, dvds, y cds
+//Se determinará mediante una variable de artículo con valor 0,1,2 si es libro, dvd o artículo.
+
 @SuppressWarnings("rawtypes")
 public class ClsArticulo implements Comparable, Serializable 
 {
