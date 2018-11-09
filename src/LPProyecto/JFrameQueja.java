@@ -18,6 +18,9 @@ import LNProyecto.ClsUnificadorDClases;
 
 public class JFrameQueja extends JFrame implements ActionListener
 {
+	
+	//para poder enviar quejas
+	//vista para los clientes
 
 	/**
 	 * 
