@@ -1,5 +1,7 @@
 package LPProyecto;
 
+//para poder enviar las sugerencias
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
