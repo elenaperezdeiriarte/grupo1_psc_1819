@@ -325,6 +325,7 @@ public class ClsUnificadorDClases
 		datos.TerminarSave();
 	}
 	
+	//Metodo para buscar articulos
 	public HashSet<ClsArticulo> ArrToHash (ArrayList<ClsArticulo> ListaArticulos)
 	{
 		HashSet<ClsArticulo> HashArticulos = new HashSet<ClsArticulo>();
