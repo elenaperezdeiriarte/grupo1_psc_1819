@@ -1,5 +1,8 @@
 package LNProyecto;
 
+//Esta tabla recoge todos los cds guardados
+//los usuarios son los que introducen los cs
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
