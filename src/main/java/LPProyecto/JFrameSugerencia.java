@@ -29,7 +29,7 @@ import org.apache.log4j.Logger;
 
 public class JFrameSugerencia extends JFrame implements ActionListener {
 
-	// Diseñamos la ventana para poder sugerir un articulo
+	// Disenamos la ventana para poder sugerir un articulo
 
 	private static final long serialVersionUID = 456983590530819147L;
 	private JPanel contentPane;
@@ -127,7 +127,7 @@ public class JFrameSugerencia extends JFrame implements ActionListener {
 			BaseDatos.initBD("eLibrary.db");
 			BaseDatos.crearTablaBDS();
 			try {
-				log.info("Mensaje de info: Se ha realizado con éxito el envio de la sugerencia");
+				log.info("Mensaje de info: Se ha realizado con ï¿½xito el envio de la sugerencia");
 				BaseDatos.crearSugerencia(BaseDatos.getStatement(),
 						textNombre.getText(), textAutor.getText(), tipo);
 			} catch (SQLException e1) {
