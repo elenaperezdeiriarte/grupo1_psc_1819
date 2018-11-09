@@ -416,7 +416,9 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		lblVerMasDetalles.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		lblVerMasDetalles.setBounds(865, 46, 227, 35);
 		contentPane.add(lblVerMasDetalles);
-
+		
+		
+		//Buscar artículos.
 		if (a == 1) {
 			ArrayList<ClsArticulo> auxiliar = new ArrayList<ClsArticulo>();
 
