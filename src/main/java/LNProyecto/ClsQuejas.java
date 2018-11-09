@@ -1,5 +1,10 @@
 package LNProyecto;
 
+/*Se crean la clase quejas
+ * las quejas se componen de un comenatio que realizan los usuarios
+ * 
+ */
+
 import java.io.Serializable;
 
 public class ClsQuejas implements Serializable {
