@@ -1,6 +1,7 @@
 package LNProyecto;
 
 import java.io.Serializable;
+//se crea la clase quejas
 
 public class ClsQuejas implements Serializable
 {
