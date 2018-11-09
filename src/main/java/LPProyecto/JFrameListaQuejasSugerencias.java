@@ -40,6 +40,7 @@ public class JFrameListaQuejasSugerencias extends JFrame implements
 	private JButton jbVolver;
 
 	public JFrameListaQuejasSugerencias() {
+		//Ver Quejas Administrador
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.DARK_GRAY);
