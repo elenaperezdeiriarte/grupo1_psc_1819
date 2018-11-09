@@ -21,7 +21,10 @@ import LNProyecto.ClsUnificadorDClases;
 public class JFrameQueja extends JFrame implements ActionListener
 {
 	
-	//Diseñamos la ventana para enviar las quejas surgidas
+	/*Disenamos la ventana para enviar las quejas surgidas
+	las quejas las realizan y las envian los usuarios
+	
+	*/
 
 	/**
 	 * 
@@ -50,7 +53,7 @@ public class JFrameQueja extends JFrame implements ActionListener
 		 btnAtras.addActionListener(this);
 		 contentPane.add(btnAtras);
 		
-		 //En este "Text Area" se podrá escribir
+		 //En este "Text Area" se podrï¿½ escribir
 		
 		 textArea = new JTextArea();
 		 textArea.setBounds(27, 11, 372, 198);
