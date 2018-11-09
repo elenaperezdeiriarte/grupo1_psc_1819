@@ -21,6 +21,7 @@ public class JFrameMenuCliente extends JFrame implements ActionListener
 
 	public JFrameMenuCliente() 
 	{
+		//Diseñar ventana cliente.
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane1 = new PanelConImagen();
