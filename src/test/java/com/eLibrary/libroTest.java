@@ -15,6 +15,8 @@ public class libroTest {
 		 
 		 String texto = nuevolibro.toString();
 			assertNotNull(texto);
+			
+			ERROR
     }
 
 }
