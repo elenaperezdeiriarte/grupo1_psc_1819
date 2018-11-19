@@ -37,7 +37,7 @@ import LPProyecto.JFrameVerArticulos;
 import LPProyecto.JFrameVerFicha;
 
 public class lpproyectoTest {
-	ClsArticulo art;
+/*	ClsArticulo art;
 		
 	@Test
 	public void fichaTest() throws Exception {
@@ -162,5 +162,5 @@ public class lpproyectoTest {
 		assertNotNull(e);
 	}
 	
-
+*/
 }
