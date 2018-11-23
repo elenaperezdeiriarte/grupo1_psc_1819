@@ -1,5 +1,8 @@
 package LNProyecto;
 
+//Se muestra una tabla con los dvds que se han anadido
+//permite contar el numero de dvd
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 

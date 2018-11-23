@@ -4,7 +4,9 @@ import java.io.Serializable;
 
 public class ClsCD extends ClsAudioVisual implements Serializable
 {
-	
+	//Esta clase incorpora todas las propiedades que sean propias suyas 
+	//ademas de las que tiene por defecto por heredar de ClsArticulo
+	//
 
 
 	/**
