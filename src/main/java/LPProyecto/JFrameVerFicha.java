@@ -33,6 +33,8 @@ import LNProyecto.MiExcepcion;
 
 import javax.swing.JTextPane;
 
+import org.apache.log4j.Logger;
+
 import LDProyecto.BaseDatos;
 
 public class JFrameVerFicha extends JFrame implements ActionListener
@@ -58,6 +60,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 	private JLabel lblNumActu;
 	private JLabel lblEliminarFoto;
 	private JLabel lblNewLabel;
+	private static final Logger log = Logger.getLogger(JFrameVerFicha.class.getName());
 	
 	public JFrameVerFicha(ClsArticulo Articulo,int saberSiBusc, String busqueda, int ordenacion, int adminOusu, int numCom) 
 	{

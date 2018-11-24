@@ -9,6 +9,8 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsCD;
 import LNProyecto.ClsDVD;
@@ -24,6 +26,7 @@ public class BaseDatos {
 
 	private static Connection connection = null;
 	private static Statement statement = null;
+	private static final Logger log = Logger.getLogger(BaseDatos.class.getName());
 
 	public static Connection initBD(String nombreBD) {
 		try {

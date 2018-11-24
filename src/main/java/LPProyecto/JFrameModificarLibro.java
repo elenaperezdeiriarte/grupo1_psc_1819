@@ -20,6 +20,8 @@ import java.awt.Color;
 
 import javax.swing.JTextField;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsLibro;
 import LNProyecto.ClsUnificadorDClases;
@@ -39,6 +41,7 @@ public class JFrameModificarLibro extends JFrame implements ActionListener {
 	private JButton jbVolver;
 	private ClsLibro Libro;
 	private ClsArticulo Articulo;
+	private static final Logger log = Logger.getLogger(JFrameModificarLibro.class.getName());
 
 	public JFrameModificarLibro(ClsArticulo Articulo, int saberSiBusc,
 			int ordenacion, String busqueda) {

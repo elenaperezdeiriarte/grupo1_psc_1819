@@ -8,6 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 public class JFrameMenuCliente extends JFrame implements ActionListener
 {
 
@@ -18,6 +20,7 @@ public class JFrameMenuCliente extends JFrame implements ActionListener
 	private JButton btnEstadisticas;
 	private JButton btnSugerencia;
 	private JButton jbVolver;
+	private static final Logger log = Logger.getLogger(JFrameMenuCliente.class.getName());
 
 	public JFrameMenuCliente() 
 	{

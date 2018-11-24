@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
@@ -19,6 +21,7 @@ public class JFrameMenuAdministrador extends JFrame implements ActionListener {
 	private JButton btnVerSugerencias;
 	private JButton btnCambiarContrasena;
 	private JButton btnVolverAlMenu;
+	private static final Logger log = Logger.getLogger(JFrameMenuAdministrador.class.getName());
 
 	public JFrameMenuAdministrador() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -30,6 +30,8 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 public class JFrameEstadisticas extends JFrame implements ActionListener
 
 {
@@ -45,6 +47,7 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 	private JButton btnNota;
 	private JButton btnVecesPrestado;
 	private JButton btnVolver;
+	private static final Logger log = Logger.getLogger(JFrameEstadisticas.class.getName());
 
 	public JFrameEstadisticas(int x) {
 		setTitle("Administrador de articulos");

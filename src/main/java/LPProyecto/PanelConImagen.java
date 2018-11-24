@@ -6,6 +6,8 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+import org.apache.log4j.Logger;
+
 
 
 
@@ -17,6 +19,7 @@ public class PanelConImagen extends JPanel
 	 */
 	private static final long serialVersionUID = -8966477656039537105L;
 private Image bgImage;
+private static final Logger log = Logger.getLogger(PanelConImagen.class.getName());
  
  public PanelConImagen() 
  {
