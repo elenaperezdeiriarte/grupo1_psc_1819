@@ -1,7 +1,5 @@
 package LNProyecto;
 
-//crear clase articulos
-//padre de dvd, cd y libro
 //Clase en la que se definen los atributos de los articulos
 import java.io.Serializable;
 

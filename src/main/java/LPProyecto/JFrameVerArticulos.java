@@ -554,20 +554,22 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 					ClsArticulo Articulo = ArticuloList.get(tableArticulos
 							.getSelectedRow());
 
-					ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-					cambio.comenzarModificacion(Articulo);
-					cambio.Modificar(Articulo, 0, 0, null, null);
+					BaseDatos.initBD("eLibrary.db");
+					BaseDatos.cambiarEstadoArticulo(Articulo);
 
-					JFrameVerArticulos objVerArticulos11 = new JFrameVerArticulos(
-							saberSiBusc, busqueda, ordenacion, adminOusu);
-					objVerArticulos11.setVisible(true);
-					this.dispose();
 				} else {
 					throw new MiExcepcion();
 				}
 			} catch (MiExcepcion e) {
 				JOptionPane.showMessageDialog(this, e.getMessage());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			JFrameVerArticulos objVerArticulos11 = new JFrameVerArticulos(
+					saberSiBusc, busqueda, ordenacion, adminOusu);
+			objVerArticulos11.setVisible(true);
+			this.dispose();
 		}
 
 		if (botonPulsado == btnWeb) {
@@ -578,9 +580,8 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 					ClsArticulo Articulo = ArticuloList.get(tableArticulos
 							.getSelectedRow());
 
-					ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-					cambio.comenzarModificacion(Articulo);
-					cambio.Modificar(Articulo, 3, 0, txtWeb.getText(), null);
+					BaseDatos.initBD("eLibrary.db");
+					BaseDatos.cambiarWebArticulo(Articulo, txtWeb.getText());
 
 					JFrameVerArticulos objVerArticulos11 = new JFrameVerArticulos(
 							saberSiBusc, busqueda, ordenacion, adminOusu);
@@ -591,6 +592,9 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 				}
 			} catch (MiExcepcion e) {
 				JOptionPane.showMessageDialog(this, e.getMessage());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
 
@@ -634,21 +638,26 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			tableArticulos.getSelectedRow();
 			try {
 				if (tableArticulos.getSelectedRow() != -1) {
+
 					ClsArticulo Articulo = ArticuloList.get(tableArticulos
 							.getSelectedRow());
-					ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-					cambio.comenzarModificacion(Articulo);
 
-					JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(
-							saberSiBusc, busqueda, ordenacion, adminOusu);
-					objVerArticulos.setVisible(true);
-					this.dispose();
+					BaseDatos.initBD("eLibrary.db");
+					BaseDatos.borrarArticulo(Articulo);
+
 				} else {
 					throw new MiExcepcion();
 				}
 			} catch (MiExcepcion e) {
 				JOptionPane.showMessageDialog(this, e.getMessage());
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
+			JFrameVerArticulos objVerArticulos11 = new JFrameVerArticulos(
+					saberSiBusc, busqueda, ordenacion, adminOusu);
+			objVerArticulos11.setVisible(true);
+			this.dispose();
 		}
 		if (botonPulsado == btnNumero) {
 			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(
@@ -1090,9 +1099,12 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 					ClsArticulo Articulo = ArticuloList.get(tableArticulos
 							.getSelectedRow());
 
-					ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-					cambio.comenzarModificacion(Articulo);
-					cambio.Modificar(Articulo, 1, nota, null, null);
+//					ClsUnificadorDClases cambio = new ClsUnificadorDClases();
+//					cambio.comenzarModificacion(Articulo);
+//					cambio.Modificar(Articulo, 1, nota, null, null);
+					
+					BaseDatos.initBD("eLibrary.db");
+					BaseDatos.anyadirNotaArticulo(Articulo, nota);
 
 					JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(
 							saberSiBusc, busqueda, ordenacion, 1);
@@ -1104,6 +1116,9 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			}
 		} catch (MiExcepcion e) {
 			JOptionPane.showMessageDialog(this, e.getMessage());
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

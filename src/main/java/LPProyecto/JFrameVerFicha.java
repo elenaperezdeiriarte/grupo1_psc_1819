@@ -7,7 +7,9 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
@@ -21,6 +23,7 @@ import javax.swing.JPanel;
 
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsAudioVisual;
+import LNProyecto.ClsCD;
 import LNProyecto.ClsComentario;
 import LNProyecto.ClsDVD;
 import LNProyecto.ClsLibro;
@@ -29,6 +32,8 @@ import LNProyecto.LabelUrl;
 import LNProyecto.MiExcepcion;
 
 import javax.swing.JTextPane;
+
+import LDProyecto.BaseDatos;
 
 public class JFrameVerFicha extends JFrame implements ActionListener
 {
@@ -225,6 +230,8 @@ public class JFrameVerFicha extends JFrame implements ActionListener
         
 		if(!Articulo.getImagen().equals(""))
 		{
+			
+			
 			Image image = null;
 			try 
 	        {
@@ -235,9 +242,9 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 	        {
 	        }
 			
-			//ImageIcon fot = new ImageIcon();
-	       // ImageIcon icono = new ImageIcon(fot.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_DEFAULT));
-	        //imagen.setIcon(icono);
+			ImageIcon fot = new ImageIcon(image);
+	        ImageIcon icono = new ImageIcon(fot.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_DEFAULT));
+	        imagen.setIcon(icono);
 	        
 	        contentPane.add(btnDelete);
 	        contentPane.add(lblEliminarFoto);
@@ -271,7 +278,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		
 		if(tipo==0 || tipo==1)
 		{
-			//ClsAudioVisual Audiovisual = (ClsAudioVisual) Articulo;
+			ClsAudioVisual Audiovisual = (ClsAudioVisual) Articulo;
 			
 			JLabel lbDuracion = new JLabel("Duracion:");
 			lbDuracion.setForeground(Color.WHITE);
@@ -279,13 +286,13 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 			lbDuracion.setBounds(557, 256, 102, 37);
 			contentPane.add(lbDuracion);
 			
-			/*JLabel lbDuracion1 = new JLabel(Integer.toString(Audiovisual.getDuracion())+ " min");
+			JLabel lbDuracion1 = new JLabel(Integer.toString(Audiovisual.getDuracion())+ " min");
 			lbDuracion1.setForeground(Color.WHITE);
 			lbDuracion1.setFont(new Font("Tahoma", Font.BOLD, 21));
 			lbDuracion1.setBounds(686, 256, 168, 37);
 			contentPane.add(lbDuracion1);
 			
-			JLabel lbAno= new JLabel("Ano:");
+			JLabel lbAno= new JLabel("Año:");
 			lbAno.setForeground(Color.WHITE);
 			lbAno.setFont(new Font("Tahoma", Font.BOLD, 21));
 			lbAno.setBounds(80, 255, 48, 37);
@@ -295,7 +302,7 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 			lbAno1.setForeground(Color.WHITE);
 			lbAno1.setFont(new Font("Tahoma", Font.BOLD, 21));
 			lbAno1.setBounds(155, 255, 168, 37);
-			contentPane.add(lbAno1);*/
+			contentPane.add(lbAno1);
 			
 			if(tipo==2)
 			{
@@ -350,54 +357,11 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		btnPrevious.setContentAreaFilled(false);
 		btnPrevious.setBorderPainted(false);
 		btnPrevious.addActionListener(this);
-		
-		btnComentar = new JButton(new ImageIcon(getClass().getResource("/images/comentar.png")));
-		btnComentar.setBounds(588, 401, 230, 79);
-		btnComentar.setOpaque(false);
-		btnComentar.setContentAreaFilled(false);
-		btnComentar.setBorderPainted(false);
-		btnComentar.addActionListener(this);
-		
+				
 		lblNumActu = new JLabel();
 		lblNumActu.setForeground(Color.WHITE);
 		lblNumActu.setFont(new Font("Tahoma", Font.BOLD, 14));
 		lblNumActu.setBounds(306, 624, 99, 14);
-		
-		
-		ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		boolean abridor = Gestor.saberSiComentarios(Articulo.getNumero());
-		
-		ComentariosArticulo= new ArrayList<ClsComentario>();
-		
-		if (abridor ==true)
-		{
-			ComentariosArticulo = Gestor.leerComentariosArticulo(Articulo.getNumero());
-			this.numAct = numCom;
-			
-			lblNumActu.setText(numAct +" de "+ ComentariosArticulo.size());
-			contentPane.add(lblNumActu);
-			
-			textPane = new JTextPane();
-			textPane.setText(ComentariosArticulo.get(numAct-1).toString());
-			textPane.setBounds(104, 370, 444, 243);
-			textPane.setEditable(false);
-			contentPane.add(textPane);
-			contentPane.add(btnComentar);
-			
-			if(ComentariosArticulo.size()>1)
-			{
-				contentPane.add(btnNext);
-			}
-		}
-		else
-		{
-			textPane = new JTextPane();
-			textPane.setText("No hay comentarios");
-			textPane.setBounds(104, 370, 444, 243);
-			textPane.setEditable(false);
-			contentPane.add(textPane);
-			contentPane.add(btnComentar);
-		}
 
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setForeground(Color.BLACK);
@@ -419,29 +383,27 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		}
 		if (botonPulsado == btnAdd)
 		{
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
 			String Url = JOptionPane.showInputDialog("Inserte la nueva Url");
 			
-			if(Url.equals(null)==false)
+			if(Url.equals("")==false)
 			{
-				cambio.comenzarModificacion(Articulo);
+				BaseDatos.initBD("eLibrary.db");
 				try {
-					cambio.Modificar(Articulo,4,0,null, Url);
-				} catch (MiExcepcion e2) 
-				{
-					
+					BaseDatos.cambiarImagenArticulo(Articulo, Url);
+				} catch (SQLException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
 				}
 				
 				Image image = null;
-				try 
-		        {
-		            URL url = new URL(Url);
-		            image = ImageIO.read(url);
-		        } 
-		        catch (IOException e1) 
-		        {
-		        
-		        }
+	            URL url;
+				try {
+					url = new URL(Url);
+					image = ImageIO.read(url);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 				
 				ImageIcon fot = new ImageIcon(image);
 		        ImageIcon icono = new ImageIcon(fot.getImage().getScaledInstance(imagen.getWidth(), imagen.getHeight(), Image.SCALE_DEFAULT));
@@ -456,13 +418,12 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		}
 		if (botonPulsado == btnDelete)
 		{		
-			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
-			cambio.comenzarModificacion(Articulo);
+			BaseDatos.initBD("eLibrary.db");
 			try {
-				cambio.Modificar(Articulo,4,0,null,"");
-			} catch (MiExcepcion e1) {
+				BaseDatos.cambiarImagenArticulo(Articulo, "");
+			} catch (SQLException e2) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				e2.printStackTrace();
 			}
 
 			imagen.setIcon(null);
@@ -538,34 +499,34 @@ public class JFrameVerFicha extends JFrame implements ActionListener
 		    contentPane.validate();
 		    contentPane.repaint();
 		}
-		if (botonPulsado == btnEnviar)
-		{
-			ClsComentario Comentario = new ClsComentario(Articulo.getNumero(),textPane.getText());
-			ComentariosArticulo.add(Comentario);
-			textPane.setText(ComentariosArticulo.get(ComentariosArticulo.size()-1).toString());
-			textPane.setEditable(true);
-			
-			ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-			ArrayList<ClsComentario> ListaComentarios = Gestor.leerComentarios();
-			ListaComentarios.add(Comentario);			
-			Gestor.guardarComentarios(ListaComentarios);
-			
-			textPane.setText(ComentariosArticulo.get(numAct-1).toString());
-			lblNumActu.setText((numAct +" de "+ ComentariosArticulo.size()));
-			
-			if(contentPane.isAncestorOf(lblNumActu)==false)
-			contentPane.add(lblNumActu);
-
-			
-			contentPane.remove(btnEnviar);
-			contentPane.add(btnComentar);
-			if(ComentariosArticulo.size()>1) contentPane.add(btnNext);
-			contentPane.remove(lblNewLabel);
-			contentPane.add(lblNewLabel);
-			
-			setContentPane(contentPane);
-		    contentPane.validate();
-		    contentPane.repaint();
-		}
+//		if (botonPulsado == btnEnviar)
+//		{
+//			ClsComentario Comentario = new ClsComentario(Articulo.getNumero(),textPane.getText());
+//			ComentariosArticulo.add(Comentario);
+//			textPane.setText(ComentariosArticulo.get(ComentariosArticulo.size()-1).toString());
+//			textPane.setEditable(true);
+//			
+//			ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
+//			ArrayList<ClsComentario> ListaComentarios = Gestor.leerComentarios();
+//			ListaComentarios.add(Comentario);			
+//			Gestor.guardarComentarios(ListaComentarios);
+//			
+//			textPane.setText(ComentariosArticulo.get(numAct-1).toString());
+//			lblNumActu.setText((numAct +" de "+ ComentariosArticulo.size()));
+//			
+//			if(contentPane.isAncestorOf(lblNumActu)==false)
+//			contentPane.add(lblNumActu);
+//
+//			
+//			contentPane.remove(btnEnviar);
+//			contentPane.add(btnComentar);
+//			if(ComentariosArticulo.size()>1) contentPane.add(btnNext);
+//			contentPane.remove(lblNewLabel);
+//			contentPane.add(lblNewLabel);
+//			
+//			setContentPane(contentPane);
+//		    contentPane.validate();
+//		    contentPane.repaint();
+//		}
 	}
 }

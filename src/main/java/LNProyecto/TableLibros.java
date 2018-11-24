@@ -1,9 +1,5 @@
 package LNProyecto;
 
-//Esta tabla recoge todos los libros guardados
-//los usuarios son los que introducen los libros
-
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 

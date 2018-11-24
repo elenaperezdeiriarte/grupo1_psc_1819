@@ -301,6 +301,7 @@ public class BaseDatos {
 		Statement stmt = connection.createStatement();
 		String query = "select texto from QUEJAS";
 		ResultSet rs = stmt.executeQuery(query);
+		arrayQuejas = new ArrayList<ClsQuejas>();
 		while (rs.next()) {
 			queja(rs.getString(1));
 		}
@@ -367,6 +368,7 @@ public class BaseDatos {
 		Statement stmt = connection.createStatement();
 		String query = "select nombre, autor, tipo from SUGERENCIAS";
 		ResultSet rs = stmt.executeQuery(query);
+		arraySugerencia = new ArrayList<ClsSugerencias>();
 		while (rs.next()) {
 			sugerencia(rs.getString(1), rs.getString(2), rs.getString(3));
 		}
@@ -417,7 +419,7 @@ public class BaseDatos {
 			String sentSQL = "insert into CDS (nombre, numero, autor, duracion, ano, nota, estado, contador, numVotos, tipo, web, imagen) values('"
 					+ cd.getNombre()
 					+ "', "
-					+ cd.getNumero()
+					+ (getNumArticulos()+1)
 					+ ", '"
 					+ cd.getAutor()
 					+ "', "
@@ -464,6 +466,25 @@ public class BaseDatos {
 			articulo(articulo);
 		}
 	}
+	
+	static ClsCD CD = new ClsCD("", 0, "", 0, 0, 0, 0, 0, 0, 0, "", "");
+	public static void getCDInfo(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "select * from CDS where numero=" + numero;
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			CD = new ClsCD(rs.getString(1), rs.getInt(2),
+					rs.getString(3), rs.getInt(4), rs.getInt(5),
+					rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9),
+					rs.getInt(10), rs.getString(11), rs.getString(12));
+		}
+	}
+	
+	public static ClsCD returnCD(int numero) throws SQLException
+	{
+		getCDInfo(numero);
+		return CD;
+	}
 
 	static ArrayList<ClsCD> arrayCD = new ArrayList<ClsCD>();
 
@@ -474,7 +495,43 @@ public class BaseDatos {
 	public static ArrayList<ClsCD> getCDs() {
 		return arrayCD;
 	}
-
+	
+	public static void cambiarNotaCD(int numero, double nota, int votos) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update CDS set nota="+ nota +", numVotos=" + votos + " where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarEstadoCD(int numero, int estado, int vecesPrestado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update CDS set estado="+ estado +", contador=" + vecesPrestado +" where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void modificarCD(ClsCD CDModificado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update CDS set nombre='"+ CDModificado.getNombre() +"', autor='" + CDModificado.getAutor()+"', duracion=" + CDModificado.getDuracion()+", ano=" + CDModificado.getAno() +" where numero=" + CDModificado.getNumero();
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarWebCD(int numero, String web) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update CDS set web='"+ web +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}	
+	
+	public static void cambiarImagenCD(int numero, String imagen) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update CDS set imagen='"+ imagen +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void borrarCD(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "delete from CDS where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
 	// ////////////////////////////////////
 	// /// DVD /////
 	// ////////////////////////////////////
@@ -510,7 +567,7 @@ public class BaseDatos {
 			String sentSQL = "insert into DVDS (nombre, numero, autor, duracion, ano, nota, estado, contador, oscar, numVotos, tipo, web, imagen) values('"
 					+ dvd.getNombre()
 					+ "', "
-					+ dvd.getNumero()
+					+ (getNumArticulos()+1)
 					+ ", '"
 					+ dvd.getAutor()
 					+ "', "
@@ -560,6 +617,27 @@ public class BaseDatos {
 			articulo(articulo);
 		}
 	}
+	
+	static ClsDVD DVD = new ClsDVD("", 0, "", 0, 0, 0, 0, 0, 0, 0, 0, "", "");
+	public static void getDVDInfo(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "select * from DVDS where numero=" + numero;
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			DVD = new ClsDVD(rs.getString(1), rs.getInt(2),
+					rs.getString(3), rs.getInt(4), rs.getInt(5),
+					rs.getDouble(6), rs.getInt(7), rs.getInt(8), rs.getInt(9),
+					rs.getInt(10), rs.getInt(11), rs.getString(12),
+					rs.getString(13));
+		}
+	}
+	
+	public static ClsDVD returnDVD(int numero) throws SQLException
+	{
+		getDVDInfo(numero);
+		return DVD;
+	}
+
 
 	static ArrayList<ClsDVD> arrayDVD = new ArrayList<ClsDVD>();
 
@@ -569,6 +647,42 @@ public class BaseDatos {
 
 	public static ArrayList<ClsDVD> getDVDs() {
 		return arrayDVD;
+	}
+	
+	public static void cambiarNotaDVD(int numero, double nota, int votos) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update DVDS set nota="+ nota +", numVotos=" + votos + " where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarEstadoDVD(int numero, int estado, int vecesPrestado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update DVDS set estado="+ estado +", contador=" + vecesPrestado +" where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void modificarDVD(ClsDVD DVDModificado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update DVDS set nombre='"+ DVDModificado.getNombre() +"', autor='" + DVDModificado.getAutor()+"', duracion=" + DVDModificado.getDuracion()+", ano=" + DVDModificado.getAno() +", oscar=" + DVDModificado.getOscar() +" where numero=" + DVDModificado.getNumero();
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarWebDVD(int numero, String web) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update DVDS set web='"+ web +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarImagenDVD(int numero, String imagen) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update DVDS set imagen='"+ imagen +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void borrarDVD(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "delete from DVDS where numero=" + numero;
+		stmt.executeUpdate(query);
 	}
 
 	// ////////////////////////////////////
@@ -606,7 +720,7 @@ public class BaseDatos {
 			String sentSQL = "insert into LIBROS (nombre, numero, autor, nota, estado, contador, paginas, numVotos, tipo, web, imagen) values('"
 					+ libro.getNombre()
 					+ "', "
-					+ libro.getNumero()
+					+ (getNumArticulos()+1)
 					+ ", '"
 					+ libro.getAutor()
 					+ "', "
@@ -651,6 +765,25 @@ public class BaseDatos {
 			articulo(articulo);
 		}
 	}
+	
+	static ClsLibro Libro = new ClsLibro("", 0, "", 0, 0, 0, 0, 0, 0, "", "");
+	public static void getLibroInfo(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "select * from LIBROS where numero=" + numero;
+		ResultSet rs = stmt.executeQuery(query);
+		while (rs.next()) {
+			Libro = new ClsLibro(rs.getString(1), rs.getInt(2),
+					rs.getString(3), rs.getDouble(4), rs.getInt(5),
+					rs.getInt(6), rs.getInt(7), rs.getInt(8), rs.getInt(9),
+					rs.getString(10), rs.getString(11));
+		}
+	}
+	
+	public static ClsLibro returnLibro(int numero) throws SQLException
+	{
+		getLibroInfo(numero);
+		return Libro;
+	}
 
 	static ArrayList<ClsLibro> arrayLibros = new ArrayList<ClsLibro>();
 
@@ -660,6 +793,42 @@ public class BaseDatos {
 
 	public static ArrayList<ClsLibro> getLibros() {
 		return arrayLibros;
+	}
+	
+	public static void cambiarNotaLibro(int numero, double nota, int votos) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update LIBROS set nota="+ nota +", numVotos=" + votos + " where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarEstadoLibro(int numero, int estado, int vecesPrestado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update LIBROS set estado="+ estado +", contador=" + vecesPrestado + " where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void modificarLibro(ClsLibro LibroModificado) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update LIBROS set nombre='"+ LibroModificado.getNombre() +"', autor='" + LibroModificado.getAutor()+"', paginas=" + LibroModificado.getpaginas()+" where numero=" + LibroModificado.getNumero();
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarWebLibro(int numero, String web) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update LIBROS set web='"+ web +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void cambiarImagenLibro(int numero, String imagen) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "update LIBROS set imagen='"+ imagen +"' where numero=" + numero;
+		stmt.executeUpdate(query);
+	}
+	
+	public static void borrarLibro(int numero) throws SQLException {
+		Statement stmt = connection.createStatement();
+		String query = "delete from LIBROS where numero=" + numero;
+		stmt.executeUpdate(query);
 	}
 
 	// ////////////////////////////////////
@@ -686,5 +855,151 @@ public class BaseDatos {
 	public static ArrayList<ClsArticulo> getArticulos() {
 		return arrayArticulos;
 	}
+	
+	public static int getNumArticulos()
+	{
+		try {
+			selectArticulos();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		int contador = 0;
+		for(int a = 0 ; a<arrayArticulos.size(); a++)
+		{
+			if(arrayArticulos.get(a).getNumero()>=contador)
+			{
+				contador = arrayArticulos.get(a).getNumero();
+			}
+		}
+		return contador;
+	}
+	
+	public static void anyadirNotaArticulo(ClsArticulo Articulo, int nota) throws SQLException
+	{
+		double notaFinal = 0.0;
+		int votos = Articulo.getNumVotos();
+				
+		if(votos==0)
+		{
+			notaFinal = nota;
+		}
+		else
+		{
+			double notaGlobal = Articulo.getNumVotos()*Articulo.getNota();
+			notaGlobal = notaGlobal + nota;
+			notaFinal = notaGlobal/(votos+1);
+		}
+
+		switch(Articulo.getTipo())
+		{
+			case 0: //CD
+					cambiarNotaCD(Articulo.getNumero(),notaFinal,votos+1);
+					break;
+					
+			case 1: //DVD
+					cambiarNotaDVD(Articulo.getNumero(),notaFinal,votos+1);
+					break;
+					
+			case 2: //Libro
+					cambiarNotaLibro(Articulo.getNumero(),notaFinal,votos+1);
+					break;
+		}
+	}
+	
+	public static void cambiarEstadoArticulo(ClsArticulo Articulo) throws SQLException
+	{
+		int estado = Articulo.getEstado();
+		int vecesPrestado = Articulo.getContador();
+				
+		if(estado==0)
+		{
+			estado = 1;
+			vecesPrestado++;
+		}
+		else
+		{
+			estado = 0;
+		}
+
+		switch(Articulo.getTipo())
+		{
+			case 0: //CD
+					cambiarEstadoCD(Articulo.getNumero(),estado,vecesPrestado);
+					break;
+					
+			case 1: //DVD
+					cambiarEstadoDVD(Articulo.getNumero(),estado,vecesPrestado);
+					break;
+					
+			case 2: //Libro
+					cambiarEstadoLibro(Articulo.getNumero(),estado,vecesPrestado);
+					break;
+		}
+	}
+	
+	public static void borrarArticulo(ClsArticulo Articulo) throws SQLException
+	{
+		switch(Articulo.getTipo())
+		{
+			case 0: //CD
+					borrarCD(Articulo.getNumero());
+					break;
+					
+			case 1: //DVD
+					borrarDVD(Articulo.getNumero());
+					break;
+					
+			case 2: //Libro
+					borrarLibro(Articulo.getNumero());
+					break;
+		}
+	}
+	
+	public static void cambiarWebArticulo(ClsArticulo Articulo, String web) throws SQLException
+	{
+		switch(Articulo.getTipo())
+		{
+			case 0: //CD
+					cambiarWebCD(Articulo.getNumero(),web);
+					break;
+					
+			case 1: //DVD
+					cambiarWebDVD(Articulo.getNumero(),web);
+					break;
+					
+			case 2: //Libro
+					cambiarWebLibro(Articulo.getNumero(),web);
+					break;
+		}
+	}
+	
+	public static void cambiarImagenArticulo(ClsArticulo Articulo, String imagen) throws SQLException
+	{
+		switch(Articulo.getTipo())
+		{
+			case 0: //CD
+					cambiarImagenCD(Articulo.getNumero(),imagen);
+					break;
+					
+			case 1: //DVD
+					cambiarImagenDVD(Articulo.getNumero(),imagen);
+					break;
+					
+			case 2: //Libro
+					cambiarImagenLibro(Articulo.getNumero(),imagen);
+					break;
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

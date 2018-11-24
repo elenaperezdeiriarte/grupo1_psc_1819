@@ -3,12 +3,6 @@ package LNProyecto;
 import java.io.Serializable;
 
 public class ClsLibro extends ClsArticulo implements Serializable {
-	
-	//Esta clase incorpora todas las propiedades que sean propias suyas 
-	//ademas de las que tiene por defecto por heredar de ClsArticulo
-	//
-
-
 	/**
 	 * 
 	 */
