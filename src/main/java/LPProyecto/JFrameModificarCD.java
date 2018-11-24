@@ -3,6 +3,7 @@ package LPProyecto;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -12,6 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import LDProyecto.BaseDatos;
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsCD;
 import LNProyecto.ClsUnificadorDClases;
@@ -124,18 +126,19 @@ public class JFrameModificarCD extends JFrame implements ActionListener
 			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
 			cambio.comenzarModificacion(CDaModificar);
 			
-			CDaModificar.setAutor(txtCDAutor.getText());	CDaModificar.setNombre(txtCDNom.getText());	
+			CDaModificar.setAutor(txtCDAutor.getText());	
+			CDaModificar.setNombre(txtCDNom.getText());	
 			CDaModificar.setDuracion(Integer.parseInt(txtCDDuracion.getText()));
 			CDaModificar.setAno(Integer.parseInt(txtCDAno.getText()));
 			
-			try
-			{
-				cambio.Modificar(CDaModificar, 2, 0,null,null);
+			BaseDatos.initBD("eLibrary.db");
+			try {
+				BaseDatos.modificarCD(CDaModificar);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
-			catch (MiExcepcion j)
-			{
-				JOptionPane.showMessageDialog(this, j.toString());
-			}
+			
 			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(0,"",0,0);
 			objVerArticulos.setVisible(true);
 			this.dispose();	

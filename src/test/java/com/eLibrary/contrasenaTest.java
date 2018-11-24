@@ -10,7 +10,7 @@ import LPProyecto.JFramePedirContra;
 
 
 public class contrasenaTest {
-/*
+
 	private JFramePedirContra contrasena = new JFramePedirContra();
 	private ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
 	@Test
@@ -19,5 +19,5 @@ public class contrasenaTest {
 			
 		assertTrue(!password.equals(""));
 	}
-*/
+
 }
