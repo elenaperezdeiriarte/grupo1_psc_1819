@@ -529,6 +529,7 @@ public class BaseDatos {
 		stmt.executeUpdate(query);
 	}
 	
+	//Metodo que permite borrar el artículo CD de base de datos.
 	public static void borrarCD(int numero) throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "delete from CDS where numero=" + numero;
@@ -682,6 +683,7 @@ public class BaseDatos {
 		stmt.executeUpdate(query);
 	}
 	
+	//Metodo que permite borrar un DVD de la base de datos.
 	public static void borrarDVD(int numero) throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "delete from DVDS where numero=" + numero;
@@ -828,6 +830,7 @@ public class BaseDatos {
 		stmt.executeUpdate(query);
 	}
 	
+	//Metodo que permite borrar un libro de la base de datos.
 	public static void borrarLibro(int numero) throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "delete from LIBROS where numero=" + numero;
