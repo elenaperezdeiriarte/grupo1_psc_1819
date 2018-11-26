@@ -1,9 +1,5 @@
 package LPProyecto;
 
-//en esta clase se visualizan los cd
-//tambien para introducir nuevos por los clientes
-//
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -22,6 +18,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsCD;
 import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.MiExcepcion;
@@ -39,6 +37,7 @@ public class JFrameCFCD extends JFrame implements ActionListener {
 	private String busqueda;
 	private JButton jbGuardar;
 	private JButton jbVolver;
+	private static final Logger log = Logger.getLogger(JFrameCFCD.class.getName());
 
 	public JFrameCFCD(int saberSiBusc, int ordenacion, String busqueda) {
 		this.saberSiBusc = saberSiBusc;

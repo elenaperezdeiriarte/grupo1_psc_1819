@@ -2,18 +2,15 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 public class ClsLibro extends ClsArticulo implements Serializable {
-	
-	//Esta clase incorpora todas las propiedades que sean propias suyas 
-	//ademas de las que tiene por defecto por heredar de ClsArticulo
-	//
-
-
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private int paginas;
+	private static final Logger log = Logger.getLogger(ClsLibro.class.getName());
 
 	public ClsLibro(String nombre, int numero, String autor, double nota,
 			int estado, int contador, int paginas, int numVotos, int tipo,

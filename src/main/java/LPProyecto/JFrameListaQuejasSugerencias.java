@@ -27,6 +27,8 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JList;
 
+import org.apache.log4j.Logger;
+
 public class JFrameListaQuejasSugerencias extends JFrame implements
 		ActionListener {
 
@@ -38,6 +40,7 @@ public class JFrameListaQuejasSugerencias extends JFrame implements
 	private JButton btnLimpiarSuger;
 	private JList list;
 	private JButton jbVolver;
+	private static final Logger log = Logger.getLogger(JFrameListaQuejasSugerencias.class.getName());
 
 	public JFrameListaQuejasSugerencias() {
 		//Ver Quejas Administrador

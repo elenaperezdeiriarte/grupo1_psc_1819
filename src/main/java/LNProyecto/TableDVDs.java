@@ -1,19 +1,19 @@
 package LNProyecto;
 
-//Se muestra una tabla con los dvds que se han anadido
-//permite contar el numero de dvd
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
+
+import org.apache.log4j.Logger;
 
 public class TableDVDs extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	private String[] columnNames = { "Num", "Nombre", "Autor", "Nota",
 			"Estado", "Num. Pre." };
 	Object[][] data;
-
+	private static final Logger log = Logger.getLogger(TableDVDs.class.getName());
+	
 	public TableDVDs(ArrayList<ClsDVD> a) {
 
 		super();

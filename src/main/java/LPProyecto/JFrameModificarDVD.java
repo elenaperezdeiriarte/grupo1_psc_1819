@@ -2,9 +2,13 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
+
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -13,6 +17,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 
 import javax.swing.JButton;
+
+import org.apache.log4j.Logger;
 
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsDVD;
@@ -35,6 +41,7 @@ public class JFrameModificarDVD extends JFrame implements ActionListener {
 	private String busqueda;
 	private JButton jbVolver;
 	private ClsDVD DVD;
+	private static final Logger log = Logger.getLogger(JFrameModificarDVD.class.getName());
 
 	public JFrameModificarDVD(ClsArticulo Articulo, int saberSiBusc,
 			int ordenacion, String busqueda) {
@@ -142,17 +149,19 @@ public class JFrameModificarDVD extends JFrame implements ActionListener {
 
 			DVDaModificar.setAutor(txtAutorDVD.getText());
 			DVDaModificar.setNombre(txtNomDVD.getText());
-			DVDaModificar
-					.setDuracion(Integer.parseInt(txtDuracionDVD.getText()));
+			DVDaModificar.setDuracion(Integer.parseInt(txtDuracionDVD.getText()));
 			DVDaModificar.setAno(Integer.parseInt(txtAnoDVD.getText()));
 			DVDaModificar.setOscar(Integer.parseInt(txtOscarDVD.getText()));
+			
+			BaseDatos.initBD("eLibrary.db");
 			try {
-				cambio.Modificar(DVDaModificar, 2, 0, null, null);
-			} catch (MiExcepcion j) {
-				JOptionPane.showMessageDialog(this, j.toString());
+				BaseDatos.modificarDVD(DVDaModificar);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
-			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(0, "",
-					0, 0);
+			
+			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(0, "", 0, 0);
 			objVerArticulos.setVisible(true);
 			this.dispose();
 

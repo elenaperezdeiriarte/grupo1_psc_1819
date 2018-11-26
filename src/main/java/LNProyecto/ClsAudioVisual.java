@@ -2,6 +2,8 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 public class ClsAudioVisual extends ClsArticulo implements Serializable
 {
 	/**
@@ -10,6 +12,7 @@ public class ClsAudioVisual extends ClsArticulo implements Serializable
 	private static final long serialVersionUID = 1L;
 	private int duracion; //Minutos!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	private int ano; 
+	private static final Logger log = Logger.getLogger(ClsAudioVisual.class.getName());
 	
 	
 	public ClsAudioVisual (String nombre, int numero, String autor, int duracion, int ano, double nota, int estado, int contador, int numVotos, int tipo, String web, String imagen)

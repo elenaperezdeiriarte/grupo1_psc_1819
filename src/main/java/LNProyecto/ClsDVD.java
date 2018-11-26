@@ -2,16 +2,18 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 
 //Esta clase incorpora todas las propiedades que sean propias suyas 
 //ademas de las que tiene por defecto por heredar de ClsArticulo
-//
 
 public class ClsDVD extends ClsAudioVisual implements Serializable
 {
 
 	private static final long serialVersionUID = 1L;
 	private int oscar;
+	private static final Logger log = Logger.getLogger(ClsDVD.class.getName());
 	
 	public ClsDVD (String nombre, int numero, String autor, int duracion, int ano, double nota, int estado, int contador, int oscar, int numVotos, int tipo, String web, String imagen)
 	{

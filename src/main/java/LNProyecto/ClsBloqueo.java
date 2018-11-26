@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
+import org.apache.log4j.Logger;
+
 public class ClsBloqueo implements Serializable {
 	// Gestion de bloqueos
 	private static final long serialVersionUID = -7956610234382749357L;
@@ -12,6 +14,7 @@ public class ClsBloqueo implements Serializable {
 	private Date now3;
 	private Date now4;
 	private int intentado;
+	private static final Logger log = Logger.getLogger(ClsBloqueo.class.getName());
 
 	public int sacarSemaforo() {
 		sumarMinutoFecha();
@@ -32,9 +35,9 @@ public class ClsBloqueo implements Serializable {
 	public void sumarMinutoFecha() {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(now1); // Configuramos la fecha de antes
-		calendar.add(Calendar.MINUTE, intentado); // numero de minutos a añadir
+		calendar.add(Calendar.MINUTE, intentado); // numero de minutos a aï¿½adir
 		this.now2 = calendar.getTime(); // Da valor al atributo now2 con los
-										// nuevos minutos añadidos
+										// nuevos minutos aï¿½adidos
 	}
 
 	public void sacarMinutos() {

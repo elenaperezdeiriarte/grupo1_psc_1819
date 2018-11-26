@@ -2,12 +2,15 @@ package LPProyecto;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.border.EmptyBorder;
+
+import LDProyecto.BaseDatos;
 
 import java.awt.Font;
 
@@ -16,6 +19,8 @@ import javax.swing.JLabel;
 import java.awt.Color;
 
 import javax.swing.JTextField;
+
+import org.apache.log4j.Logger;
 
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsLibro;
@@ -36,6 +41,7 @@ public class JFrameModificarLibro extends JFrame implements ActionListener {
 	private JButton jbVolver;
 	private ClsLibro Libro;
 	private ClsArticulo Articulo;
+	private static final Logger log = Logger.getLogger(JFrameModificarLibro.class.getName());
 
 	public JFrameModificarLibro(ClsArticulo Articulo, int saberSiBusc,
 			int ordenacion, String busqueda) {
@@ -124,16 +130,17 @@ public class JFrameModificarLibro extends JFrame implements ActionListener {
 
 			LibroaModificar.setAutor(txtLibAutor.getText());
 			LibroaModificar.setNombre(txtLibNombre.getText());
-			LibroaModificar
-					.setpaginas(Integer.parseInt(txtLibPaginas.getText()));
+			LibroaModificar.setpaginas(Integer.parseInt(txtLibPaginas.getText()));
+			
+			BaseDatos.initBD("eLibrary.db");
 			try {
-				cambio.Modificar(LibroaModificar, 2, 0, null, null);
-			} catch (MiExcepcion j) {
-				JOptionPane.showMessageDialog(this, j.toString());
+				BaseDatos.modificarLibro(LibroaModificar);
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			}
 
-			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(0, "",
-					0, 0);
+			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(0, "", 0, 0);
 			objVerArticulos.setVisible(true);
 			this.dispose();
 

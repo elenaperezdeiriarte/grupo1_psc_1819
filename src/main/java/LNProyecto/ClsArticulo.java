@@ -1,9 +1,9 @@
 package LNProyecto;
 
-//crear clase articulos
-//padre de dvd, cd y libro
 //Clase en la que se definen los atributos de los articulos
 import java.io.Serializable;
+
+import org.apache.log4j.Logger;
 
 @SuppressWarnings("rawtypes")
 public class ClsArticulo implements Comparable, Serializable 
@@ -20,6 +20,7 @@ public class ClsArticulo implements Comparable, Serializable
 	private int tipo; //0=CD 1=DVD 2=Libro
 	private String web;
 	private String imagen; //hipervinculo a la imagen
+	private static final Logger log = Logger.getLogger(ClsArticulo.class.getName());
 
 	public ClsArticulo (int numero, String nombre, String autor, double nota, int estado, int contador, int numVotos, int tipo, String web, String imagen)
 	{
