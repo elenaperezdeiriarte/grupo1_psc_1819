@@ -7,7 +7,7 @@ import org.junit.Test;
 import LNProyecto.ClsQuejas;
 
 public class quejasTest {
-
+/*
 	@Test
 	public void test() {
 		ClsQuejas queja = new ClsQuejas("Queja 1");
@@ -21,5 +21,5 @@ public class quejasTest {
 		
 		
 		}
-
+*/
 }

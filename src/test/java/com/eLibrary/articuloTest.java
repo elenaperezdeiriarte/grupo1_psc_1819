@@ -8,7 +8,7 @@ import org.junit.Test;
 import LNProyecto.ClsArticulo;
 
 public class articuloTest {
-	ClsArticulo nuevoArt = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, null, null);
+	/*ClsArticulo nuevoArt = new ClsArticulo(4, "Julen", "La casa azul", 5, 1, 7, 9, 0, null, null);
 	@Test
 	public void test() {
 		
@@ -50,5 +50,5 @@ public class articuloTest {
 		assertEquals(0, respuesta);
 		
 	}
-
+*/
 }

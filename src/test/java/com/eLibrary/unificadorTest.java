@@ -19,7 +19,7 @@ import LNProyecto.ClsUnificadorDClases;
 import LNProyecto.MiExcepcion;
 
 public class unificadorTest {
-	ClsUnificadorDClases uni = new ClsUnificadorDClases();
+/*	ClsUnificadorDClases uni = new ClsUnificadorDClases();
 	ArrayList<ClsArticulo> arti;
 	ArrayList<ClsSugerencias> sug;
 	ArrayList<ClsQuejas> quej;
@@ -61,7 +61,7 @@ public class unificadorTest {
 		uni.NuevoLibro(null, 0, null, 0, 0, 0, 0, 0, 2, null, null);
 	}*/
 	
-	@Test
+/*	@Test
 	public void artitest() {
 		arti = uni.leerArticulos();		
 		uni.guardarArticulos(arti);		
@@ -101,7 +101,7 @@ public class unificadorTest {
 		uni.Modificar(a, 0, 0, null, null);
 	}*/
 	
-	@Test
+/*	@Test
 	public void contratest()  {
 		con = new ClsContrasena("password");
 		uni.guardarContra(con);
@@ -142,7 +142,7 @@ public class unificadorTest {
 		uni.sacarFalta();
 	}*/
 	
-	@Test
+/*	@Test
 	public void eliminarfictest()  {
 		//uni.eliminarFichero(fic);
 		uni.eliminarSugerencias();
@@ -176,7 +176,7 @@ public class unificadorTest {
 		assertNotNull(tam);
 	}
 	
-	
+*/	
 	
 	
 	

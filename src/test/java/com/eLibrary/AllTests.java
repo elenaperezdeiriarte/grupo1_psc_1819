@@ -10,7 +10,9 @@ import org.junit.runners.Suite.SuiteClasses;
 	elenaTest.class,
 	julenTest.class,
 	mikelTest.class,
-	cdMockTest.class
+	cdMockTest.class,
+	dvdMockTest.class,
+	libroMockTest.class
 	})
 	//articuloTest.class,
 	//cdTest.class, 

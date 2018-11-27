@@ -63,6 +63,7 @@ public class lpproyectoPerfTest {
 	 */
 
 	//Activa Contiperf cuando se lanza JUnit
+/*
 	@Rule
 	public ContiPerfRule i = new ContiPerfRule();
 	
@@ -190,5 +191,5 @@ public class lpproyectoPerfTest {
 	{
 		Thread.sleep(1000);
 	}
-	
+	*/
 }
