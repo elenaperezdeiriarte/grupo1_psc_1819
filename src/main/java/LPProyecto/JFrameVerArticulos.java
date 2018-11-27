@@ -92,6 +92,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 	public JFrameVerArticulos(int a, String Busc, int x, int adminOusu) {
 		//Ver Articulos Admin
 		this.adminOusu = adminOusu;
+		//Ver Articulos Cliente
 		this.busqueda = Busc;
 
 		BaseDatos.initBD("eLibrary.db");
