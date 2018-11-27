@@ -1,5 +1,6 @@
 package LNProyecto;
 
+
 import java.io.Serializable;
 
 import org.apache.log4j.Logger;
@@ -34,6 +35,12 @@ public class ClsCD extends ClsAudioVisual implements Serializable
 		return salida.toString();
 	}
 	
+	/*
+	 *
+	 * Se compruebas si el autor y el nombre de la cancion son validos
+	 * Para poder añadirlos a la BD deben ser validos
+	 * 
+	 */
 
 	public boolean isValidAuthor(String nombre)
 	{
