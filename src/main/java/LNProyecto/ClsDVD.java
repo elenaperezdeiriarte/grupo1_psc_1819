@@ -14,6 +14,7 @@ public class ClsDVD extends ClsAudioVisual implements Serializable
 	private static final long serialVersionUID = 1L;
 	private int oscar;
 	private static final Logger log = Logger.getLogger(ClsDVD.class.getName());
+	Iimdb db;
 	
 	public ClsDVD (String nombre, int numero, String autor, int duracion, int ano, double nota, int estado, int contador, int oscar, int numVotos, int tipo, String web, String imagen)
 	{
@@ -43,4 +44,23 @@ public class ClsDVD extends ClsAudioVisual implements Serializable
 		return salida.toString();
 	}
 		
+	public boolean isValidAuthor(String nombre)
+	{
+		return db.isValidAuthor(nombre);
+	}
+	
+	public boolean isValidSong(String song)
+	{
+		return db.isValidSong(song);
+	}
+	
+	public Iimdb getBrainz()
+	{
+		return db;
+	}
+	
+	public void setBrainz (Iimdb db)
+	{
+		this.db = db;
+	}
 }

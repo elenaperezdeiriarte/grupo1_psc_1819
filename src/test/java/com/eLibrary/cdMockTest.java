@@ -13,7 +13,8 @@ import LNProyecto.ClsCD;
 
 public class cdMockTest {
 	
-	ClsCD addingSong;
+	String nombre;
+	String song;
 
 	@Mock
 	ClsCD mockCD;
@@ -22,12 +23,14 @@ public class cdMockTest {
 	public void setup()
 	{
 		MockitoAnnotations.initMocks(this);
-		Mockito.when(mockCD.isValidMusic(addingSong)).thenReturn(true);
+		Mockito.when(mockCD.isValidAuthor(nombre)).thenReturn(true);
+		Mockito.when(mockCD.isValidSong(song)).thenReturn(true);
 	}
 	
 	@Test
 	public void test() {
-		assertTrue(mockCD.isValidMusic(addingSong));
+		assertTrue(mockCD.isValidAuthor(nombre));
+		assertTrue(mockCD.isValidSong(song));
 	}
 
 }

@@ -14,7 +14,7 @@ public class ClsCD extends ClsAudioVisual implements Serializable
 	
 	
 	
-	
+	IMusicBrainz db;
 
 	public ClsCD (String nombre, int numero, String autor, int duracion, int ano, double nota, int estado, int contador, int numVotos, int tipo, String web, String imagen)
 	{
@@ -35,9 +35,23 @@ public class ClsCD extends ClsAudioVisual implements Serializable
 	}
 	
 
-	public boolean isValidMusic(ClsCD cdService)
+	public boolean isValidAuthor(String nombre)
 	{
-		return false;
+		return db.isValidAuthor(nombre);
 	}
-		
+	
+	public boolean isValidSong(String song)
+	{
+		return db.isValidSong(song);
+	}
+	
+	public IMusicBrainz getBrainz()
+	{
+		return db;
+	}
+	
+	public void setBrainz (IMusicBrainz db)
+	{
+		this.db = db;
+	}
 }
