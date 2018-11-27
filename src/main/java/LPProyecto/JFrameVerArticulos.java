@@ -366,6 +366,13 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		contentPane.add(textBusqueda);
 		textBusqueda.setColumns(10);
 
+		/*
+		 * 
+		 * Se recogerá la palabra (nombre o autor) introducido por el cliente 
+		 * se filtrará entre los artículos que ya están recogidos en el programa desde la base de datos 
+		 * con la funcionalidad de mostrar los artículo
+		 * 
+		 */
 		btnBuscar = new JButton(new ImageIcon(getClass().getResource(
 				"/images/Search.png")));
 		btnBuscar.setBounds(1137, 117, 48, 48);
@@ -426,7 +433,14 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		contentPane.add(lblVerMasDetalles);
 		
 		
-		//Buscar artículos.
+		/*
+		 * 
+		 * Buscar artículos.
+		 * Compara la palabra introducida con nombres y titulos de la base de datos
+		 * Si hay alguna coincidencia muestra ese articulo
+		 * 
+		 */
+		
 		if (a == 1) {
 			ArrayList<ClsArticulo> auxiliar = new ArrayList<ClsArticulo>();
 
