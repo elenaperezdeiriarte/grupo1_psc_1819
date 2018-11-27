@@ -1,6 +1,13 @@
 package LNProyecto;
 
-//Clase en la que se definen los atributos de los articulos
+/*
+ * 
+ * Clase en la que se definen los atributos de los articulos
+ * actuará como padre de libros, dvds, y cds
+ * Recoge los datos comunes de los 3: numero, nombre, autor..
+ * 
+ */
+
 import java.io.Serializable;
 
 @SuppressWarnings("rawtypes")
