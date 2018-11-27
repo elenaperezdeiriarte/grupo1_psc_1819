@@ -38,7 +38,7 @@ public class JFrameMenuPrincipal extends JFrame implements ActionListener {
 		this.datos = new ClsDatos();
 		enFicDatos constantebloq = enFicDatos.FICHERO_DATOS_BLOQUEO;
 
-		datos.ComenzarSave(constantebloq);
+		//datos.ComenzarSave(constantebloq);
 		datos.Save((Serializable) bloqueo);
 		datos.TerminarSave();
 
