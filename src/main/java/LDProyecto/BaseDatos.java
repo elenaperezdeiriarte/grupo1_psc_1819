@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 import org.apache.log4j.Logger;
 
@@ -36,10 +36,7 @@ public class BaseDatos {
 			statement.setQueryTimeout(30); // poner timeout 30 msg
 			return connection;
 		} catch (ClassNotFoundException | SQLException e) {
-			JOptionPane.showMessageDialog(null,
-					"Error de conexi�n!! No se ha podido conectar con "
-							+ nombreBD + "\n" + e, "ERROR",
-					JOptionPane.ERROR_MESSAGE);
+//			JOptionPane.showMessageDialog(null, "Error de conexi�n!! No se ha podido conectar con " + nombreBD + "\n" + e, "ERROR", JOptionPane.ERROR_MESSAGE);
 			System.out
 					.println("Error de conexi�n!! No se ha podido conectar con "
 							+ nombreBD);
@@ -101,7 +98,7 @@ public class BaseDatos {
 		try {
 			String sentSQL = "insert into CONTRASENA (contra) values('"
 					+ contra + "')";
-			JOptionPane.showMessageDialog(null, "Contrase�a cambiada");
+//			JOptionPane.showMessageDialog(null, "Contrase�a cambiada");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
@@ -287,7 +284,7 @@ public class BaseDatos {
 		try {
 			String sentSQL = "insert into QUEJAS (texto) values('" + texto
 					+ "')";
-			JOptionPane.showMessageDialog(null, "Queja guardada");
+//			JOptionPane.showMessageDialog(null, "Queja guardada");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
@@ -354,7 +351,7 @@ public class BaseDatos {
 		try {
 			String sentSQL = "insert into SUGERENCIAS (nombre, autor, tipo) values('"
 					+ nombre + "', '" + autor + "', '" + tipo + "')";
-			JOptionPane.showMessageDialog(null, "Sugerencia guardada");
+//			JOptionPane.showMessageDialog(null, "Sugerencia guardada");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
@@ -443,7 +440,7 @@ public class BaseDatos {
 					+ cd.getWeb()
 					+ "', '"
 					+ cd.getImagen() + "')";
-			JOptionPane.showMessageDialog(null, "CD guardado");
+//			JOptionPane.showMessageDialog(null, "CD guardado");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
@@ -593,7 +590,7 @@ public class BaseDatos {
 					+ dvd.getWeb()
 					+ "', '"
 					+ dvd.getImagen() + "')";
-			JOptionPane.showMessageDialog(null, "DVD guardado");
+//			JOptionPane.showMessageDialog(null, "DVD guardado");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
@@ -742,7 +739,7 @@ public class BaseDatos {
 					+ libro.getWeb()
 					+ "', '"
 					+ libro.getImagen() + "')";
-			JOptionPane.showMessageDialog(null, "Libro guardado");
+//			JOptionPane.showMessageDialog(null, "Libro guardado");
 			System.out.println(sentSQL); // (Quitar) para ver lo que se hace
 			int val = st.executeUpdate(sentSQL);
 			if (val != 1)
