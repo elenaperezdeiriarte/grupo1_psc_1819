@@ -90,7 +90,8 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 		JScrollPane scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(918, 150, 400, 450);
 		contentPane.add(scrollPane_2);
-
+		
+		//ordenadr ver estadisticas
 		if (x == 1) {
 			btnNota = new JButton("Nota");
 			btnNota.setBounds(616, 648, 89, 23);
@@ -126,7 +127,8 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-
+		
+		// Funcionalidad ver estadisticas
 		ArticuloList = BaseDatos.getArticulos();
 		BaseDatos.close();
 
