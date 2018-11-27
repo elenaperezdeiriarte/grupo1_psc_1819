@@ -12,7 +12,8 @@ import org.junit.runners.Suite.SuiteClasses;
 	mikelTest.class,
 	cdMockTest.class,
 	dvdMockTest.class,
-	libroMockTest.class
+	libroMockTest.class,
+	insertionPerfTest.class
 	})
 	//articuloTest.class,
 	//cdTest.class, 
