@@ -32,7 +32,12 @@ import LNProyecto.TableArticulos;
 
 import java.awt.Font;
 
-// Ventana que dise�a la pantalla de ver art�culos del sistema
+/*
+ * 
+ * Ventana que dise�a la pantalla de ver art�culos del sistema
+ * Una de las funcionalidades es la de anadir articulos
+ * 
+ */
 
 public class JFrameVerArticulos extends JFrame implements ActionListener,
 		MouseListener {
@@ -59,6 +64,8 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 	private String busqueda;
 	private JButton btnInsertarCD1;
 	private JButton btnInsertarDVD1;
+	
+	// Este boton sirve para anadir un nuevo libro
 	private JButton btnInsertarLibro1;
 	private JLabel label_3;
 	private JButton btnWeb;
@@ -175,6 +182,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			btnInsertarDVD1.addActionListener(this);
 			contentPane.add(btnInsertarDVD1);
 
+			//Se introduce el nuevo libro
 			btnInsertarLibro = new JButton(new ImageIcon(getClass()
 					.getResource("/images/book.png")));
 			btnInsertarLibro.setBounds(865, 278, 118, 120);
