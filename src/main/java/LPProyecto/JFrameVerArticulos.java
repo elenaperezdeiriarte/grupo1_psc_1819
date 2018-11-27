@@ -106,6 +106,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		ordenacion = x;
 		
 		//Ordenar por nombre o numero
+		//
 		if (x == 0) {
 			Collections.sort(ArticuloList);
 		}
