@@ -89,9 +89,6 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		//Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
 
 		BaseDatos.initBD("eLibrary.db");
-		BaseDatos.crearTablaBDU();
-		String savedContra = "";
-
 		try {
 			BaseDatos.selectArticulos();
 			log.info("Mensaje de info: El usuario esta viendo correctamente los articulos");
