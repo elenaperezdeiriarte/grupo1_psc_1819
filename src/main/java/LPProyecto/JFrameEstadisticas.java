@@ -127,7 +127,8 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
-
+		
+		// Funcionalidad ver estadisticas
 		ArticuloList = BaseDatos.getArticulos();
 		BaseDatos.close();
 
