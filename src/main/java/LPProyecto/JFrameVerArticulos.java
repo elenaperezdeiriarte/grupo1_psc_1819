@@ -357,7 +357,8 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		textBusqueda.setBounds(884, 117, 243, 48);
 		contentPane.add(textBusqueda);
 		textBusqueda.setColumns(10);
-
+		
+		//Botones y funcionalidad para buscar artículos
 		btnBuscar = new JButton(new ImageIcon(getClass().getResource(
 				"/images/Search.png")));
 		btnBuscar.setBounds(1137, 117, 48, 48);
@@ -418,7 +419,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		contentPane.add(lblVerMasDetalles);
 		
 		
-		//Buscar artículos.
+		//Metodologia que permite buscar articulos.
 		if (a == 1) {
 			ArrayList<ClsArticulo> auxiliar = new ArrayList<ClsArticulo>();
 
@@ -466,7 +467,8 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 				tableArticulos.getColumnModel().getColumn(i)
 						.setPreferredWidth(tamanos.get(i).intValue());
 			}
-
+			
+			//Conexion base de datos para los articulos
 			tableArticulos.setEnabled(true);
 			tableArticulos.setRowSelectionAllowed(true);
 		}
