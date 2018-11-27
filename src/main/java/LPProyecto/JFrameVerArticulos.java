@@ -90,11 +90,9 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 
 	@SuppressWarnings("unchecked")
 	public JFrameVerArticulos(int a, String Busc, int x, int adminOusu) {
+		//Ver Articulos Admin
 		this.adminOusu = adminOusu;
 		this.busqueda = Busc;
-		//ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		//ArticuloList =
-		//Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
 
 		BaseDatos.initBD("eLibrary.db");
 		try {
