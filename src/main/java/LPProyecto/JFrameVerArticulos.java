@@ -62,9 +62,10 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 	private int saberSiBusc;
 	private int adminOusu;
 	private String busqueda;
+	// Este boton sirve para anadir un nuevo CD
 	private JButton btnInsertarCD1;
+	// Este boton sirve para anadir un nuevo DVD
 	private JButton btnInsertarDVD1;
-	
 	// Este boton sirve para anadir un nuevo libro
 	private JButton btnInsertarLibro1;
 	private JLabel label_3;
@@ -146,6 +147,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			btnWeb.addActionListener(this);
 			contentPane.add(btnWeb);
 
+			//Se anade un nuevo CD
 			btnInsertarCD = new JButton(new ImageIcon(getClass().getResource(
 					"/images/CD.png")));
 			btnInsertarCD.setBounds(1169, 270, 128, 128);
