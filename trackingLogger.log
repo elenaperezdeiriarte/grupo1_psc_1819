@@ -213,3 +213,7 @@
 2018-11-27 12:21:18,957 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
 2018-11-27 12:21:23,894 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
 2018-11-27 12:21:29,980 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
+2018-11-27 15:59:37,566 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos
+2018-11-27 15:59:47,584 [AWT-EventQueue-0] INFO  LPProyecto.JFrameQueja - Mensaje de info: El usuario ha enviado correctamente la queja
+2018-11-27 16:00:19,120 [AWT-EventQueue-0] INFO  LPProyecto.JFrameSugerencia - Mensaje de info: Se ha realizado con �xito el envio de la sugerencia
+2018-11-27 16:00:21,106 [AWT-EventQueue-0] INFO  LPProyecto.JFrameVerArticulos - Mensaje de info: El usuario esta viendo correctamente los articulos

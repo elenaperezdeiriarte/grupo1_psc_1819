@@ -62,7 +62,7 @@ public class ClsDatos {
 		return "";
 	}
 
-	/*public void ComenzarSave(enFicDatos fichero) {
+	public void ComenzarSave(enFicDatos fichero) {
 
 		// Para guardar un nuevo libro
 
@@ -102,7 +102,7 @@ public class ClsDatos {
 			}
 		}
 
-	}*/
+	}
 
 	public void TerminarSave() {
 		try {
