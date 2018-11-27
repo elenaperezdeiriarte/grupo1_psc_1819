@@ -20,6 +20,8 @@ import java.awt.Color;
 
 import javax.swing.JTextField;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsDVD;
 import LNProyecto.ClsLibro;
 import LNProyecto.ClsUnificadorDClases;
@@ -37,6 +39,7 @@ public class JFrameCFLibro extends JFrame implements ActionListener {
 	private JTextField txtLibNom;
 	private JTextField txtLibAutor;
 	private JTextField txtLibPag;
+	private static final Logger log = Logger.getLogger(JFrameCFLibro.class.getName());
 
 	public JFrameCFLibro(int saberSiBusc, int ordenacion, String busqueda) {
 

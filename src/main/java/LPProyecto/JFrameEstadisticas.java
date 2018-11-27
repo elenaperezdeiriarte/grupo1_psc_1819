@@ -3,6 +3,7 @@ package LPProyecto;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -30,6 +31,10 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
+import LDProyecto.BaseDatos;
+
 public class JFrameEstadisticas extends JFrame implements ActionListener
 
 {
@@ -45,6 +50,7 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 	private JButton btnNota;
 	private JButton btnVecesPrestado;
 	private JButton btnVolver;
+	private static final Logger log = Logger.getLogger(JFrameEstadisticas.class.getName());
 
 	public JFrameEstadisticas(int x) {
 		setTitle("Administrador de articulos");
@@ -114,9 +120,15 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 		btnVolver.addActionListener(this);
 		contentPane.add(btnVolver);
 
-		ClsUnificadorDClases Gestor = new ClsUnificadorDClases();
-		ArticuloList = Gestor
-				.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
+		BaseDatos.initBD("eLibrary.db");
+		try {
+			BaseDatos.selectArticulos();
+		} catch (SQLException e1) {
+			e1.printStackTrace();
+		}
+
+		ArticuloList = BaseDatos.getArticulos();
+		BaseDatos.close();
 
 		ArrayList<ClsCD> ListaCDs = new ArrayList<ClsCD>();
 		ArrayList<ClsDVD> ListaDVDs = new ArrayList<ClsDVD>();

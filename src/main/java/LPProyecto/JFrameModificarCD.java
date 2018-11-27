@@ -13,6 +13,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.log4j.Logger;
+
 import LDProyecto.BaseDatos;
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsCD;
@@ -35,6 +37,7 @@ public class JFrameModificarCD extends JFrame implements ActionListener
 	private String busqueda;
 	private JButton jbVolver;
 	private ClsCD CD;
+	private static final Logger log = Logger.getLogger(JFrameModificarCD.class.getName());
 	public JFrameModificarCD(ClsArticulo Articulo, int saberSiBusc, int ordenacion, String busqueda) 
 	{
 		CDaModificar = (ClsCD)Articulo;

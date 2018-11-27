@@ -4,11 +4,14 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
+import org.apache.log4j.Logger;
+
 	public class TableSugerencias extends AbstractTableModel
 	{
 			private static final long serialVersionUID = 1L;
 			private String[] columnNames = {"Tipo", "Nombre", "Autor"};
 			Object [][] data;
+			private static final Logger log = Logger.getLogger(TableSugerencias.class.getName());
 			
 			public TableSugerencias(ArrayList<ClsSugerencias> a){
 				

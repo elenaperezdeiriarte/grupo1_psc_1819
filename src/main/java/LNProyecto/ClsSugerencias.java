@@ -2,12 +2,15 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 public class ClsSugerencias implements Serializable
 {
 	private static final long serialVersionUID = 8684936469815067072L;
 	private String nombre;
 	private String autor;
 	private String tipo;
+	private static final Logger log = Logger.getLogger(ClsSugerencias.class.getName());
 	
 
 	public ClsSugerencias (String nombre, String autor, String tipo)

@@ -89,9 +89,6 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		//Gestor.HashToArr(Gestor.ArrToHash(Gestor.leerArticulos()));
 
 		BaseDatos.initBD("eLibrary.db");
-		BaseDatos.crearTablaBDU();
-		String savedContra = "";
-
 		try {
 			BaseDatos.selectArticulos();
 			log.info("Mensaje de info: El usuario esta viendo correctamente los articulos");
@@ -106,6 +103,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		ordenacion = x;
 		
 		//Ordenar por nombre o numero
+		//
 		if (x == 0) {
 			Collections.sort(ArticuloList);
 		}
@@ -511,7 +509,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		}
 
 		if (botonPulsado == btnBuscar) {
-			// Aqui se manda lo que hemos buscado
+			//Se envia lo que se ha introducido para buscar
 			JFrameVerArticulos objVerArticulos = new JFrameVerArticulos(1,
 					textBusqueda.getText(), ordenacion, adminOusu);
 			objVerArticulos.setVisible(true);

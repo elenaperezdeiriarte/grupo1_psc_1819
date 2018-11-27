@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import org.apache.log4j.Logger;
+
 import LDProyecto.ClsDatos;
 import LNProyecto.ClsCD;
 import LNProyecto.ClsConstantes.enFicDatos;
@@ -14,6 +16,7 @@ import LNProyecto.ClsArticulo;
 
 public class ClsUnificadorDClases 
 {	
+	private static final Logger log = Logger.getLogger(ClsUnificadorDClases.class.getName());
 	
 	public int leerNumerador()
 	{
@@ -325,6 +328,7 @@ public class ClsUnificadorDClases
 		datos.TerminarSave();
 	}
 	
+	//Metodo para buscar articulos
 	public HashSet<ClsArticulo> ArrToHash (ArrayList<ClsArticulo> ListaArticulos)
 	{
 		HashSet<ClsArticulo> HashArticulos = new HashSet<ClsArticulo>();

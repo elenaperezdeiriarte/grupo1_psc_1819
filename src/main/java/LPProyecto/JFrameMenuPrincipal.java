@@ -1,12 +1,12 @@
 package LPProyecto;
 
 import java.awt.event.ActionEvent;
-
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import LDProyecto.ClsDatos;
 import LNProyecto.ClsBloqueo;
 import LNProyecto.ClsConstantes.enFicDatos;
@@ -17,7 +17,9 @@ import java.io.Serializable;
 
 import javax.swing.ImageIcon;
 
-//Diseñar menu inicio
+import org.apache.log4j.Logger;
+
+//Diseï¿½ar menu inicio
 
 public class JFrameMenuPrincipal extends JFrame implements ActionListener {
 
@@ -28,6 +30,7 @@ public class JFrameMenuPrincipal extends JFrame implements ActionListener {
 	private JButton btnSalir;
 	private ClsBloqueo bloqueo;
 	private ClsDatos datos;
+	private static final Logger log = Logger.getLogger(JFrameMenuPrincipal.class.getName());
 
 	public JFrameMenuPrincipal() {
 

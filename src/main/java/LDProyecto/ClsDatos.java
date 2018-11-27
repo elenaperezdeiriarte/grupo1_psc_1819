@@ -10,6 +10,8 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
+
 import static LNProyecto.ClsConstantes.enFicDatos;
 
 public class ClsDatos {
@@ -27,6 +29,7 @@ public class ClsDatos {
 	ObjectOutputStream oos;
 	ObjectInputStream ois;
 	AppendableObjectOutputStream aos;
+	private static final Logger log = Logger.getLogger(ClsDatos.class.getName());
 
 	private String setFichero(enFicDatos fichero) {
 		// Segï¿½n el fichero sobre el que se quiera trabajar, se selecciona la
@@ -236,7 +239,7 @@ public class ClsDatos {
 	}
 
 	public String ReadContrasena() {
-		// Leemos y comprobamos si la contraseña es correcta
+		// Leemos y comprobamos si la contraseï¿½a es correcta
 
 		String contrasena = null;
 		Serializable o = null;

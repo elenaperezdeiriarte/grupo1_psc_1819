@@ -18,6 +18,8 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import org.apache.log4j.Logger;
+
 import LNProyecto.ClsArticulo;
 import LNProyecto.ClsDVD;
 import LNProyecto.ClsUnificadorDClases;
@@ -39,6 +41,7 @@ public class JFrameModificarDVD extends JFrame implements ActionListener {
 	private String busqueda;
 	private JButton jbVolver;
 	private ClsDVD DVD;
+	private static final Logger log = Logger.getLogger(JFrameModificarDVD.class.getName());
 
 	public JFrameModificarDVD(ClsArticulo Articulo, int saberSiBusc,
 			int ordenacion, String busqueda) {

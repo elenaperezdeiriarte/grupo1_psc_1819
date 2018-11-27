@@ -7,10 +7,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.apache.log4j.Logger;
+
 public class Inicio extends JFrame {
 
 	private static final long serialVersionUID = -1515105495374550920L;
 	private JPanel contentPane;
+	private static final Logger log = Logger.getLogger(Inicio.class.getName());
 
 	public Inicio() 
 	{

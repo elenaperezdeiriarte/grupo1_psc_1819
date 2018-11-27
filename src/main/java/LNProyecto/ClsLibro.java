@@ -2,12 +2,16 @@ package LNProyecto;
 
 import java.io.Serializable;
 
+import org.apache.log4j.Logger;
+
 public class ClsLibro extends ClsArticulo implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 	private int paginas;
+	private static final Logger log = Logger.getLogger(ClsLibro.class.getName());
+	Ibibliotecadigital db;
 
 	public ClsLibro(String nombre, int numero, String autor, double nota,
 			int estado, int contador, int paginas, int numVotos, int tipo,
@@ -36,5 +40,25 @@ public class ClsLibro extends ClsArticulo implements Serializable {
 		salida.append(" paginas");
 
 		return salida.toString();
+	}
+	
+	public boolean isValidAuthor(String nombre)
+	{
+		return db.isValidAuthor(nombre);
+	}
+	
+	public boolean isValidSong(String song)
+	{
+		return db.isValidSong(song);
+	}
+	
+	public Ibibliotecadigital getBrainz()
+	{
+		return db;
+	}
+	
+	public void setBrainz (Ibibliotecadigital db)
+	{
+		this.db = db;
 	}
 }

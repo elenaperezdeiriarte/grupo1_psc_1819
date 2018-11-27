@@ -8,12 +8,16 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URI;
 import java.net.URISyntaxException;
+
 import javax.swing.JLabel;
+
+import org.apache.log4j.Logger;
 
 // en esta clase se anade el url
 public class LabelUrl extends JLabel implements MouseListener {
 
 	private static final long serialVersionUID = -6065731997922680545L;
+	private static final Logger log = Logger.getLogger(LabelUrl.class.getName());
 
 	private URI url;
 
