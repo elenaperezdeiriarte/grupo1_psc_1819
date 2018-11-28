@@ -37,6 +37,7 @@ import LDProyecto.BaseDatos;
 
 public class JFrameEstadisticas extends JFrame implements ActionListener
 
+	//Diseño de la ventana para ver las estadisiticas
 {
 	private static final long serialVersionUID = 1483541409470235114L;
 	private JPanel contentPane;
