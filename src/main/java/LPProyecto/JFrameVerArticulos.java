@@ -618,7 +618,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 				e.printStackTrace();
 			}
 		}
-
+		//Funcionalidad para modificar articulo
 		if (botonPulsado == btnModificar) {
 			tableArticulos.getSelectedRow();
 			try {
