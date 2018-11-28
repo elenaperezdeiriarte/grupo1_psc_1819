@@ -7,6 +7,8 @@ import javax.swing.table.AbstractTableModel;
 
 import org.apache.log4j.Logger;
 
+//Clase que gestiona las tablas de los articulos que se visualizan en verArticulos
+
 	public class TableArticulos extends AbstractTableModel
 	{
 			private static final long serialVersionUID = 1L;
