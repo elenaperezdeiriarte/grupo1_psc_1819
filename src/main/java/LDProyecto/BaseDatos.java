@@ -480,6 +480,7 @@ public class BaseDatos {
 		}
 	}
 	
+	//metodo que devuelve un CD
 	public static ClsCD returnCD(int numero) throws SQLException
 	{
 		getCDInfo(numero);
@@ -535,7 +536,8 @@ public class BaseDatos {
 	// ////////////////////////////////////
 	// /// DVD /////
 	// ////////////////////////////////////
-
+	
+	//Crear la tabla en bse de datos de DVD
 	public static void crearTablaBDDVD() {
 		if (statement == null)
 			return;
@@ -548,7 +550,8 @@ public class BaseDatos {
 			// e.printStackTrace();
 		}
 	}
-
+	
+	//Eliminar la tabla en BBDD de DVD
 	public static void eliminarTablaBDDVD() {
 		if (statement == null)
 			return;
