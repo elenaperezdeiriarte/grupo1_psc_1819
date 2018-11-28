@@ -515,7 +515,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			nuevoCD.setVisible(true);
 			this.dispose();
 		}
-
+		//Insertar DVD
 		if (botonPulsado == btnInsertarDVD || botonPulsado == btnInsertarDVD1) {
 			JFrameCFDVD nuevoDVD = new JFrameCFDVD(saberSiBusc, ordenacion,
 					busqueda);
@@ -592,7 +592,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 			objVerArticulos11.setVisible(true);
 			this.dispose();
 		}
-
+		//Insertas link
 		if (botonPulsado == btnWeb) {
 			tableArticulos.getSelectedRow();
 			try {
