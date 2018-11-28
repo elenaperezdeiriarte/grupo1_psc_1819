@@ -605,6 +605,7 @@ public class BaseDatos {
 		}
 	}
 
+	//Metodo que sirve para seleccionar DVDs de la base de datos
 	public static void selectDVDs() throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "select * from DVDS";
@@ -692,6 +693,7 @@ public class BaseDatos {
 	// /// Libro /////
 	// ////////////////////////////////////
 
+	//Metodo que crea la tabla de libros en la base de datos
 	public static void crearTablaBDLibro() {
 		if (statement == null)
 			return;
@@ -704,7 +706,8 @@ public class BaseDatos {
 			// e.printStackTrace();
 		}
 	}
-
+	
+	//Metodo para eliminar la tabla de libros de la base de datos
 	public static void eliminarTablaBDLibro() {
 		if (statement == null)
 			return;
@@ -753,7 +756,8 @@ public class BaseDatos {
 			return false;
 		}
 	}
-
+	
+	//Metodo para seleccionar libros de la base de datos
 	public static void selectLibros() throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "select * from LIBROS";
