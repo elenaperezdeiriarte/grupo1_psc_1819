@@ -842,6 +842,9 @@ public class BaseDatos {
 	// /// Articulos /////
 	// ////////////////////////////////////
 
+		//Metodo que sirve para seleccionar todos los articulos para que despues
+	// sean visualizados en las tablas.
+	//Se utilizar en ver articulos de las parte de administrador y del cliente
 	public static void selectArticulos() throws SQLException {
 		//Lectura de artículos bbdd para ver artículos cliente
 		arrayArticulos = new ArrayList<ClsArticulo>();
@@ -855,14 +858,17 @@ public class BaseDatos {
 
 	static ArrayList<ClsArticulo> arrayArticulos = new ArrayList<ClsArticulo>();
 
+		//Metodo que suma ur articulo a la bbdd
 	public static void articulo(ClsArticulo articulo) {
 		arrayArticulos.add(articulo);
 	}
 
+		//Metodo que devuelve un articulo de bbdd
 	public static ArrayList<ClsArticulo> getArticulos() {
 		return arrayArticulos;
 	}
 	
+	//Metodo que cuenta y devuelve el numero de articulos en la bbdd
 	public static int getNumArticulos()
 	{
 		try {
