@@ -566,7 +566,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 				JOptionPane.showMessageDialog(this, e.getMessage());
 			}
 		}
-
+		//Funcionalidad para alquilar o devolver articulos
 		if (botonPulsado == btnAlquilardevolver) {
 			tableArticulos.getSelectedRow();
 			try {
