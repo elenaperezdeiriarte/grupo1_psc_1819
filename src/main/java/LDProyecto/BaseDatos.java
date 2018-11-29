@@ -480,6 +480,7 @@ public class BaseDatos {
 		}
 	}
 	
+	//metodo que devuelve un CD
 	public static ClsCD returnCD(int numero) throws SQLException
 	{
 		getCDInfo(numero);
@@ -535,7 +536,8 @@ public class BaseDatos {
 	// ////////////////////////////////////
 	// /// DVD /////
 	// ////////////////////////////////////
-
+	
+	//Crear la tabla en bse de datos de DVD
 	public static void crearTablaBDDVD() {
 		if (statement == null)
 			return;
@@ -548,7 +550,8 @@ public class BaseDatos {
 			// e.printStackTrace();
 		}
 	}
-
+	
+	//Eliminar la tabla en BBDD de DVD
 	public static void eliminarTablaBDDVD() {
 		if (statement == null)
 			return;
@@ -602,6 +605,7 @@ public class BaseDatos {
 		}
 	}
 
+	//Metodo que sirve para seleccionar DVDs de la base de datos
 	public static void selectDVDs() throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "select * from DVDS";
@@ -689,6 +693,7 @@ public class BaseDatos {
 	// /// Libro /////
 	// ////////////////////////////////////
 
+	//Metodo que crea la tabla de libros en la base de datos
 	public static void crearTablaBDLibro() {
 		if (statement == null)
 			return;
@@ -701,7 +706,8 @@ public class BaseDatos {
 			// e.printStackTrace();
 		}
 	}
-
+	
+	//Metodo para eliminar la tabla de libros de la base de datos
 	public static void eliminarTablaBDLibro() {
 		if (statement == null)
 			return;
@@ -750,7 +756,8 @@ public class BaseDatos {
 			return false;
 		}
 	}
-
+	
+	//Metodo para seleccionar libros de la base de datos
 	public static void selectLibros() throws SQLException {
 		Statement stmt = connection.createStatement();
 		String query = "select * from LIBROS";
@@ -835,6 +842,9 @@ public class BaseDatos {
 	// /// Articulos /////
 	// ////////////////////////////////////
 
+		//Metodo que sirve para seleccionar todos los articulos para que despues
+	// sean visualizados en las tablas.
+	//Se utilizar en ver articulos de las parte de administrador y del cliente
 	public static void selectArticulos() throws SQLException {
 		//Lectura de artículos bbdd para ver artículos cliente
 		arrayArticulos = new ArrayList<ClsArticulo>();
@@ -848,14 +858,17 @@ public class BaseDatos {
 
 	static ArrayList<ClsArticulo> arrayArticulos = new ArrayList<ClsArticulo>();
 
+		//Metodo que suma ur articulo a la bbdd
 	public static void articulo(ClsArticulo articulo) {
 		arrayArticulos.add(articulo);
 	}
 
+		//Metodo que devuelve un articulo de bbdd
 	public static ArrayList<ClsArticulo> getArticulos() {
 		return arrayArticulos;
 	}
 	
+	//Metodo que cuenta y devuelve el numero de articulos en la bbdd
 	public static int getNumArticulos()
 	{
 		try {
