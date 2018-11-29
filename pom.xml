@@ -96,6 +96,25 @@
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
           <version>2.5.2</version>
+          <configuration>
+			<descriptorRefs>
+				<descriptorRef>jar-with-dependencies</descriptorRef>
+			</descriptorRefs>
+			<archive>
+				<manifest>
+					<addClasspath>true</addClasspath>
+					<mainClass>com.eLibrary.ClsMain</mainClass>
+				</manifest>
+			</archive>
+		</configuration>
+			<executions>
+				<execution>
+					<phase>package</phase>
+					<goals>
+						<goal>single</goal>
+					</goals>
+				</execution>
+			</executions>
         </plugin>
         <plugin>
           <artifactId>maven-deploy-plugin</artifactId>
