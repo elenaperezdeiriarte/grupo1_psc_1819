@@ -128,6 +128,7 @@ public class JFrameCFCD extends JFrame implements ActionListener {
 		}
 
 		if (botonPulsado == jbGuardar) {
+			log.info("Mensaje de información: El CD ha sido alquilado/devuelto correctamente a la base de datos");
 			int numero = 1;
 			double nota = 0;
 			int estado = 0, contador = 0, numVotos = 0;

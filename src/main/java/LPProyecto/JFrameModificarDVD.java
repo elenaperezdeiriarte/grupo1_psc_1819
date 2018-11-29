@@ -143,7 +143,7 @@ public class JFrameModificarDVD extends JFrame implements ActionListener {
 		JButton botonPulsado = (JButton) e.getSource();
 
 		if (botonPulsado == btnGuardar) {
-
+			log.info("Mensaje de informacion: El DVD ha sido modificado correctamente en la base de datos");
 			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
 			cambio.comenzarModificacion(DVDaModificar);
 

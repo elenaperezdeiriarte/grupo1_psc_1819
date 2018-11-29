@@ -13,7 +13,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	cdMockTest.class,
 	dvdMockTest.class,
 	libroMockTest.class,
-	insertionPerfTest.class
+	insertionPerfTest.class,
 	})
 	//articuloTest.class,
 	//cdTest.class, 

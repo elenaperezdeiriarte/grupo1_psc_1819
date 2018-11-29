@@ -93,12 +93,12 @@ public class JFrameCambiarContrasena extends JFrame implements ActionListener
 		
 		//Si son iguales se modificara la contraseña, si no, dara un mensaje de error
 		if (botonPulsado == jbGuardar)
-		{			
+		{						
 			String nuevacontr1 = txtFieldContrasena1.getText();
 			String nuevacontr2 = textFieldContrasena2.getText();
 			
 			if (nuevacontr1.equals(nuevacontr2))
-			{				
+			{	
 				BaseDatos.initBD("eLibrary.db");
 				BaseDatos.eliminarTablaBDU();
 				BaseDatos.crearTablaBDU();

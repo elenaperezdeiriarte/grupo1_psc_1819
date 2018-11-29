@@ -92,6 +92,8 @@ public class JFrameEstadisticas extends JFrame implements ActionListener
 		scrollPane_2.setBounds(918, 150, 400, 450);
 		contentPane.add(scrollPane_2);
 		
+		log.info("Mensaje de informacion: Las estadisticas se están mostrando correctamente");
+		
 		//ordenadr ver estadisticas
 		if (x == 1) {
 			btnNota = new JButton("Nota");

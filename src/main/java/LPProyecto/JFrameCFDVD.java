@@ -141,6 +141,8 @@ public class JFrameCFDVD extends JFrame implements ActionListener {
 		}
 
 		if (botonPulsado == jbGuardar) {
+			
+			log.info("Mensaje de informacion: El DVD ha sido alquilado/devuelto correctamente en la base de datos");
 			int numero = 1;
 
 			double nota = 0;

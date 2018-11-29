@@ -125,7 +125,8 @@ public class JFrameModificarCD extends JFrame implements ActionListener
 		JButton botonPulsado = (JButton)e.getSource();
 		
 		if (botonPulsado == btnGuardar)
-		{									
+		{		
+			log.info("Mensaje de informacion: El CD ha sido modificado correctamente en la base de datos");
 			ClsUnificadorDClases cambio = new ClsUnificadorDClases();
 			cambio.comenzarModificacion(CDaModificar);
 			

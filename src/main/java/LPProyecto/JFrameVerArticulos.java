@@ -98,7 +98,7 @@ public class JFrameVerArticulos extends JFrame implements ActionListener,
 		BaseDatos.initBD("eLibrary.db");
 		try {
 			BaseDatos.selectArticulos();
-			log.info("Mensaje de info: El usuario esta viendo correctamente los articulos");
+			log.info("Mensaje de informacion: El usuario esta viendo correctamente los articulos");
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}

@@ -21,7 +21,7 @@ import LNProyecto.ClsUnificadorDClases;
 public class JFrameQueja extends JFrame implements ActionListener
 {
 	
-	//Diseñamos la ventana para enviar las quejas surgidas
+	//Diseï¿½amos la ventana para enviar las quejas surgidas
 
 	/**
 	 * 
@@ -50,7 +50,7 @@ public class JFrameQueja extends JFrame implements ActionListener
 		 btnAtras.addActionListener(this);
 		 contentPane.add(btnAtras);
 		
-		 //En este "Text Area" se podrá escribir
+		 //En este "Text Area" se podrï¿½ escribir
 		
 		 textArea = new JTextArea();
 		 textArea.setBounds(27, 11, 372, 198);
@@ -84,7 +84,7 @@ public class JFrameQueja extends JFrame implements ActionListener
 			 
 			 JFrameMenuCliente objCliente = new JFrameMenuCliente();			
 			 objCliente.setVisible(true);
-			 log.info("Mensaje de info: El usuario ha enviado correctamente la queja");
+			 log.info("Mensaje de informacion: El usuario ha enviado correctamente la queja");
 			 this.dispose();
 		 }
 		 if (botonPulsado == btnAtras)
