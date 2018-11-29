@@ -75,7 +75,7 @@ public class insertionPerfTest {
 	*/
 	@Test
 	@PerfTest(invocations = 10000, threads = 20, duration=2000)   //PerfTest convierte un JUnit en una prueba Contiperf. A definir número de iteraciones y los hilos que se disponen
-	@Required(max = 2300, average = 400, median= 300)  //Required define las requisitos de rendimiento, si no los cumple --> rojo	
+	@Required(max = 2500, average = 400, median= 300)  //Required define las requisitos de rendimiento, si no los cumple --> rojo	
 	public void contraseInsertionTest() throws Exception {
 		
 		//assertNotNull(cdnuevo);
