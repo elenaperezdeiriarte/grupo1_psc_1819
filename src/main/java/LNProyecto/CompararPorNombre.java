@@ -1,12 +1,15 @@
 package LNProyecto;
 
 //Clase que sirve para realizar la funcion de comparar articulos por nombre.
+//
+//
 import java.util.Comparator;
 
 import org.apache.log4j.Logger;
 
 public class CompararPorNombre implements Comparator<ClsArticulo> {
 	private static final Logger log = Logger.getLogger(CompararPorNombre.class.getName());
+	//Compara dos objetos articulos
 	public int compare(ClsArticulo o1, ClsArticulo o2) {
 
 		if (o1.getNombre().toLowerCase()
