@@ -8,6 +8,9 @@ import org.junit.Test;
 
 import LDProyecto.BaseDatos;
 import LNProyecto.ClsCD;
+//
+//Clase test de test inserciones de nuevos CDs en base de datos.
+//
 
 public class adrianTest {
 	ClsCD cdnuevo = new ClsCD("Zapatillas", 1, "El canto del loco", 120, 2005,
