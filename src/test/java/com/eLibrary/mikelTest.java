@@ -11,6 +11,9 @@ import LDProyecto.BaseDatos;
 import LNProyecto.ClsQuejas;
 import LNProyecto.ClsSugerencias;
 
+//
+//Clase test de inserciones de sugerencias a la base de datos para el test.
+//
 public class mikelTest {
 	ClsSugerencias sugerencia = new ClsSugerencias("El Mal Querer", "Rosalia", "CD");
 	@Test
