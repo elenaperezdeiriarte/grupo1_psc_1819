@@ -1,0 +1,6 @@
+<map id="com.eLibrary.insertionPerfTest.quejasInsertionTest" name="com.eLibrary.insertionPerfTest.quejasInsertionTest">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#af2b4bbffd40169a4321e317061511a52" title="LDProyecto.BaseDatos.crear\lTablaBDQ" alt="" coords="227,5,417,47"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#acf00c9a9a3411f8cae8fd6a2094f6f80" title="LDProyecto.BaseDatos.crear\lQueja" alt="" coords="227,71,417,112"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="232,136,412,177"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_quejas.html#ae6a6ff628ca4b48bb06f21fb55977654" title="LNProyecto.ClsQuejas.get\lQueja" alt="" coords="234,201,410,243"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="LDProyecto.ClsDatos.ComenzarSave" name="LDProyecto.ClsDatos.ComenzarSave">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a6776681c0cb7da3dd2b5a32a717f5b5a" title="LNProyecto.ClsUnificador\lDClases.sumarNumerador" alt="" coords="316,5,491,47"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a95e40aa2f47525f52ace95b3c326e15d" title="LNProyecto.ClsUnificador\lDClases.guardarArticulos" alt="" coords="318,71,489,112"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a19a57a948a9dc75a809bd27b4cc485b5" title="LNProyecto.ClsUnificador\lDClases.guardarSugerencias" alt="" coords="308,136,499,177"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a86a2ff5267407a38a2be4c629509151e" title="LNProyecto.ClsUnificador\lDClases.guardarComentarios" alt="" coords="308,201,499,243"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#ace3147ab8db7155cf6577c279f3a2d05" title="LNProyecto.ClsUnificador\lDClases.guardarQuejas" alt="" coords="318,267,489,308"/>
+<area shape="rect" id="node10" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#ae294e6c1c1521790ccf5b4bd7d66de82" title="LNProyecto.ClsUnificador\lDClases.guardarContra" alt="" coords="318,332,489,373"/>
+<area shape="rect" id="node11" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#aa893fbdfe46e9002522aef38accc37c0" title="LNProyecto.ClsUnificador\lDClases.guardarBloqueo" alt="" coords="318,397,489,439"/>
+<area shape="rect" id="node16" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#ae775d56d3e54de95cead3ee2e270f696" title="LNProyecto.ClsUnificador\lDClases.guardarComentario" alt="" coords="311,463,495,504"/>
+<area shape="rect" id="node17" href="$class_l_p_proyecto_1_1_j_frame_menu_principal.html#a7187c93a36282718fb4993a20c8143bc" title="LPProyecto.JFrameMenuPrincipal.\lJFrameMenuPrincipal" alt="" coords="292,528,515,569"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a173b7c573185c349459d4825c9fb1bf7" title="LNProyecto.ClsUnificador\lDClases.NuevaSugerencia" alt="" coords="563,136,738,177"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a419668c7d369c86e939a9e3cdb1ce9a4" title="LNProyecto.ClsUnificador\lDClases.NuevoComentario" alt="" coords="563,201,739,243"/>
+<area shape="rect" id="node9" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#afb992bd5209896113dfbcca9452ad555" title="LNProyecto.ClsUnificador\lDClases.NuevaQueja" alt="" coords="565,267,736,308"/>
+<area shape="rect" id="node12" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#abf37938a1afc04a23b4efdadd17647ca" title="LNProyecto.ClsUnificador\lDClases.semaforoBloqueo" alt="" coords="563,332,738,373"/>
+<area shape="rect" id="node13" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a674705ac62eb57e02f7060479bf62227" title="LNProyecto.ClsUnificador\lDClases.reiniciarIntentos" alt="" coords="565,397,736,439"/>
+<area shape="rect" id="node14" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a1321ea356f67ab0c4e4030bbe0d8f979" title="LNProyecto.ClsUnificador\lDClases.sacarMinutos" alt="" coords="565,463,736,504"/>
+<area shape="rect" id="node15" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a8054ba102504e98d0670d414be950f1b" title="LNProyecto.ClsUnificador\lDClases.sumarIntento" alt="" coords="565,528,736,569"/>
+</map>

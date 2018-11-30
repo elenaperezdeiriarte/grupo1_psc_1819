@@ -1,0 +1,7 @@
+<map id="LPProyecto.JFrameQueja.actionPerformed" name="LPProyecto.JFrameQueja.actionPerformed">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="264,5,461,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#af2b4bbffd40169a4321e317061511a52" title="LDProyecto.BaseDatos.crear\lTablaBDQ" alt="" coords="267,57,458,98"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#acf00c9a9a3411f8cae8fd6a2094f6f80" title="LDProyecto.BaseDatos.crear\lQueja" alt="" coords="267,122,458,163"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="273,187,453,229"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="266,253,459,280"/>
+</map>

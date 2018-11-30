@@ -1,0 +1,12 @@
+<map id="LNProyecto.ClsUnificadorDClases.sacarMinutos" name="LNProyecto.ClsUnificadorDClases.sacarMinutos">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a2a2e7050340965e46ee7c24a31133d59" title="LNProyecto.ClsUnificador\lDClases.leerBloqueo" alt="" coords="237,54,407,95"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_bloqueo.html#ab59bcd607e465a153f49abf5fd9576eb" title="LNProyecto.ClsBloqueo.sacar\lMinutos" alt="" coords="224,125,420,166"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#aa893fbdfe46e9002522aef38accc37c0" title="LNProyecto.ClsUnificador\lDClases.guardarBloqueo" alt="" coords="237,201,407,242"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_cls_datos.html#ac192ef2d4d704ce9462d212f19cb77b7" title="LDProyecto.ClsDatos.ComenzarRead" alt="" coords="468,5,708,32"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_cls_datos.html#ab70503d644b23c5a51cc69e554e9d4ec" title="LDProyecto.ClsDatos.Read" alt="" coords="497,56,679,83"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_cls_datos.html#ae68d932b543537721bf7b0cd71a573dd" title="LDProyecto.ClsDatos.TerminarRead" alt="" coords="473,107,703,133"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_cls_datos.html#a71b014cb4516f818ac5ebd8ee08b86c6" title="LDProyecto.ClsDatos.ResetFile" alt="" coords="485,157,691,184"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_cls_datos.html#ac351c48cbc97477e74dcf66eaf9ff25d" title="LDProyecto.ClsDatos.ComenzarSave" alt="" coords="469,208,707,235"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_cls_datos.html#a724280cd5fba8a2e789fda1a69c2b92a" title="LDProyecto.ClsDatos.Save" alt="" coords="499,259,677,285"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_cls_datos.html#ac3c50cb74d20e16d5a2d940e428ff9f0" title="LDProyecto.ClsDatos.TerminarSave" alt="" coords="473,309,703,336"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="LPProyecto.JFrameVerFicha.JFrameVerFicha" name="LPProyecto.JFrameVerFicha.JFrameVerFicha">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_articulo.html#a0ab609fb03168998ba7bd6eada3427d8" title="LNProyecto.ClsArticulo.get\lNumero" alt="" coords="271,5,449,47"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_articulo.html#a40a699435831590cf7641f1d0ccdac54" title="LNProyecto.ClsArticulo.getTipo" alt="" coords="259,71,461,98"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_articulo.html#a0f265f916a3f2e9371beb923a411db48" title="LNProyecto.ClsArticulo.get\lNombre" alt="" coords="271,123,449,164"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_articulo.html#af764d53018249f4ae2df4b7aadf8cda9" title="LNProyecto.ClsArticulo.get\lAutor" alt="" coords="271,188,449,229"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_articulo.html#a7bb27908c07798710f612a6a76acb513" title="LNProyecto.ClsArticulo.get\lEstado" alt="" coords="271,253,449,295"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_articulo.html#ad165ce5b0c56fb0108adcb1211acb02a" title="LNProyecto.ClsArticulo.get\lContador" alt="" coords="271,319,449,360"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_articulo.html#ae450867cd5c43c35a596f1d1998a94a8" title="LNProyecto.ClsArticulo.getNota" alt="" coords="257,385,463,411"/>
+<area shape="rect" id="node9" href="$class_l_n_proyecto_1_1_cls_articulo.html#af16fbdf9e6d054ff6f00520b3c89a2e9" title="LNProyecto.ClsArticulo.getWeb" alt="" coords="257,435,463,462"/>
+<area shape="rect" id="node10" href="$class_l_n_proyecto_1_1_label_url.html#a94f064046adceb380c7b3e6127311a1a" title="LNProyecto.LabelUrl.setURL" alt="" coords="266,486,454,513"/>
+<area shape="rect" id="node11" href="$class_l_n_proyecto_1_1_cls_articulo.html#aba1c782f888c4664d00b5b2fe4740a10" title="LNProyecto.ClsArticulo.get\lImagen" alt="" coords="271,537,449,579"/>
+<area shape="rect" id="node12" href="$class_l_n_proyecto_1_1_cls_libro.html#a51a9ce3b79f60296696ea32e8a4fb4d7" title="LNProyecto.ClsLibro.getpaginas" alt="" coords="256,603,464,630"/>
+<area shape="rect" id="node13" href="$class_l_n_proyecto_1_1_cls_audio_visual.html#ae6aab7715610b5c6365603d7dfc41403" title="LNProyecto.ClsAudioVisual.get\lDuracion" alt="" coords="258,655,462,696"/>
+<area shape="rect" id="node14" href="$class_l_n_proyecto_1_1_cls_audio_visual.html#ab0c014d30e4c4e64353586f4aae932fc" title="LNProyecto.ClsAudioVisual.getAno" alt="" coords="247,721,473,747"/>
+<area shape="rect" id="node15" href="$class_l_n_proyecto_1_1_cls_d_v_d.html#a06bd94f58959e4b21ce0155dffb9198e" title="LNProyecto.ClsDVD.getOscar" alt="" coords="261,771,459,798"/>
+</map>

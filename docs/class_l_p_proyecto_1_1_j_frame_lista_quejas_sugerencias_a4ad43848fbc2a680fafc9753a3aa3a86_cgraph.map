@@ -1,0 +1,12 @@
+<map id="LPProyecto.JFrameListaQuejasSugerencias.JFrameListaQuejasSugerencias" name="LPProyecto.JFrameListaQuejasSugerencias.JFrameListaQuejasSugerencias">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="336,5,533,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#af2b4bbffd40169a4321e317061511a52" title="LDProyecto.BaseDatos.crear\lTablaBDQ" alt="" coords="339,57,530,98"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#afd4ff93e506f0ff6deddfa0f176d8b12" title="LDProyecto.BaseDatos.select\lQuejas" alt="" coords="336,122,533,163"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#a23953a51caf795b862a0789bb77edda4" title="LDProyecto.BaseDatos.get\lQuejas" alt="" coords="345,187,525,229"/>
+<area shape="rect" id="node7" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="338,253,531,280"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#a7338bc16607d91d16b927f9205e5d076" title="LDProyecto.BaseDatos.crear\lTablaBDS" alt="" coords="339,305,530,346"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#ad15e72e3260b7c35429f40f873c46d5c" title="LDProyecto.BaseDatos.select\lSugerencias" alt="" coords="336,370,533,411"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a34bb3f4c2dd422a8381429c2092e17f0" title="LDProyecto.BaseDatos.get\lSugerencias" alt="" coords="345,435,525,477"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#a52157304753a6168763d3b9ec0f0a586" title="LDProyecto.BaseDatos.queja" alt="" coords="597,129,791,156"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a914a8149712fcbd8262923533529d0ca" title="LDProyecto.BaseDatos.sugerencia" alt="" coords="581,377,807,404"/>
+</map>

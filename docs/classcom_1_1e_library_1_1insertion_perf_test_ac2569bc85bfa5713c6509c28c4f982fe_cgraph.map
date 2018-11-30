@@ -1,0 +1,8 @@
+<map id="com.eLibrary.insertionPerfTest.sugerenciasInsertionTest" name="com.eLibrary.insertionPerfTest.sugerenciasInsertionTest">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#a7338bc16607d91d16b927f9205e5d076" title="LDProyecto.BaseDatos.crear\lTablaBDS" alt="" coords="268,5,459,47"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#aac04b99ca249371a8deab48aeadcf901" title="LDProyecto.BaseDatos.crear\lSugerencia" alt="" coords="268,71,459,112"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="273,136,453,177"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#ab88713d6028a1a7cc88ff26b2984f007" title="LNProyecto.ClsSugerencias.get\lNombre" alt="" coords="260,201,467,243"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#a44e32e6cd87101e648b90ca44f3073ab" title="LNProyecto.ClsSugerencias.get\lAutor" alt="" coords="260,267,467,308"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#a3687742be551156b056005cd2be530c2" title="LNProyecto.ClsSugerencias.getTipo" alt="" coords="248,333,479,359"/>
+</map>

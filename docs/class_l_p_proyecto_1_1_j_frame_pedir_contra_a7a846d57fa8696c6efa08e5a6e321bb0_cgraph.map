@@ -1,0 +1,12 @@
+<map id="LPProyecto.JFramePedirContra.JFramePedirContra" name="LPProyecto.JFramePedirContra.JFramePedirContra">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="267,5,465,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#a697aa2667128135a3aad6dd6d0b65e54" title="LDProyecto.BaseDatos.crear\lTablaBDB" alt="" coords="271,57,461,98"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#a3be3eb06f30857291a8d443e524b12e7" title="LDProyecto.BaseDatos.devolver\lBloqueo" alt="" coords="263,122,469,163"/>
+<area shape="rect" id="node7" href="$class_l_d_proyecto_1_1_base_datos.html#a97c6b5a0ccb49c4dc0284d95f616e530" title="LDProyecto.BaseDatos.get\lIntentos" alt="" coords="276,253,456,294"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#aff45b47ae6883f09ae4bf30686c4ac33" title="LDProyecto.BaseDatos.get\lMilisegundos" alt="" coords="276,318,456,359"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#a8223c0b30a51d7dec61cd141681359be" title="LDProyecto.BaseDatos.crear\lBloqueo" alt="" coords="271,187,461,229"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="276,383,456,425"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="269,449,463,476"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#a1f8ca544e764d8455a6e0609d09bd694" title="LDProyecto.BaseDatos.intentos" alt="" coords="533,133,741,160"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#a877f1b4ff1513f4171ce73ae4baf5d5d" title="LDProyecto.BaseDatos.milisegundos" alt="" coords="517,188,756,215"/>
+</map>

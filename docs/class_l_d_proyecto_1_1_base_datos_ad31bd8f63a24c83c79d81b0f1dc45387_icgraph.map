@@ -1,0 +1,26 @@
+<map id="LDProyecto.BaseDatos.initBD" name="LDProyecto.BaseDatos.initBD">
+<area shape="rect" id="node2" href="$class_l_p_proyecto_1_1_j_frame_cambiar_contrasena.html#a162caf8392c1cb0bbec5d9b0c54e10f6" title="LPProyecto.JFrameCambiar\lContrasena.actionPerformed" alt="" coords="299,5,485,47"/>
+<area shape="rect" id="node3" href="$class_l_p_proyecto_1_1_j_frame_c_f_c_d.html#adfa1730a0e0f79c42e30da3ce83f042c" title="LPProyecto.JFrameCFCD.action\lPerformed" alt="" coords="287,71,497,112"/>
+<area shape="rect" id="node4" href="$class_l_p_proyecto_1_1_j_frame_c_f_d_v_d.html#a6b53cf847f7a2b24cdf6c964cd537146" title="LPProyecto.JFrameCFDVD.action\lPerformed" alt="" coords="282,136,502,177"/>
+<area shape="rect" id="node5" href="$class_l_p_proyecto_1_1_j_frame_c_f_libro.html#acca47a3a574a0d2020731ffc568f01d0" title="LPProyecto.JFrameCFLibro.action\lPerformed" alt="" coords="281,201,503,243"/>
+<area shape="rect" id="node6" href="$class_l_p_proyecto_1_1_j_frame_estadisticas.html#aee1338c608bf798d8845fabee472d7de" title="LPProyecto.JFrameEstadisticas.\lJFrameEstadisticas" alt="" coords="285,267,499,308"/>
+<area shape="rect" id="node8" href="$class_l_p_proyecto_1_1_j_frame_lista_quejas_sugerencias.html#a4ad43848fbc2a680fafc9753a3aa3a86" title="LPProyecto.JFrameListaQuejas\lSugerencias.JFrameListaQuejasSugerencias" alt="" coords="251,332,533,373"/>
+<area shape="rect" id="node9" href="$class_l_p_proyecto_1_1_j_frame_lista_quejas_sugerencias.html#aba260020b9126d84f32b2034c6e5d2a2" title="LPProyecto.JFrameListaQuejas\lSugerencias.actionPerformed" alt="" coords="603,361,810,403"/>
+<area shape="rect" id="node10" href="$class_l_p_proyecto_1_1_j_frame_modificar_c_d.html#a49cd69f987e4c01faafd5c103488784d" title="LPProyecto.JFrameModificar\lCD.actionPerformed" alt="" coords="297,449,487,491"/>
+<area shape="rect" id="node11" href="$class_l_p_proyecto_1_1_j_frame_modificar_d_v_d.html#a45709ee3033c12c7104c9d19441d7aed" title="LPProyecto.JFrameModificar\lDVD.actionPerformed" alt="" coords="297,515,487,556"/>
+<area shape="rect" id="node12" href="$class_l_p_proyecto_1_1_j_frame_modificar_libro.html#ad8f8ed1dc61d898b693db14c8158e72a" title="LPProyecto.JFrameModificar\lLibro.actionPerformed" alt="" coords="297,580,487,621"/>
+<area shape="rect" id="node13" href="$class_l_p_proyecto_1_1_j_frame_pedir_contra.html#a7a846d57fa8696c6efa08e5a6e321bb0" title="LPProyecto.JFramePedirContra.\lJFramePedirContra" alt="" coords="287,645,497,687"/>
+<area shape="rect" id="node14" href="$class_l_p_proyecto_1_1_j_frame_pedir_contra.html#aad235eaf41fa6d90662273f7f2060419" title="LPProyecto.JFramePedirContra.action\lPerformed" alt="" coords="585,675,829,716"/>
+<area shape="rect" id="node15" href="$class_l_p_proyecto_1_1_j_frame_queja.html#a776ad27df7ada4ee4f6e8b796c18cb86" title="LPProyecto.JFrameQueja.action\lPerformed" alt="" coords="287,763,497,804"/>
+<area shape="rect" id="node16" href="$class_l_p_proyecto_1_1_j_frame_sugerencia.html#ae223b4bfa2b27b05ddfcae0589eb5374" title="LPProyecto.JFrameSugerencia.action\lPerformed" alt="" coords="271,828,513,869"/>
+<area shape="rect" id="node17" href="$class_l_p_proyecto_1_1_j_frame_ver_articulos.html#a094af1ddea088744044774818392e4cf" title="LPProyecto.JFrameVerArticulos.\lJFrameVerArticulos" alt="" coords="286,945,498,987"/>
+<area shape="rect" id="node18" href="$class_l_p_proyecto_1_1_j_frame_ver_articulos.html#a47a1fcd73ec735ea79210d774ed003a5" title="LPProyecto.JFrameVerArticulos.action\lPerformed" alt="" coords="583,912,830,953"/>
+<area shape="rect" id="node19" href="$class_l_p_proyecto_1_1_j_frame_ver_articulos.html#a88c0ffeca707c16a3194518a2653eadf" title="LPProyecto.JFrameVerArticulos.mouse\lPressed" alt="" coords="581,991,832,1032"/>
+<area shape="rect" id="node20" href="$class_l_p_proyecto_1_1_j_frame_ver_ficha.html#a6e73c8b93f4168c8c7d092accfacf292" title="LPProyecto.JFrameVerFicha.action\lPerformed" alt="" coords="278,1063,506,1104"/>
+<area shape="rect" id="node21" href="$classcom_1_1e_library_1_1adrian_test.html#a54e41ce20348cade0bed0abea97a6a04" title="com.eLibrary.adrianTest.test" alt="" coords="299,1129,485,1155"/>
+<area shape="rect" id="node22" href="$classcom_1_1e_library_1_1elena_test.html#a296e9e39c40ca9b01c4d2e49aeeedef3" title="com.eLibrary.elenaTest.test" alt="" coords="301,1179,483,1206"/>
+<area shape="rect" id="node23" href="$classcom_1_1e_library_1_1insertion_perf_test.html#ab5bba319e5b7a63d65e91a8ef1b3b8d1" title="com.eLibrary.insertionPerf\lTest.setup" alt="" coords="305,1231,479,1272"/>
+<area shape="rect" id="node24" href="$classcom_1_1e_library_1_1julen_test.html#a2f4e321d81f93c99185b113f6be685b0" title="com.eLibrary.julenTest.test" alt="" coords="303,1297,481,1323"/>
+<area shape="rect" id="node25" href="$classcom_1_1e_library_1_1mikel_test.html#ab75c27be42b33482dd129518999b2520" title="com.eLibrary.mikelTest.test" alt="" coords="301,1347,483,1374"/>
+<area shape="rect" id="node7" href="$class_l_p_proyecto_1_1_j_frame_estadisticas.html#aa262bf54f2ab1aa7a4966392d7bb8478" title="LPProyecto.JFrameEstadisticas.action\lPerformed" alt="" coords="583,267,831,308"/>
+</map>

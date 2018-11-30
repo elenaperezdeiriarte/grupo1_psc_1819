@@ -1,0 +1,12 @@
+<map id="LDProyecto.BaseDatos.selectArticulos" name="LDProyecto.BaseDatos.selectArticulos">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ab98ea30479d4fb28ccad4597e541eeb4" title="LDProyecto.BaseDatos.crear\lTablaBDCD" alt="" coords="271,5,461,47"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#a0c8fc23f90fac0cbccfb84fd66f3ea21" title="LDProyecto.BaseDatos.selectCDs" alt="" coords="255,71,477,98"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#a5cf209e8baba862b2c73a45d99b60228" title="LDProyecto.BaseDatos.crear\lTablaBDDVD" alt="" coords="271,239,461,280"/>
+<area shape="rect" id="node7" href="$class_l_d_proyecto_1_1_base_datos.html#a1552bfeb2a110aaa67982b0d462839f4" title="LDProyecto.BaseDatos.selectDVDs" alt="" coords="251,122,481,149"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#a8e438812272262871e88173d0d1297af" title="LDProyecto.BaseDatos.crear\lTablaBDLibro" alt="" coords="271,304,461,345"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#aaf49fd7f506dc1d62ade27cdfeb3dc9c" title="LDProyecto.BaseDatos.select\lLibros" alt="" coords="267,173,465,215"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#a58672a87bb279b24cbc0ee953e43b83a" title="LDProyecto.BaseDatos.cd" alt="" coords="543,50,719,77"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#a893d31c4d876802e255fdf4324840380" title="LDProyecto.BaseDatos.articulo" alt="" coords="529,101,733,127"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#a3711300b77d1512e278ca9633c732134" title="LDProyecto.BaseDatos.dvd" alt="" coords="541,151,722,178"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a7e4595878ca77bf9a49b65be5b14a1a3" title="LDProyecto.BaseDatos.libro" alt="" coords="538,202,725,229"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="LPProyecto.JFrameModificarCD.actionPerformed" name="LPProyecto.JFrameModificarCD.actionPerformed">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a2063dc81dee41c89da435dcdb4aea41d" title="LNProyecto.ClsUnificador\lDClases.comenzarModificacion" alt="" coords="257,71,461,112"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_articulo.html#afbfa4328d9d2e6a2fc99b39f537fa5d3" title="LNProyecto.ClsArticulo.set\lAutor" alt="" coords="269,136,448,177"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_articulo.html#a957205e4d4cd787943007ab1442cd0e2" title="LNProyecto.ClsArticulo.set\lNombre" alt="" coords="269,201,448,243"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_audio_visual.html#a8b510f4ccb48b7427c18793268000953" title="LNProyecto.ClsAudioVisual.set\lDuracion" alt="" coords="257,267,461,308"/>
+<area shape="rect" id="node9" href="$class_l_n_proyecto_1_1_cls_audio_visual.html#a79cb198c5a76e5db8c6981ae61ad3d4f" title="LNProyecto.ClsAudioVisual.setAno" alt="" coords="245,333,472,359"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="260,383,457,410"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a30ee3bb71003de8c5cb5c7bfec6e1be9" title="LDProyecto.BaseDatos.modificarCD" alt="" coords="243,434,475,461"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_articulo.html#a0f265f916a3f2e9371beb923a411db48" title="LNProyecto.ClsArticulo.get\lNombre" alt="" coords="535,5,713,47"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_articulo.html#af764d53018249f4ae2df4b7aadf8cda9" title="LNProyecto.ClsArticulo.get\lAutor" alt="" coords="535,71,713,112"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_articulo.html#a40a699435831590cf7641f1d0ccdac54" title="LNProyecto.ClsArticulo.getTipo" alt="" coords="523,137,725,163"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="com.eLibrary.mikelTest.test" name="com.eLibrary.mikelTest.test">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="253,5,450,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#a41266378f0d12428c948c5461f3e0b1d" title="LDProyecto.BaseDatos.eliminar\lTablaBDS" alt="" coords="248,57,455,98"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#a7338bc16607d91d16b927f9205e5d076" title="LDProyecto.BaseDatos.crear\lTablaBDS" alt="" coords="256,122,447,163"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#aac04b99ca249371a8deab48aeadcf901" title="LDProyecto.BaseDatos.crear\lSugerencia" alt="" coords="256,187,447,229"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="261,253,441,294"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#ab88713d6028a1a7cc88ff26b2984f007" title="LNProyecto.ClsSugerencias.get\lNombre" alt="" coords="248,318,455,359"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#a44e32e6cd87101e648b90ca44f3073ab" title="LNProyecto.ClsSugerencias.get\lAutor" alt="" coords="248,383,455,425"/>
+<area shape="rect" id="node9" href="$class_l_n_proyecto_1_1_cls_sugerencias.html#a3687742be551156b056005cd2be530c2" title="LNProyecto.ClsSugerencias.getTipo" alt="" coords="236,449,467,476"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="255,500,448,527"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#ad15e72e3260b7c35429f40f873c46d5c" title="LDProyecto.BaseDatos.select\lSugerencias" alt="" coords="253,551,450,593"/>
+<area shape="rect" id="node13" href="$class_l_d_proyecto_1_1_base_datos.html#a34bb3f4c2dd422a8381429c2092e17f0" title="LDProyecto.BaseDatos.get\lSugerencias" alt="" coords="261,617,441,658"/>
+<area shape="rect" id="node12" href="$class_l_d_proyecto_1_1_base_datos.html#a914a8149712fcbd8262923533529d0ca" title="LDProyecto.BaseDatos.sugerencia" alt="" coords="515,559,740,585"/>
+</map>

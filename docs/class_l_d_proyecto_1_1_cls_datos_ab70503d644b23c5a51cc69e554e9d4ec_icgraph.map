@@ -1,0 +1,23 @@
+<map id="LDProyecto.ClsDatos.Read" name="LDProyecto.ClsDatos.Read">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_cls_datos.html#ac1745f9630b5ae6070f1c7eda9af3082" title="LDProyecto.ClsDatos.Contar\lGuardados" alt="" coords="235,5,424,47"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#af3a19606e4b9c3eea938894b6905e0b7" title="LNProyecto.ClsUnificador\lDClases.leerNumerador" alt="" coords="244,71,415,112"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a3016148ee85941403722422044541430" title="LNProyecto.ClsUnificador\lDClases.leerArticulos" alt="" coords="244,136,415,177"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a5cd04a0b517016f228035e1afdc6ee4f" title="LNProyecto.ClsUnificador\lDClases.leerSugerencias" alt="" coords="244,201,415,243"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#afb11c6cd55a56a16d558bca844ccc072" title="LNProyecto.ClsUnificador\lDClases.leerQuejas" alt="" coords="244,267,415,308"/>
+<area shape="rect" id="node10" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a33880d03e7f7d072b054fbc814f19456" title="LNProyecto.ClsUnificador\lDClases.leerComentarios" alt="" coords="244,332,415,373"/>
+<area shape="rect" id="node14" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a87aa3b599ebafead4a5d046a537bef38" title="LNProyecto.ClsUnificador\lDClases.leerContra" alt="" coords="244,397,415,439"/>
+<area shape="rect" id="node15" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a2a2e7050340965e46ee7c24a31133d59" title="LNProyecto.ClsUnificador\lDClases.leerBloqueo" alt="" coords="244,659,415,700"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a6776681c0cb7da3dd2b5a32a717f5b5a" title="LNProyecto.ClsUnificador\lDClases.sumarNumerador" alt="" coords="491,71,666,112"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a173b7c573185c349459d4825c9fb1bf7" title="LNProyecto.ClsUnificador\lDClases.NuevaSugerencia" alt="" coords="491,168,666,209"/>
+<area shape="rect" id="node9" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#afb992bd5209896113dfbcca9452ad555" title="LNProyecto.ClsUnificador\lDClases.NuevaQueja" alt="" coords="493,233,664,275"/>
+<area shape="rect" id="node11" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a419668c7d369c86e939a9e3cdb1ce9a4" title="LNProyecto.ClsUnificador\lDClases.NuevoComentario" alt="" coords="491,299,667,340"/>
+<area shape="rect" id="node12" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a47a4519d38e2e8be4de77ca52922afd8" title="LNProyecto.ClsUnificador\lDClases.leerComentariosArticulo" alt="" coords="472,364,685,405"/>
+<area shape="rect" id="node13" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a5a8e464602763a5dbaceb16c0638219c" title="LNProyecto.ClsUnificador\lDClases.saberSiComentarios" alt="" coords="483,429,675,471"/>
+<area shape="rect" id="node16" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a0da2eb6b91dc821166f984de5ee66554" title="LNProyecto.ClsUnificador\lDClases.intentosBloqueo" alt="" coords="493,495,664,536"/>
+<area shape="rect" id="node17" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#abf37938a1afc04a23b4efdadd17647ca" title="LNProyecto.ClsUnificador\lDClases.semaforoBloqueo" alt="" coords="491,560,666,601"/>
+<area shape="rect" id="node18" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a674705ac62eb57e02f7060479bf62227" title="LNProyecto.ClsUnificador\lDClases.reiniciarIntentos" alt="" coords="493,625,664,667"/>
+<area shape="rect" id="node19" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a1321ea356f67ab0c4e4030bbe0d8f979" title="LNProyecto.ClsUnificador\lDClases.sacarMinutos" alt="" coords="493,691,664,732"/>
+<area shape="rect" id="node20" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a8054ba102504e98d0670d414be950f1b" title="LNProyecto.ClsUnificador\lDClases.sumarIntento" alt="" coords="493,756,664,797"/>
+<area shape="rect" id="node21" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a71f56164f57847687081999cdaa220ff" title="LNProyecto.ClsUnificador\lDClases.getIntentos" alt="" coords="493,821,664,863"/>
+<area shape="rect" id="node22" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#aeaa513d0778b5be3445798f8bdd6f04c" title="LNProyecto.ClsUnificador\lDClases.sacarFalta" alt="" coords="493,887,664,928"/>
+</map>

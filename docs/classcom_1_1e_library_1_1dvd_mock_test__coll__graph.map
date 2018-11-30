@@ -1,0 +1,6 @@
+<map id="com.eLibrary.dvdMockTest" name="com.eLibrary.dvdMockTest">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_d_v_d.html" title="LNProyecto.ClsDVD" alt="" coords="59,247,199,273"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_audio_visual.html" title="LNProyecto.ClsAudioVisual" alt="" coords="37,157,220,184"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_articulo.html" title="LNProyecto.ClsArticulo" alt="" coords="87,81,245,108"/>
+<area shape="rect" id="node7" href="$interface_l_n_proyecto_1_1_iimdb.html" title="LNProyecto.Iimdb" alt="" coords="245,157,370,184"/>
+</map>

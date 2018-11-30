@@ -1,0 +1,15 @@
+<map id="LPProyecto.JFrameListaQuejasSugerencias.actionPerformed" name="LPProyecto.JFrameListaQuejasSugerencias.actionPerformed">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="591,5,788,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#a3ae59cdc84bac188772768e9d3827904" title="LDProyecto.BaseDatos.eliminar\lTablaBDQ" alt="" coords="298,229,505,270"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="593,56,786,83"/>
+<area shape="rect" id="node5" href="$class_l_p_proyecto_1_1_j_frame_lista_quejas_sugerencias.html#a4ad43848fbc2a680fafc9753a3aa3a86" title="LPProyecto.JFrameListaQuejas\lSugerencias.JFrameListaQuejasSugerencias" alt="" coords="260,163,543,205"/>
+<area shape="rect" id="node14" href="$class_l_d_proyecto_1_1_base_datos.html#a41266378f0d12428c948c5461f3e0b1d" title="LDProyecto.BaseDatos.eliminar\lTablaBDS" alt="" coords="298,294,505,335"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#af2b4bbffd40169a4321e317061511a52" title="LDProyecto.BaseDatos.crear\lTablaBDQ" alt="" coords="594,107,785,149"/>
+<area shape="rect" id="node7" href="$class_l_d_proyecto_1_1_base_datos.html#afd4ff93e506f0ff6deddfa0f176d8b12" title="LDProyecto.BaseDatos.select\lQuejas" alt="" coords="591,173,788,214"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#a23953a51caf795b862a0789bb77edda4" title="LDProyecto.BaseDatos.get\lQuejas" alt="" coords="599,238,779,279"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a7338bc16607d91d16b927f9205e5d076" title="LDProyecto.BaseDatos.crear\lTablaBDS" alt="" coords="594,303,785,345"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#ad15e72e3260b7c35429f40f873c46d5c" title="LDProyecto.BaseDatos.select\lSugerencias" alt="" coords="591,369,788,410"/>
+<area shape="rect" id="node13" href="$class_l_d_proyecto_1_1_base_datos.html#a34bb3f4c2dd422a8381429c2092e17f0" title="LDProyecto.BaseDatos.get\lSugerencias" alt="" coords="599,434,779,475"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#a52157304753a6168763d3b9ec0f0a586" title="LDProyecto.BaseDatos.queja" alt="" coords="852,180,1045,207"/>
+<area shape="rect" id="node12" href="$class_l_d_proyecto_1_1_base_datos.html#a914a8149712fcbd8262923533529d0ca" title="LDProyecto.BaseDatos.sugerencia" alt="" coords="836,376,1061,403"/>
+</map>

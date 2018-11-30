@@ -1,0 +1,10 @@
+<map id="LDProyecto.BaseDatos" name="LDProyecto.BaseDatos">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_c_d.html" title="LNProyecto.ClsCD" alt="" coords="686,73,817,100"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_audio_visual.html" title="LNProyecto.ClsAudioVisual" alt="" coords="399,107,581,133"/>
+<area shape="rect" id="node12" href="$class_l_n_proyecto_1_1_cls_d_v_d.html" title="LNProyecto.ClsDVD" alt="" coords="681,173,821,200"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_articulo.html" title="LNProyecto.ClsArticulo" alt="" coords="160,245,317,272"/>
+<area shape="rect" id="node10" href="$class_l_n_proyecto_1_1_cls_libro.html" title="LNProyecto.ClsLibro" alt="" coords="419,296,561,323"/>
+<area shape="rect" id="node7" href="$interface_l_n_proyecto_1_1_i_music_brainz.html" title="LNProyecto.IMusicBrainz" alt="" coords="405,5,575,32"/>
+<area shape="rect" id="node11" href="$interface_l_n_proyecto_1_1_ibibliotecadigital.html" title="LNProyecto.Ibibliotecadigital" alt="" coords="145,347,332,373"/>
+<area shape="rect" id="node13" href="$interface_l_n_proyecto_1_1_iimdb.html" title="LNProyecto.Iimdb" alt="" coords="427,157,553,184"/>
+</map>

@@ -1,0 +1,31 @@
+<map id="LPProyecto.JFrameVerArticulos.actionPerformed" name="LPProyecto.JFrameVerArticulos.actionPerformed">
+<area shape="rect" id="node2" href="$class_l_p_proyecto_1_1_j_frame_ver_articulos.html#a094af1ddea088744044774818392e4cf" title="LPProyecto.JFrameVerArticulos.\lJFrameVerArticulos" alt="" coords="300,209,512,251"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="573,93,770,119"/>
+<area shape="rect" id="node17" href="$class_l_n_proyecto_1_1_mi_excepcion.html#acc43ead50c1a0486c6cc3bde0df6ab8b" title="LNProyecto.MiExcepcion.get\lMessage" alt="" coords="311,360,501,401"/>
+<area shape="rect" id="node18" href="$class_l_d_proyecto_1_1_base_datos.html#aa54b9bc9890ecee7e0070ebee0d35503" title="LDProyecto.BaseDatos.cambiar\lEstadoArticulo" alt="" coords="302,425,510,467"/>
+<area shape="rect" id="node22" href="$class_l_d_proyecto_1_1_base_datos.html#abf417f163d40ca1f9d9518e007836f0d" title="LDProyecto.BaseDatos.cambiar\lWebArticulo" alt="" coords="302,523,510,564"/>
+<area shape="rect" id="node26" href="$class_l_n_proyecto_1_1_cls_articulo.html#a40a699435831590cf7641f1d0ccdac54" title="LNProyecto.ClsArticulo.getTipo" alt="" coords="305,589,507,615"/>
+<area shape="rect" id="node27" href="$class_l_d_proyecto_1_1_base_datos.html#a91f700a280191c2bf36f4bf8aa880a74" title="LDProyecto.BaseDatos.borrar\lArticulo" alt="" coords="309,737,503,779"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#ad6b0e8b490c2826a85e231c4c10c8035" title="LDProyecto.BaseDatos.select\lArticulos" alt="" coords="573,144,770,185"/>
+<area shape="rect" id="node15" href="$class_l_d_proyecto_1_1_base_datos.html#a5a680f532882dc8bdb0d4bf4588895ea" title="LDProyecto.BaseDatos.get\lArticulos" alt="" coords="581,209,761,251"/>
+<area shape="rect" id="node16" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="575,275,768,302"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#ab98ea30479d4fb28ccad4597e541eeb4" title="LDProyecto.BaseDatos.crear\lTablaBDCD" alt="" coords="851,5,1041,47"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#a0c8fc23f90fac0cbccfb84fd66f3ea21" title="LDProyecto.BaseDatos.selectCDs" alt="" coords="835,71,1057,98"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#a5cf209e8baba862b2c73a45d99b60228" title="LDProyecto.BaseDatos.crear\lTablaBDDVD" alt="" coords="851,239,1041,280"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a1552bfeb2a110aaa67982b0d462839f4" title="LDProyecto.BaseDatos.selectDVDs" alt="" coords="831,122,1061,149"/>
+<area shape="rect" id="node12" href="$class_l_d_proyecto_1_1_base_datos.html#a8e438812272262871e88173d0d1297af" title="LDProyecto.BaseDatos.crear\lTablaBDLibro" alt="" coords="851,304,1041,345"/>
+<area shape="rect" id="node13" href="$class_l_d_proyecto_1_1_base_datos.html#aaf49fd7f506dc1d62ade27cdfeb3dc9c" title="LDProyecto.BaseDatos.select\lLibros" alt="" coords="847,173,1045,215"/>
+<area shape="rect" id="node7" href="$class_l_d_proyecto_1_1_base_datos.html#a58672a87bb279b24cbc0ee953e43b83a" title="LDProyecto.BaseDatos.cd" alt="" coords="1123,50,1299,77"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#a893d31c4d876802e255fdf4324840380" title="LDProyecto.BaseDatos.articulo" alt="" coords="1109,101,1313,127"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a3711300b77d1512e278ca9633c732134" title="LDProyecto.BaseDatos.dvd" alt="" coords="1121,151,1302,178"/>
+<area shape="rect" id="node14" href="$class_l_d_proyecto_1_1_base_datos.html#a7e4595878ca77bf9a49b65be5b14a1a3" title="LDProyecto.BaseDatos.libro" alt="" coords="1118,202,1305,229"/>
+<area shape="rect" id="node19" href="$class_l_d_proyecto_1_1_base_datos.html#a4b71183edda5581f6d94c88781053cad" title="LDProyecto.BaseDatos.cambiar\lEstadoCD" alt="" coords="567,327,775,368"/>
+<area shape="rect" id="node20" href="$class_l_d_proyecto_1_1_base_datos.html#a46e50fa425f8cb822ce9ec07a456889d" title="LDProyecto.BaseDatos.cambiar\lEstadoDVD" alt="" coords="567,392,775,433"/>
+<area shape="rect" id="node21" href="$class_l_d_proyecto_1_1_base_datos.html#acbf1698d757053cf7d92ccfd439a80ab" title="LDProyecto.BaseDatos.cambiar\lEstadoLibro" alt="" coords="567,457,775,499"/>
+<area shape="rect" id="node23" href="$class_l_d_proyecto_1_1_base_datos.html#ac295bdcde1b76b92d1eaba5d87187f80" title="LDProyecto.BaseDatos.cambiar\lWebCD" alt="" coords="567,523,775,564"/>
+<area shape="rect" id="node24" href="$class_l_d_proyecto_1_1_base_datos.html#a490f261264a8bd38f84167c81279bbc0" title="LDProyecto.BaseDatos.cambiar\lWebDVD" alt="" coords="567,588,775,629"/>
+<area shape="rect" id="node25" href="$class_l_d_proyecto_1_1_base_datos.html#a1a73c363846012dbc88171ff4b5f4b24" title="LDProyecto.BaseDatos.cambiar\lWebLibro" alt="" coords="567,653,775,695"/>
+<area shape="rect" id="node28" href="$class_l_d_proyecto_1_1_base_datos.html#a5c1315d284c26ab23ad3177375fb02be" title="LDProyecto.BaseDatos.borrarCD" alt="" coords="565,719,778,746"/>
+<area shape="rect" id="node29" href="$class_l_d_proyecto_1_1_base_datos.html#a63df237aaf41749be0efd338fdf3165b" title="LDProyecto.BaseDatos.borrarDVD" alt="" coords="560,770,783,797"/>
+<area shape="rect" id="node30" href="$class_l_d_proyecto_1_1_base_datos.html#aab4c402fe50d6859607d0b56f1566e6d" title="LDProyecto.BaseDatos.borrar\lLibro" alt="" coords="574,821,769,863"/>
+</map>

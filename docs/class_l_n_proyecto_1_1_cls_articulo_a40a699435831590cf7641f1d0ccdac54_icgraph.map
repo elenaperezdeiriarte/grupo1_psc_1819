@@ -1,0 +1,10 @@
+<map id="LNProyecto.ClsArticulo.getTipo" name="LNProyecto.ClsArticulo.getTipo">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_articulo.html#a750d72af8e970e5f9b0e031b98a830cd" title="LNProyecto.ClsArticulo.equals" alt="" coords="280,19,479,46"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a2063dc81dee41c89da435dcdb4aea41d" title="LNProyecto.ClsUnificador\lDClases.comenzarModificacion" alt="" coords="277,71,481,112"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a7e7bd2a064e5ec37f8cbd3d444fda21a" title="LNProyecto.ClsUnificador\lDClases.Modificar" alt="" coords="294,136,465,177"/>
+<area shape="rect" id="node8" href="$class_l_p_proyecto_1_1_j_frame_ver_articulos.html#a47a1fcd73ec735ea79210d774ed003a5" title="LPProyecto.JFrameVerArticulos.action\lPerformed" alt="" coords="256,201,503,243"/>
+<area shape="rect" id="node9" href="$class_l_p_proyecto_1_1_j_frame_ver_ficha.html#a3fc37143bff27b337998035b51c2c031" title="LPProyecto.JFrameVerFicha.\lJFrameVerFicha" alt="" coords="283,267,476,308"/>
+<area shape="rect" id="node4" href="$class_l_p_proyecto_1_1_j_frame_modificar_c_d.html#a49cd69f987e4c01faafd5c103488784d" title="LPProyecto.JFrameModificar\lCD.actionPerformed" alt="" coords="551,5,740,47"/>
+<area shape="rect" id="node5" href="$class_l_p_proyecto_1_1_j_frame_modificar_d_v_d.html#a45709ee3033c12c7104c9d19441d7aed" title="LPProyecto.JFrameModificar\lDVD.actionPerformed" alt="" coords="551,71,740,112"/>
+<area shape="rect" id="node6" href="$class_l_p_proyecto_1_1_j_frame_modificar_libro.html#ad8f8ed1dc61d898b693db14c8158e72a" title="LPProyecto.JFrameModificar\lLibro.actionPerformed" alt="" coords="551,136,740,177"/>
+</map>

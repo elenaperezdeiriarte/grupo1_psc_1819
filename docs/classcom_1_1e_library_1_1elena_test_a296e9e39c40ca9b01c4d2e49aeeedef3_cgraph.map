@@ -1,0 +1,12 @@
+<map id="com.eLibrary.elenaTest.test" name="com.eLibrary.elenaTest.test">
+<area shape="rect" id="node2" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="241,5,438,32"/>
+<area shape="rect" id="node3" href="$class_l_d_proyecto_1_1_base_datos.html#a3ae59cdc84bac188772768e9d3827904" title="LDProyecto.BaseDatos.eliminar\lTablaBDQ" alt="" coords="236,57,443,98"/>
+<area shape="rect" id="node4" href="$class_l_d_proyecto_1_1_base_datos.html#af2b4bbffd40169a4321e317061511a52" title="LDProyecto.BaseDatos.crear\lTablaBDQ" alt="" coords="244,122,435,163"/>
+<area shape="rect" id="node5" href="$class_l_d_proyecto_1_1_base_datos.html#acf00c9a9a3411f8cae8fd6a2094f6f80" title="LDProyecto.BaseDatos.crear\lQueja" alt="" coords="244,187,435,229"/>
+<area shape="rect" id="node6" href="$class_l_d_proyecto_1_1_base_datos.html#aceecc6fe6d6a6b76cc3e8bce3152a7c9" title="LDProyecto.BaseDatos.get\lStatement" alt="" coords="249,253,429,294"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_quejas.html#ae6a6ff628ca4b48bb06f21fb55977654" title="LNProyecto.ClsQuejas.get\lQueja" alt="" coords="251,318,427,359"/>
+<area shape="rect" id="node8" href="$class_l_d_proyecto_1_1_base_datos.html#a1d91129a200d6a4b2e5453b6817cdbe8" title="LDProyecto.BaseDatos.close" alt="" coords="243,384,436,411"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#afd4ff93e506f0ff6deddfa0f176d8b12" title="LDProyecto.BaseDatos.select\lQuejas" alt="" coords="241,435,438,477"/>
+<area shape="rect" id="node11" href="$class_l_d_proyecto_1_1_base_datos.html#a23953a51caf795b862a0789bb77edda4" title="LDProyecto.BaseDatos.get\lQuejas" alt="" coords="249,501,429,542"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a52157304753a6168763d3b9ec0f0a586" title="LDProyecto.BaseDatos.queja" alt="" coords="491,443,684,469"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="LPProyecto.JFrameModificarLibro.actionPerformed" name="LPProyecto.JFrameModificarLibro.actionPerformed">
+<area shape="rect" id="node2" href="$class_l_n_proyecto_1_1_cls_unificador_d_clases.html#a2063dc81dee41c89da435dcdb4aea41d" title="LNProyecto.ClsUnificador\lDClases.comenzarModificacion" alt="" coords="248,71,452,112"/>
+<area shape="rect" id="node6" href="$class_l_n_proyecto_1_1_cls_articulo.html#afbfa4328d9d2e6a2fc99b39f537fa5d3" title="LNProyecto.ClsArticulo.set\lAutor" alt="" coords="261,136,439,177"/>
+<area shape="rect" id="node7" href="$class_l_n_proyecto_1_1_cls_articulo.html#a957205e4d4cd787943007ab1442cd0e2" title="LNProyecto.ClsArticulo.set\lNombre" alt="" coords="261,201,439,243"/>
+<area shape="rect" id="node8" href="$class_l_n_proyecto_1_1_cls_libro.html#acb56a1b50e29092013e21b23b692e2ac" title="LNProyecto.ClsLibro.setpaginas" alt="" coords="246,267,454,294"/>
+<area shape="rect" id="node9" href="$class_l_d_proyecto_1_1_base_datos.html#ad31bd8f63a24c83c79d81b0f1dc45387" title="LDProyecto.BaseDatos.initBD" alt="" coords="251,318,449,345"/>
+<area shape="rect" id="node10" href="$class_l_d_proyecto_1_1_base_datos.html#a61f4de96e7ea1a1f9cb8507c262e44ce" title="LDProyecto.BaseDatos.modificar\lLibro" alt="" coords="243,369,457,411"/>
+<area shape="rect" id="node3" href="$class_l_n_proyecto_1_1_cls_articulo.html#a0f265f916a3f2e9371beb923a411db48" title="LNProyecto.ClsArticulo.get\lNombre" alt="" coords="517,5,696,47"/>
+<area shape="rect" id="node4" href="$class_l_n_proyecto_1_1_cls_articulo.html#af764d53018249f4ae2df4b7aadf8cda9" title="LNProyecto.ClsArticulo.get\lAutor" alt="" coords="517,71,696,112"/>
+<area shape="rect" id="node5" href="$class_l_n_proyecto_1_1_cls_articulo.html#a40a699435831590cf7641f1d0ccdac54" title="LNProyecto.ClsArticulo.getTipo" alt="" coords="505,137,708,163"/>
+</map>
