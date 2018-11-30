@@ -10,6 +10,9 @@ import org.junit.Test;
 import LDProyecto.BaseDatos;
 import LNProyecto.ClsQuejas;
 
+//
+//Se realizan inserciones de quejas para el test
+//
 public class elenaTest {
 	ClsQuejas queja = new ClsQuejas("Somos unos vividores");
 	@Test
