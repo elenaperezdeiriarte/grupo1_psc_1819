@@ -66,7 +66,14 @@ public class ClsArticulo implements Comparable, Serializable
 	public double getNota() {
 		return nota;
 	}
-
+	
+	/*
+	 * 
+	 * la suma e asigna multiplicando los votos por por la nota
+	 * 
+	 */
+	
+	
 	public void setNota (double notapersona, double nota, int numVotos) 
 	{
 		double suma = nota*numVotos;
