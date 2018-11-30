@@ -8,7 +8,9 @@ import org.junit.Test;
 
 import LDProyecto.BaseDatos;
 
-
+//
+//Prueba test de cambiar la contra
+//
 public class julenTest {
 	String nuevaContra = "Vividores";
 	@Test
