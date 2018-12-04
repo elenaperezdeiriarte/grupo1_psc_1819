@@ -14,6 +14,7 @@ import org.junit.runners.Suite.SuiteClasses;
 	dvdMockTest.class,
 	libroMockTest.class,
 	insertionPerfTest.class,
+	aaaa
 	})
 	//articuloTest.class,
 	//cdTest.class, 
